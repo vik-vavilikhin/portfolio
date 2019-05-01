@@ -1,0 +1,7 @@
+mixin top-slider__item(products_card)
+	.top-slider__item
+		.top-slider__picture(style="background-image: url(assets/images/" + products_card.picture + ");")
+		.top-slider__description.top-description
+			h1.top-description__title=products_card.title
+			p.top-description__text=products_card.caption
+			a.brand-btn.top-description__btn(href="#") Shop now

@@ -1,0 +1,34 @@
+//- Карточки товаров: Файл картинки, Описание, Цена
+- 
+	CardContent = [
+		{
+			picture: "slide-image.png", 
+			title  : "Cowhide Standard Crew", 
+			caption: "White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit."
+		},
+		{
+			picture: "slide-image.png", 
+			title  : "Cowhide Standard Crew", 
+			caption: "White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit."
+		},
+		{
+			picture: "slide-image.png", 
+			title  : "Cowhide Standard Crew", 
+			caption: "White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit."
+		},
+		{
+			picture: "slide-image.png", 
+			title  : "Cowhide Standard Crew", 
+			caption: "White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit."
+		},
+		{
+			picture: "slide-image.png", 
+			title  : "Cowhide Standard Crew", 
+			caption: "White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit."
+		}
+	];
+section.top-carousel
+	.owl-carousel.top-slider
+		include top-slider__item
+		for products_card in CardContent
+			+top-slider__item(products_card)

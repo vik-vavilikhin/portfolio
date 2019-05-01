@@ -1,0 +1,25 @@
+.list,
+.top-description,
+.basket__sum,
+.btn-navbar,
+.featured-products__description,
+.brand-slider__description {
+	font-family: 'BN';
+}
+
+.row,
+.sale,
+.mens,
+.women,
+.links,
+.copyright,
+.top-description__text {
+	font-family: 'Open Sans';
+	&__title	{
+		font-family: 'BN';
+	}
+}
+
+.logo {
+	font-family: 'LB';
+}

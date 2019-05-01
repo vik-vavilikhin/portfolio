@@ -1,0 +1,24 @@
+.list {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	text-transform: uppercase;
+	color: #FFF;
+	font-size: 1.3125rem;
+	line-height: 1.8;
+	&__item {
+		display: inline-block;
+		&::after {
+			content: "|";
+			margin-left: 0.9rem;
+		}
+		&:last-child::after {
+			content: none;
+		}
+	}
+	&__link {
+		&:hover {
+			text-shadow: 1px 1px 4px #000, 0 0 1em #3cc3b5;
+		}
+	}
+}

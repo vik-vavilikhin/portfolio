@@ -1,0 +1,24 @@
+//- Пункты меню
+- 
+	ListItem = [
+		"Home", 
+		"Sale", 
+		"Handbags", 
+		"Wallets", 
+		"Accessories", 
+		"Mens Store", 
+		"Shoes", 
+		"Vintage", 
+		"Services", 
+		"Contact us"
+	]
+
+section.top-menu
+	.row
+		.flex-container
+			nav.navbar
+				include btn-navbar
+				ul.top-menu__list.list#nav-main
+					for Item in ListItem
+						li.list__item
+							a.list__link(href="#")=Item

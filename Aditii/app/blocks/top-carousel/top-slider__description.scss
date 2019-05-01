@@ -1,0 +1,25 @@
+.top-description {
+	color: #fff;
+	height: 65%;
+	width: 47%;
+	position: relative;
+	&__title {
+		font-size: 3.8125rem;
+		line-height: 0.9;
+		margin-bottom: 0.5625rem;
+		padding-right: 3rem;
+	}
+	&__text {
+		font-size: 1.0625rem;
+		line-height: 1.7;
+	}
+	&__btn {
+		bottom: 1rem;
+		left: 0.3125rem;
+		font-size: 1.6875rem;
+		padding: 0.1875rem 1.5rem;
+		border: 3px solid #fff;
+		background-color: #3bc7b8;
+		border-radius: 7px;
+	}
+}

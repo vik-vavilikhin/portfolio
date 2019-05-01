@@ -1,0 +1,29 @@
+.brand-slider {
+	&__item {
+		height: 11.875rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	&__description {
+		height: 100%;
+		width: 30%;
+		position: relative;
+		padding-top: 3.25rem;
+	}
+
+	&__title {
+		font-size: 1.6875rem;
+		color: #afafaf;
+		line-height: 0.95;
+	}
+
+	&__btn {
+		bottom: 2.5625rem;
+		left: 0px;
+		font-size: 1.1875rem;
+		padding: 0.25rem .875rem;
+		background-color: #3cc395;
+		border-radius: 3px;
+	}
+}

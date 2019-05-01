@@ -1,0 +1,8 @@
+mixin featured-products__item(products_card)
+	.featured-products__item
+		.featured-products__picture
+			img(alt="#" src="assets/images/" + products_card.picture)
+		.featured-products__description.description
+			h1.featured-products__title=products_card.title
+			p.featured-products__price=products_card.price
+			a.brand-btn.featured-products__btn(href="#") bUY NOW

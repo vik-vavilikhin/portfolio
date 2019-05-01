@@ -1,0 +1,14 @@
+//- Карточки товаров: Файл картинки, Описание, Цена
+- 
+	CardContent = [
+		{picture: "brand01.jpg", title: "bRANDED sHOES", price: "$300"}, 
+		{picture: "brand02.jpg", title: "bRANDED tSHIRTS", price: "$300"}, 
+		{picture: "brand03.jpg", title: "bRANDED sHOES", price: "$300"}
+	];
+section.brand-carousel
+	.row
+		.flex-container
+			.owl-carousel.brand-slider
+				include brand-slider__item
+				for products_card in CardContent
+					+brand-slider__item(products_card)

@@ -1,0 +1,7 @@
+mixin brand-slider__item(products_card)
+	.brand-slider__item
+		.brand-slider__picture
+			img(src="assets/images/" + products_card.picture)
+		.brand-slider__description.description
+			h1.brand-slider__title=products_card.title
+			a.brand-btn.brand-slider__btn(href="#") sHOP

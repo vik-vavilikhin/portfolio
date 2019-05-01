@@ -1,0 +1,336 @@
+@import "../vendor/bourbon/core/bourbon";
+@import "../vendor/mediaqueries/media-queries";
+
+// Large Devices, Wide Screens
+@include max-screen(1200px) {
+	.top-description {
+		height: 80%;
+	}
+}
+
+@include max-screen(1050px) {
+	html {
+		font-size: 95%;
+	}
+	.row {
+		max-width: 900px;
+	}
+	.featured-products {
+		&__gallery {
+			padding: 0;
+		}
+		&__btn {
+		    bottom: 35px;
+			 right: 35px;
+			 text-align: center;
+			 padding: 0.5125rem .6875rem;
+		}
+	}
+}
+
+// Medium Devices, Desktops
+@include max-screen(992px) {
+
+}
+
+@include max-screen(950px) {
+	.row {
+		max-width: 90%
+	}
+	.navbar {
+		position: relative;
+		&__btn {
+			display: block;
+		}
+	}
+
+	.list {
+		display: none;
+		&_open {
+			display: flex;
+			flex-direction: column;
+			width: 50%;
+			margin: 0 auto;
+			background-color: rgba(#000, 0.2);
+			+ .btn-navbar {
+				&__line {
+					display: none;
+				}
+			}
+		}
+		&__item {
+			&::after {
+				content: none;
+			}
+		}
+		&__link {
+			padding: 0.3rem 1rem;
+			display: block;
+			text-align: center;
+			&:hover {
+				background-color: rgba(#fff, .2)
+			}
+		}
+	}
+	.top-slider__item{
+		justify-content: space-between;
+		width: 80%;
+	}
+	.top-description{
+		&__title {
+			font-size: 3rem;
+		}
+		&__text {
+			font-size: 1rem;
+		}
+	}
+	.row__title {
+		font-size: 1.5rem;
+		line-height: 2.2rem;
+	}
+	.featured-products {
+		&__item {
+		   border-bottom: none;
+		}
+		&__price {
+			display: block;
+			margin: 0 auto 3rem;
+			text-align: center;
+		}
+		&__btn {
+		    bottom: 2px;
+			 right: 2px;
+			 left: 2px;
+			 text-align: center;
+			 padding: 0.5125rem .6875rem;
+		}
+	}
+	.row__title {
+		padding: 0 2.5625rem;
+	}
+}
+
+@include max-screen(800px) {
+	.top-slider__item {
+		width: 90%;
+	}
+	.row__title {
+		font-size: 1.2rem;
+   	line-height: 2rem;
+	}
+}
+
+
+// Small Devices, Tablets
+@include max-screen(767px) {
+	.header {
+		line-height: 1.5;
+	}
+	.search {
+		&__form {
+			padding: 0;
+			width: 21rem;
+		}
+	}
+	.top-slider {
+		&__picture {
+			flex-basis: 45%;
+		}
+		&__description {
+			flex-basis: 45%;
+		}
+	}
+	.brand-slider {
+		&__description {
+			width: 35%;
+		}
+		&__btn {
+			left: 2px;
+			right: 2px;
+			bottom: 25px;
+			text-align: center;
+		}
+	}
+}
+
+@include max-screen(710px) {
+	.top-slider {
+		&__picture {
+			width: 50%;
+			flex-basis: auto;
+		}
+		&__description {
+			width: 40%;
+		}
+	}
+	.featured-products {
+		margin-top: 1.5rem;
+		margin-bottom: 0;
+		&__item {
+			margin-bottom: 1.5rem;
+		}
+	}
+	.footer {
+		&__sale,
+		&__mens,
+		&__women,
+		&__links {
+			padding: 0;
+
+		}
+	}
+	.copyright__text {
+		font-size: 0.7rem;
+	}
+}
+
+@include max-screen(650px) {
+	.header {
+		max-height: none;
+		padding-bottom: 0.8rem;
+	}
+
+	.logo,
+	.search,
+	.basket,
+	.sale,
+	.mens,
+	.women,
+	.links,
+	.featured-products__item {
+		flex-shrink: 0;
+	}
+
+	.search {
+		order: 1;
+		flex-basis: 100%;
+		margin: auto;
+		&__form {
+			width: 100%;
+		}
+	}
+	.list_open {
+		width: 70%;
+	}
+	.top-slider {
+		&__picture{
+			width: 100%;
+		}
+	}
+	.top-description {
+		&__title {
+			font-size: 2.5rem;
+		}
+		&__text {
+			font-size: 0.9rem;
+		}
+	}
+
+	.featured-products__item,
+	.sale,
+	.mens,
+	.women,
+	.links {
+		flex-basis: 40%;
+	}
+}
+
+@include max-screen(550px) {
+	.top-slider__picture {
+		height: 70%;
+		background-size: contain;
+		background-position: top left;
+	}
+	.featured-products__item {
+		flex-basis: 47%;
+	}
+}
+// Extra Small Devices, Phones
+@include max-screen(480px) {
+	.top-slider__description {
+		margin-left: 1rem;
+	}
+
+	.featured-products__item {
+		flex-basis: 65%;
+	}
+	.brand-slider__btn,
+	.featured-products__btn {
+		font-size: 1.5rem;
+	}
+	.footer-block {
+		justify-content: space-around;
+	}
+}
+
+@include max-screen(450px) {
+	.top-description {
+		&__title {
+			font-size: 2.2rem;
+		}
+		&__text {
+			font-size: 0.8rem;
+		}
+	}
+}
+
+@include max-screen(380px) {
+	.top-description__btn {
+		font-size: 1.5rem;
+	   padding: .1rem 1rem;
+	}
+
+	.featured-products__item {
+		flex-basis: 80%;
+	}
+}
+
+@include max-screen(350px) {
+	.sale,
+	.mens,
+	.women,
+	.links {
+		flex-basis: 80%;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	.copyright__text {
+		font-size: 0.5rem;
+	}
+}
+
+// Custom, iPhone Retina
+@include max-screen(320px) {
+
+}
+
+// ======================== //
+// Custom, iPhone Retina
+@include min-screen(320px) {
+
+}
+
+// Extra Small Devices, Phones
+@include min-screen(480px) {
+
+}
+
+// Small Devices, Tablets
+@include min-screen(768px) {
+
+}
+
+// Medium Devices, Desktops
+@include min-screen(992px) {
+
+}
+
+// Large Devices, Wide Screens
+@include min-screen(1200px) {
+
+}
+
+// Rules for a range of devices
+@include screen(320px, 768px) {
+
+}

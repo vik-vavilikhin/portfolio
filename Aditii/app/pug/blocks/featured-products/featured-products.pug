@@ -1,0 +1,19 @@
+//- Карточки товаров: Файл картинки, Описание, Цена
+- 
+	CardContent = [
+		{picture: "01.jpg", title: "bRANDED sHOE", price: "$300"}, 
+		{picture: "02.jpg", title: "bRANDED tEES", price: "$300"}, 
+		{picture: "03.jpg", title: "bRANDED sHOE", price: "$300"}, 
+		{picture: "04.jpg", title: "bRANDED sHOE", price: "$300"}, 
+		{picture: "05.jpg", title: "EMS Women  bAG", price: "$300"}, 
+		{picture: "06.jpg", title: "bRANDED CARGOS ", price: "$300"}
+	];
+section.row__title
+	.row FEATURED pRODUCTS
+section.featured-products
+	.row
+		.flex-container
+			.featured-products__gallery
+				include featured-products__item
+				for products_card in CardContent
+					+featured-products__item(products_card)

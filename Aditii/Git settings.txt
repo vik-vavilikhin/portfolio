@@ -1,0 +1,91 @@
+﻿# Для вставки информации из буфера обмена использовать в
+# консоли Git Bush комбинацию клавиш <Shift> + <Insert>
+
+1. 	В папке проекта в консоли Git Bush
+	$ git init
+
+2.	Прописать пользователя (--global OR --save-dev)
+	$ git config --global user.name "vik-vavilikhin"
+
+3.	Прописать e-mail пользователя (--global OR --save-dev)
+	$ git config --global user.email vva76@yandex.ru
+
+4.	Просмотр конфигурации
+	$ git cpnfig --list
+	# Расположение файла конфигурации: C:\Users\vva76\.gitconfig
+
+5.	Создать в папке проекта файл исключений .gitignore
+
+6.	Внести в файл исключений файлы и папки не входящие в
+	систему контроля версий:
+
+	# Comment
+	node_modules/
+	maket/
+	# Исключить файлы с расширением .log
+	app/*.log
+
+7.	Просмотр файлов, включенных в Git
+	$ git status
+
+8.	Для перехода в папку (например, частично исключенную
+	из контроля git)
+	$ cd app
+
+9.	Просмотр файлов, попадающих под контроль ревизии
+	в текущей папке
+	$ git status --untracked-files=all (normal, no)
+
+10.	Добавить файлы в систему контроля
+	(для добавления всех файлов проекта указать . точку)
+	$ git add <file>
+
+11.	Удалить файл из системы контроля
+	$ git rm --cached <file>
+
+12.1	Инициализация файлов проекта
+	$ git commit -a -m"init"
+
+13.2	Индексация новых файлов
+	$ git add <file>
+
+14.3	Добавление файлов в коммит
+	$ git commit -m"add files"
+
+15.4	Откат к предыдущей версии
+	$ git checkout --<file>
+
+16.	Вызов помощи
+	$ git help log
+
+17.	Получить историю коммитов (Q - выход)
+	# Полный лог
+	$ git log
+
+	# Сокращенный лог
+	$ git log --pretty=format:"%h - %an, %ar : %s"
+
+	# Полный лог за последние 2 недели
+	$ git log --since=2.weeks
+
+	# Просмотр изменений в файлах
+	$ git log -p -2
+
+18.	Редактор по умолчанию
+	$ git config --global core.editor "'C:\Users\vva76\AppData\Local\atom.exe' - multiInst -notabbar -nosession -noPlugin"
+
+19.	Работа с ветками
+	#Создание ветки
+	$ git checkout <name_branch>
+
+	# Создание ветки с переходом в нее
+	$ git checkout -b <name_branch>
+
+	# Просмотр веток
+	$ git branch
+
+	# Просмотр версий веток
+	$ git brench -v
+
+	# Переключение веток
+	$ git checkout <name_branch>

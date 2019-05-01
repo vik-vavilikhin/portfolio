@@ -1,0 +1,8 @@
+.brand-btn {
+	position: absolute;
+	text-transform: uppercase;
+	&:hover {
+		text-shadow: 2px 2px 4px #000, 0 0 2em #fff;
+		box-shadow: 0px 0px 4px #000, 0px 0px 1em #fff;
+	}
+}

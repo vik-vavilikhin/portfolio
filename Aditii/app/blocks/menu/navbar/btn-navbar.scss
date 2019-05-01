@@ -1,0 +1,30 @@
+.btn-navbar {
+	border: 1px solid #a1a1a1;
+	background: none;
+	padding: 0.5rem;
+	cursor: pointer;
+	border-radius: 0.2rem;
+	&:hover,
+   &:focus {
+		box-shadow: 1px 1px 2px #363434, 0 0 1em #3cc3b5;
+      border: 1px solid #3cc3b5;
+      outline-color: #3cc3b5;
+	}
+	&__title {
+		display: none;
+		color: #fff;
+		font-size: 1.5rem;
+		letter-spacing: 0.5rem;
+	}
+	&__line {
+		display: block;
+		width: 25px;
+      height: 2px;
+		border-radius: 1px;
+		background: #a1a1a1;
+		margin-bottom: 3px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
