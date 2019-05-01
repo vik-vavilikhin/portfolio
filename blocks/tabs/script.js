@@ -1,5 +1,6 @@
+'use strict';
+
 window.addEventListener('DOMContentLoaded', () => {
-  'use strict';
 
   // Блок-обертка для закладок
   let parentTabs = document.querySelector('.info-header');
