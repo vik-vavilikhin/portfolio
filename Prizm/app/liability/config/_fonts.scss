@@ -1,0 +1,15 @@
+@import "_mixins/font-face";
+
+@include font-face("roboto", "../fonts/Roboto/Roboto Bold", bold);
+@include font-face("roboto", "../fonts/Roboto/Roboto Regular");
+@include font-face("roboto", "../fonts/Roboto/Roboto Thin", 100);
+
+@include font-face("futura", "../fonts/FuturaPT/FuturaPT-Bold", bold);
+@include font-face("futura", "../fonts/FuturaPT/FuturaPT-Medium", 500);
+@include font-face("futura", "../fonts/FuturaPT/FuturaPTCond-Book", normal);
+@include font-face("futura", "../fonts/FuturaPT/FuturaPT-LightObl", 100);
+@include font-face("futura", "../fonts/FuturaPT/FuturaPT-Light", 100);
+
+@include font-face("times new roman", "../fonts/TimesNewRoman/TimesNewRomanBold", bold);
+@include font-face("times new roman", "../fonts/TimesNewRoman/TimesNewRomanRegular", normal);
+

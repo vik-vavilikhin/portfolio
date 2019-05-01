@@ -1,0 +1,406 @@
+@font-face {
+  font-family: roboto;
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Roboto/Roboto Bold.eot");
+  src: url("../fonts/Roboto/Roboto Bold.eot?#iefix") format("embedded-opentype"),url("../fonts/Roboto/Roboto Bold.woff") format("woff"),url("../fonts/Roboto/Roboto Bold.ttf") format("truetype")
+}
+@font-face {
+  font-family: roboto;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Roboto/Roboto Regular.eot");
+  src: url("../fonts/Roboto/Roboto Regular.eot?#iefix") format("embedded-opentype"),url("../fonts/Roboto/Roboto Regular.woff") format("woff"),url("../fonts/Roboto/Roboto Regular.ttf") format("truetype")
+}
+@font-face {
+  font-family: roboto;
+  font-weight: 100;
+  font-style: normal;
+  src: url("../fonts/Roboto/Roboto Thin.eot");
+  src: url("../fonts/Roboto/Roboto Thin.eot?#iefix") format("embedded-opentype"),url("../fonts/Roboto/Roboto Thin.woff") format("woff"),url("../fonts/Roboto/Roboto Thin.ttf") format("truetype")
+}
+@font-face {
+  font-family: futura;
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/FuturaPT/FuturaPT-Bold.eot);
+  src: url(../fonts/FuturaPT/FuturaPT-Bold.eot?#iefix) format("embedded-opentype"),url(../fonts/FuturaPT/FuturaPT-Bold.woff) format("woff"),url(../fonts/FuturaPT/FuturaPT-Bold.ttf) format("truetype")
+}
+@font-face {
+  font-family: futura;
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/FuturaPT/FuturaPT-Medium.eot);
+  src: url(../fonts/FuturaPT/FuturaPT-Medium.eot?#iefix) format("embedded-opentype"),url(../fonts/FuturaPT/FuturaPT-Medium.woff) format("woff"),url(../fonts/FuturaPT/FuturaPT-Medium.ttf) format("truetype")
+}
+@font-face {
+  font-family: futura;
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/FuturaPT/FuturaPTCond-Book.eot);
+  src: url(../fonts/FuturaPT/FuturaPTCond-Book.eot?#iefix) format("embedded-opentype"),url(../fonts/FuturaPT/FuturaPTCond-Book.woff) format("woff"),url(../fonts/FuturaPT/FuturaPTCond-Book.ttf) format("truetype")
+}
+@font-face {
+  font-family: futura;
+  font-weight: 100;
+  font-style: normal;
+  src: url(../fonts/FuturaPT/FuturaPT-LightObl.eot);
+  src: url(../fonts/FuturaPT/FuturaPT-LightObl.eot?#iefix) format("embedded-opentype"),url(../fonts/FuturaPT/FuturaPT-LightObl.woff) format("woff"),url(../fonts/FuturaPT/FuturaPT-LightObl.ttf) format("truetype")
+}
+@font-face {
+  font-family: futura;
+  font-weight: 100;
+  font-style: normal;
+  src: url(../fonts/FuturaPT/FuturaPT-Light.eot);
+  src: url(../fonts/FuturaPT/FuturaPT-Light.eot?#iefix) format("embedded-opentype"),url(../fonts/FuturaPT/FuturaPT-Light.woff) format("woff"),url(../fonts/FuturaPT/FuturaPT-Light.ttf) format("truetype")
+}
+@font-face {
+  font-family: "times new roman";
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/TimesNewRoman/TimesNewRomanBold.eot);
+  src: url(../fonts/TimesNewRoman/TimesNewRomanBold.eot?#iefix) format("embedded-opentype"),url(../fonts/TimesNewRoman/TimesNewRomanBold.woff) format("woff"),url(../fonts/TimesNewRoman/TimesNewRomanBold.ttf) format("truetype")
+}
+@font-face {
+  font-family: "times new roman";
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/TimesNewRoman/TimesNewRomanRegular.eot);
+  src: url(../fonts/TimesNewRoman/TimesNewRomanRegular.eot?#iefix) format("embedded-opentype"),url(../fonts/TimesNewRoman/TimesNewRomanRegular.woff) format("woff"),url(../fonts/TimesNewRoman/TimesNewRomanRegular.ttf) format("truetype")
+}
+blockquote,
+body,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+abbr,
+fieldset,
+img {
+  border: 0
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: 400
+}
+ul li {
+  list-style: none
+}
+caption,
+th {
+  text-align: left
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 400
+}
+sup {
+  vertical-align: text-top
+}
+sub {
+  vertical-align: text-bottom
+}
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit
+}
+legend {
+  color: #000
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block
+}
+img {
+  max-width: 100%;
+  height: auto
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+html {
+  font-size: 1rem
+}
+.page {
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  font-family: futura,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #1c1c1c
+}
+a,
+button,
+input,
+textarea {
+  outline: 0
+}
+a:focus:required:invalid,
+button:focus:required:invalid,
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+  border-color: red
+}
+a:required:valid,
+button:required:valid,
+input:required:valid,
+textarea:required:valid {
+  border-color: green
+}
+a:active,
+a:focus,
+button:active,
+button:focus,
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  border: 1px solid #666;
+  outline: 0
+}
+a,
+a:hover {
+  text-decoration: none
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px
+}
+::-webkit-input-placeholder {
+  color: #666
+}
+:-ms-input-placeholder {
+  color: #666
+}
+::-ms-input-placeholder {
+  color: #666
+}
+::placeholder {
+  color: #666
+}
+::-moz-selection {
+  background-color: #b40bfd;
+  color: #fff
+}
+::selection {
+  background-color: #b40bfd;
+  color: #fff
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto
+}
+.img-responsive.img-width {
+  width: 100%
+}
+.text-center {
+  text-align: center
+}
+b,
+strong {
+  font-weight: 700
+}
+.button {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #e0003f;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: 0;
+  -webkit-transition: background-color .1s;
+  -o-transition: background-color .1s;
+  transition: background-color .1s
+}
+.button:focus,
+.button:hover {
+  text-decoration: none;
+  color: #fff
+}
+.button:hover {
+  background-color: rgba(188,36,253,.1)
+}
+.button:active {
+  background-color: rgba(166,2,237,.1)
+}
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 308px;
+  height: 100vh;
+  max-height: 720px;
+  padding: 25px 25px 25px 35px;
+  background-color: #30353d;
+  color: #fff;
+  font-family: roboto
+}
+.nav__header {
+  margin-top: 53px;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 700
+}
+.nav__list {
+  margin-top: 37px;
+  padding-left: 25px
+}
+.nav__button {
+  margin-top: 35px
+}
+.nav__linkArticles {
+  margin-top: 35px;
+  display: block;
+  text-transform: uppercase;
+  font-family: 'times new roman';
+  font-weight: 300;
+  font-size: .625rem;
+  text-align: center;
+  color: #fff
+}
+.list__item {
+  margin-bottom: 11px
+}
+.list__item:last-child {
+  margin-bottom: 0
+}
+.list__item.active,
+.list__item:hover {
+  font-weight: 100;
+  color: #b40bfd
+}
+.list__link {
+  color: inherit
+}
+.list__link:hover {
+  text-decoration: none;
+  color: inherit
+}
+.logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  color: #fff
+}
+.logo:hover {
+  text-decoration: none;
+  color: #fff
+}
+.logo__img {
+  width: 47px;
+  height: 47px
+}
+.logo__title {
+  font-size: 1.8125rem;
+  font-weight: 700;
+  font-family: roboto
+}
+.logo__label {
+  font-weight: 300;
+  font-family: 'times new roman'
+}
+.debug-grid {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1
+}
+.debug-grid > div {
+  height: inherit;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px
+}
+.debug-grid > div > div {
+  height: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px
+}
+.debug-grid > div > div > div {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: -webkit-calc(8.33333% - 20px);
+  width: calc(8.33333% - 20px);
+  height: inherit;
+  outline: #000 solid 1px;
+  background: rgba(255,0,0,.2)
+}

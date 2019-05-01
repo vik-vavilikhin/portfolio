@@ -1,0 +1,199 @@
+@import "fonts";
+@import "libs";
+@import "vars";
+// @import "angle";
+
+@include reset; /*Reset from smart-grid*/
+
+@include font-face("roboto", "../fonts/Roboto/Roboto Bold", bold);
+@include font-face("roboto", "../fonts/Roboto/Roboto Regular", normal);
+@include font-face("roboto", "../fonts/Roboto/Roboto Thin", 100);
+
+@include font-face("futura", "../fonts/FuturaPT/FuturaPT-Bold", bold);
+@include font-face("futura", "../fonts/FuturaPT/FuturaPT-Medium", 500);
+@include font-face("futura", "../fonts/FuturaPT/FuturaPTCond-Book", normal);
+@include font-face("futura", "../fonts/FuturaPT/FuturaPT-LightObl", 100);
+@include font-face("futura", "../fonts/FuturaPT/FuturaPT-Light", 100);
+
+@include font-face("times new roman", "../fonts/TimesNewRoman/TimesNewRomanBold", bold);
+@include font-face("times new roman", "../fonts/TimesNewRoman/TimesNewRomanRegular", normal);
+
+/* Basic settings */
+* {
+  box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+.page {
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+	font-family: 'roboto', Arial, sans-serif;
+	font-family: $default-font;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.75;
+	color: $text;
+}
+button, input, textarea, a {
+  outline: none;
+  &:focus:required:invalid {
+    border-color: red;
+  }
+  &:required:valid {
+    border-color: green;
+  }
+  &:active, &:focus {
+    border: #666 1px solid;
+    outline: none
+  }
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.container {
+	@include wrapper();
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+/* ========= nav =========== */
+.button {
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #E0003F;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 15px 0;
+  font-size: 16px;
+  // text-transform: uppercase;
+  font-weight: 400;
+  // letter-spacing: 3px;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .1s ease;
+  &:focus, &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  &:hover {
+    background-color: rgba(lighten($accent, 5%), .1);
+  }
+  &:active{
+    background-color: rgba(darken($accent, 5%), .1);
+  }
+}
+/* ========= nav =========== */
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 308px;
+  height: 100vh;
+  max-height: 720px;
+  padding: 25px 25px 25px 35px;
+  background-color: #30353d;
+  color: #ffffff;
+  font-family: roboto;
+  &__header {
+    margin-top: 53px;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &__list {
+    margin-top: 37px;
+    padding-left: 25px;
+  }
+  &__button {
+    margin-top: 35px;
+  }
+  &__linkArticles {
+    margin-top: 35px;
+    display: block;
+    text-transform: uppercase;
+    font-family: 'times new roman';
+    font-weight: 300;
+    font-size: 10px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+.list {
+  &__item {
+    margin-bottom: 11px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover, &.active {
+      font-weight: 100;
+      color: $accent;
+    }
+  }
+  &__link {
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+      
+    }
+  }
+}
+/* ========= logo ========== */
+.logo {
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff;
+  &:hover {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  &__img {
+    width: 47px;
+    height: 47px;
+  }
+  &__title {
+    font-size: 29px;
+    font-weight: bold;
+    font-family: roboto;
+  }
+  &__label {
+    font-weight: 300;
+    font-family: 'times new roman';
+  }
+}

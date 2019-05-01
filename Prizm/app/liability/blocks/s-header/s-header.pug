@@ -1,0 +1,21 @@
+mixin s-header()
+  +b.HEADER.s-header
+    +b.DIV.container
+      +b.NAV.nav
+        +e.A(href="#").__logo.logo__
+          +e.IMG.__img(src="images/logo.png" alt="PRIZM")
+          +e.SPAN.__title PRIZM
+          +e.SPAN.__label знания
+
+        +e.H3.__header Как начать зарабатывать
+        
+        +e.OL.__list.list__
+          +e.LI.__item.active: +e.A(href="#").__link Как зарабатывать без ...
+          +e.LI.__item: +e.A(href="#").__link Кейсы других участников
+          +e.LI.__item: +e.A(href="#").__link На чем зарабатывают
+          +e.LI.__item: +e.A(href="#").__link Пошаговая инструкция
+          +e.LI.__item: +e.A(href="#").__link 5 типовых ошибок с Призм
+          +e.LI.__item: +e.A(href="#").__link Как правильно начатьа
+          +e.LI.__item: +e.A(href="#").__link Еще какая-то статья
+        +e.A(href="#").__button.button Начать зарабатывать
+        +e.A(href="#").__linkArticles.linkArticles__ все статьи
