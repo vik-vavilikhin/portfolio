@@ -1,13 +1,8 @@
-<p>
-  <span>| <a href="https://github.com/vik-vavilikhin/vik-vavilikhin.github.io">HOME</a> |</span>
-</p>
+| [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) |
 
-<hr>
-<!-- ----------------------------------------------------------- -->
-<a href="https://vik-vavilikhin.github.io/MenuCSS/dist/">Меню</a> реализовано без применения JavaScript, были задействованы: 
-<ul>
-  <li><a href="https://gulpjs.com/">Gulp</a> для сборки проекта.</li>
-  <li><a href="https://pugjs.org/api/getting-started.html">PUG</a> - шаблонизатор HTML.</li>
-  <li><a href="http://sass-lang.com/">SASS</a> в синтаксисе SCSS.</li>
-  <li><a href="https://github.com/kizu/bemto">Bemto</a> - плагин для PUG, позволяющий применять БЭМ-подход в верстке.</li>
-</ul>
+-------------------------------------------------------------------------------
+[Меню](https://vik-vavilikhin.github.io/portfolio/blocks/MenuCSS/dist/) реализовано без применения JavaScript, были задействованы: 
+  - [Gulp](https://gulpjs.com/) для сборки проекта.
+  - [PUG](https://pugjs.org/api/getting-started.html) - шаблонизатор HTML.
+  - [SASS](http://sass-lang.com/) в синтаксисе SCSS.
+  - [Bemto](https://github.com/kizu/bemto) - плагин для PUG, позволяющий применять БЭМ-подход в верстке.
