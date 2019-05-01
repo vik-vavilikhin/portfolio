@@ -1,0 +1,55 @@
+include ../../vendor/bemto/bemto
+- 
+	set_bemto_settings({
+		prefix: '',
+		element: '__',
+		modifier: '_'
+	})
+
+include ../layout/head/head
+include ../layout/head/metrics
+include ../layout/scripts/scripts
+include ../layout/debug-grid/debug-grid
+
+//- ---- SECTIONS --------------
+include ../blocks/s-main/s-main
+
+//- ---- BLOCKS ----------------
+include ../blocks/b-header/b-header
+include ../blocks/b-logo/b-logo
+include ../blocks/b-main-menu/b-main-menu
+include ../blocks/b-button/b-button
+
+doctype html
+html(lang='ru')
+	head
+		block head
+			+head({
+				"title": "MISOCIAL",
+				"author": "vav-integrity",
+				"description": "Пример верстки по технологии flex-box",
+				/* Подключаем файлы стилей */
+				"css": [
+					/*"vendor.min.css",*/
+					/*"http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css",*/
+					"css/common.min.css"
+				]
+			})
+		
+	
+	block body   
+	+b.BODY.page
+		//- +metrics()
+		//- +debug-grid(12)
+		
+		block main
+			+b.DIV.s-main
+		
+		block hidden
+			+hidden([
+				"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+				/*"http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js",*/
+				/* Подключаем файлы скриптов */
+				/*"vendor.min.js",*/
+				"js/common.min.js"
+			])

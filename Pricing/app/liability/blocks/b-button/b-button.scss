@@ -1,0 +1,64 @@
+.button {
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	padding: 2rem 1.5rem;
+	border-radius: 25px;
+	background: none;
+	cursor: pointer;
+	color: inherit;
+	transition: all 0.3s ease;
+	&:hover {
+		text-shadow: 1px 1px 2px #000;
+	}
+
+	&__menu {
+		// display: flex;
+		// justify-content: space-between;
+		letter-spacing: 5px;
+		position: relative;
+		height: 6rem;
+		width: 6rem;
+		&:hover span, &:hover span:before, &:hover span:after {
+			box-shadow: 1px 1px 2px #000;
+		}
+		span, span:before, span:after {
+			display: block;
+			height: 2px;
+			width: 4rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -2rem;
+			background-color: $color-light;
+		}
+		span {
+			&:before {
+				content: '';
+				margin-top: -12px;
+				transition: all 0.5s ease;
+			}
+			&:after {
+				content: '';
+				margin-top: 10px;
+				transition: all 0.5s ease;
+			}
+		}
+		&_mobile {
+			&:hover span,
+			&:focus span,
+			&:active span {
+				box-shadow: none;
+			}
+			span {
+				&:before {
+					transform: rotate(135deg); 
+					margin-top: 0;
+				}
+				&:after {
+					transform: rotate(-135deg); 
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+mixin b-header()
+	+b.HEADER.b-header
+		+b-logo({
+			'Img'  : 'logo.png',
+			'Title': 'MISOCIAL'
+			})
+		+b-main-menu({
+			'Items'        : [
+					{'Link': '#', 'Title':'Home'},
+					{'Link': '#', 'Title':'Why MISOCIAL'},
+					{'Link': '#', 'Title':'Features'},
+					{'Link': '#', 'Title':'Article'},
+					{'Link': '#', 'Title':'Pricing'}
+				],
+			'addClassMenu' : '_top'
+			})
+		+b-button({
+			'Title': 'Get starting'
+			})
+		//- +b.BUTTON.button.btn-menu Menu

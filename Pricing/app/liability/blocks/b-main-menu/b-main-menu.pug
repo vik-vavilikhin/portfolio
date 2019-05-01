@@ -1,0 +1,10 @@
+mixin b-main-menu(data)
+	- var ClassMenu = "main-menu"
+		if data.addClassMenu
+			- ClassMenu = ClassMenu + " " + data.addClassMenu
+
+	+b.BUTTON.button.button__menu
+		span
+	+b.UL(class= ClassMenu)
+		each Item in data.Items
+			+e.LI.item: +e.A.link(href= Item.Link)= Item.Title

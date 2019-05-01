@@ -1,0 +1,66 @@
+.b-header {
+	@include row-flex();
+	@include col();
+	justify-content: space-between;
+	align-items: center;
+	@include md-block() {
+		position: relative;
+	}
+	
+	.logo,
+	.main-menu,
+	.button {
+		@include row-flex();
+		@include col();
+		align-items: center;
+	}
+	.logo {
+		@include md-block() {
+			flex: 1;
+			font-size: 2.8rem;
+		}
+		@include sm-block() {
+			font-size: 3rem;
+			flex-basis: 100%;
+			justify-content: center;
+			margin-bottom: 2rem;
+		}
+	}
+	@include sm-block() {
+		align-items: flex-start;
+	}
+	.main-menu {
+		flex-grow: 1;
+		justify-content: flex-end;
+		
+		@include lg-block() {
+			order: 1;
+			margin-top: 2rem;
+			justify-content: center;
+		}
+		@include sm-block() {
+			display: none;
+			order: 0;
+			flex: 1;
+			margin-top: 0;
+		}
+		&__link {
+			&:hover {
+				&:after {
+				border: 1px solid $color-light;
+				animation: widthBottomLine .3s;
+				}
+			}
+		}
+	}
+	.button {
+		&__menu {
+			display: none;
+			@include sm-block() {
+				display: block;
+				order: 0;
+			}
+		}
+	}
+}
+

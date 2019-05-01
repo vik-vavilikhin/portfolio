@@ -1,0 +1,82 @@
+@import "../../vendor/_smart-grid";
+@include reset;
+/* ==================== */
+
+@import "./app/liability/config/font-face";
+@import "./app/liability/config/vars";
+// @import "./app/liability/config/angle";
+
+@include font-face('MP', "../fonts/MavenPro-Regular", 400, Normal, eof ttf woff woff2 svg);
+@include font-face('MP', "../fonts/MavenPro-Medium", 500, Medium, eof ttf woff woff2 svg);
+@include font-face('MP', "../fonts/MavenPro-Bold", 700, Bold, eof ttf woff woff2 svg);
+
+
+/* Basic settings */
+html {
+	font-size: 10px;
+}
+
+.page {
+	font-family: 'MP', Arial, sans-serif;
+	font-weight: 400;
+	font-size: 170%;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+button, input, textarea, a {
+	&:active, &:focus {
+		outline: none
+	}
+}
+
+.container {
+	@include wrapper();
+}
+
+.section-content {
+	margin: 18rem auto auto;
+	width: 50rem;
+	text-align: center;
+	&__h3 {
+		position: relative;
+		display: inline-block;
+		margin: 0;
+		font-size: 1.4rem;
+		font-weight: bold;
+		&:before,
+		&:after {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 2.4rem;
+			top: 50%;
+		}
+		&:before {
+			left: -4rem;
+		}
+		&:after {
+			right: -4rem;
+		}
+	}
+	&__h1 {
+		margin: 4rem 0;
+		font-size: 8.6rem;
+		font-weight: Medium;
+	}
+	&__title {
+		font-size: 1.6rem;
+		line-height: 2.8rem;
+	}
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes widthBottomLine {
+	from{width: 0;}
+	to{width: 90%;}
+}
