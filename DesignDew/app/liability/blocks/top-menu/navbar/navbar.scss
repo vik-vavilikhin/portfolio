@@ -1,0 +1,8 @@
+.navbar {
+	flex-grow: 1;
+	display: flex;
+	@include size-lg(12);
+	@include md-block {
+		width: 100%;
+	}
+}

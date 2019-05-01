@@ -1,0 +1,39 @@
+.botton-closing {
+	// margin: 5px 15px;
+	// первоночальное состояние
+	display: none;
+	@include sm-block {
+		display: block;
+		// order: -1;
+	}
+
+	background: none;
+	padding: 0.5rem;
+	cursor: pointer;
+
+	border-radius: 0.2rem;
+	border: 1px solid #fff;
+	&:hover,
+   &:focus {
+		box-shadow: 1px 1px 2px #363434, 0 0 1em #ae4b5d;
+      border: 1px solid #ae4b5d;
+      outline-color: #ae4b5d;
+	}
+	&__title {
+		display: none;
+		color: #fff;
+		font-size: 1.5rem;
+		letter-spacing: 0.5rem;
+	}
+	&__line {
+		display: block;
+		width: 25px;
+      height: 2px;
+		border-radius: 1px;
+		background: #fff;
+		margin-bottom: 3px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

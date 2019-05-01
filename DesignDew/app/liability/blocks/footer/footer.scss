@@ -1,0 +1,134 @@
+.footer {
+	background-color: #f9f9f9;
+	border: 1px solid #bfbfbf;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
+	margin-top: 28px;
+	padding: 22px 0;
+	.container {
+		justify-content: space-between;
+		align-items: stretch;
+		@include md-block {
+			justify-content: center;
+		};
+	}
+	&-slogan,
+	&-image {
+		@include size(4);
+	}
+
+	&-image {
+		@include size-lg(6);
+		@include lg-block{
+			// margin-bottom: 25px;
+		};
+	}
+
+	&-slogan {
+		@include size-lg(12);
+		@include lg-block{
+			margin-bottom: 25px;
+		};
+		@include md-block{
+			text-align: center;
+		};
+
+
+		color: #848484;
+		font-size: 14px;
+		line-height: 1.5;
+		padding-top: 10px;
+		.logo {
+			@include lg-block{
+				text-align: center;
+			};
+			margin-left: -4px;
+			margin-bottom: 6px;
+			&__link {
+				font-size: 48px;
+				color: #555555;
+				&:hover {
+					color: #dd5555;
+					text-shadow: 1px 1px 4px #000, 0 0 1em #dd5555;
+				}
+			}
+		}
+	}
+
+	&-friends,
+	&-social {
+		@include size(2);
+		@include size-lg(3);
+		@include size-md(5);
+		@include md-block{
+			font-size: 16px;
+			margin: 20px;
+			padding: 0;
+		};
+		font-size: 14px;
+		padding-top: 15px;
+		&__headline {
+			color: #555555;
+			font-weight: 700;
+			margin-bottom: 9px;
+			line-height: 1;
+		}
+	}
+
+	&-social {
+		@include md-block {
+			line-height: 2;
+		}
+	}
+
+	&-friends {
+		padding-left: 3px;
+		@include md-block {
+			text-align: right;
+		}
+		&__headline {
+			@include md-block {
+				letter-spacing: 3px;
+			}
+		}
+		.list {
+			&__link {
+				color: #848484;
+				text-decoration: none;
+				line-height: 1.75;
+				&:hover {
+					color: #dd5555;
+				}
+			}
+		}
+	}
+
+	&-social {
+		.social{
+			margin-left: 0px;
+			padding: 0;
+			width: 100%;
+			&__list {
+				flex-direction: column;
+			}
+			&__item {
+				text-align: left;
+			}
+			&__link {
+				line-height: 1.8;
+				text-decoration: none;
+				[class*=" icon-"]:before, [class^=icon-]:before {
+					margin: 0 4px 0 -8px;
+				}
+			}
+		}
+	}
+	&-image {
+		box-sizing: border-box;
+		padding-right: 10px;
+		padding-left: 3px;
+		@include md-block {
+			padding: 0;
+			width: auto;
+		}
+	}
+}

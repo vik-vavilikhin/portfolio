@@ -1,0 +1,13 @@
+.top-menu {
+	margin-top: 16px;
+	.container {
+		border-bottom: 1px solid #bfbfbf;
+		@media screen and(max-width: 992px){
+			flex-direction: column;
+		}
+		@include sm-block {
+			flex-direction: row;
+			// flex-wrap: nowrap;
+		}
+	}
+}

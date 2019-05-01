@@ -1,0 +1,27 @@
+.title {
+	font-family: 'RS';
+	font-weight: 300;
+	color: #3f3f3f;
+	margin-top: 28px;
+	.container {
+		flex-direction: column;
+	}
+	.headerline {
+		font-size: 40px;
+		@include to(1040px) {
+			font-size: 32px;
+		}
+		@include sm-block{
+			font-size: 24px;
+		}
+
+		letter-spacing: -.9px;
+		&__span {
+			font-weight: 700;
+		}
+	}
+	.description {
+		font-size: 18px;
+		color: #848484;
+	}
+}

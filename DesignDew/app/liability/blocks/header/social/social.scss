@@ -1,0 +1,29 @@
+.social {
+	@include col();
+	@include size-md(6);
+	@include md-block{
+		// align-items: center;
+		margin: 0;
+	};
+	margin-left: 7px;
+	margin-right: 0;
+	// background: #ccc;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		@include md-block{
+			justify-content: flex-end;
+		};
+	}
+
+	&__link {
+		color: #cccccc;
+		&:hover {
+			color: #dd5555;
+		}
+		[class*=" icon-"]:before, [class^=icon-]:before {
+			margin: 0 0 0 12.5px;
+		}
+	}
+}

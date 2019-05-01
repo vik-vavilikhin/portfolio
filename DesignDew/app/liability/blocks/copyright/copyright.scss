@@ -1,0 +1,44 @@
+.copyrigth {
+	font-size: 13px;
+	color: #8e8e8e;
+	line-height: 4.2;
+	@include md-block {
+		line-height: 2.2;
+	};
+	.container {
+		.breadcrumbs {
+			font-weight: bold;
+			&__item {
+				&:after {
+					content: "/";
+					margin: 0 8px 0 5px;
+				}
+				&:last-child:after {
+					@include md-block {
+						content: "";
+					};
+				}
+			}
+		}
+		&__copy {
+			margin-right: 21px;
+			@include size-md(12);
+			@include md-block {
+				text-align: center;
+				order: 1;
+				letter-spacing: 3px;
+			};
+
+		}
+		&__skype {
+			flex-grow: 1;
+			text-align: right;
+			color: #8e8e8e;
+			text-decoration: none;
+			span {
+				color: #dd5555;
+				font-weight: bold;
+			}
+		}
+	}
+}

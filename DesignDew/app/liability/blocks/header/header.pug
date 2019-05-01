@@ -1,0 +1,28 @@
+mixin header()
+	include ../mixins/mixins
+
+	-
+		//- Пункты меню
+		BreadcrumbsData = [
+			"About",
+			"Blog",
+			"Contact"
+		]
+      
+	-
+		//- Пункты меню
+		SocialData = [
+			{"icon": "icon-twitter"	 , "title": ""},
+			{"icon": "icon-vimeo"	 , "title": ""},
+			{"icon": "icon-facebook" , "title": ""},
+			{"icon": "icon-instagram", "title": ""},
+			{"icon": "icon-dribbble" , "title": ""},
+			{"icon": "icon-reddit"	 , "title": ""}
+		]
+
+	+b.HEADER.header
+		+b.wrapper
+			+b.container
+				+logo("Designdew")
+				+breadcrumbs(BreadcrumbsData)
+				+social(SocialData)

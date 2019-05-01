@@ -1,0 +1,11 @@
+.gallery {
+	margin-top: 24px;
+	.container {
+		margin-left: -15px;
+		margin-right: -15px;
+		align-items: stretch;
+		@include to(768px){
+			justify-content: center;
+		};
+	}
+}

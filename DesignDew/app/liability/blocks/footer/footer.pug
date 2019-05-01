@@ -1,0 +1,39 @@
+mixin footer()
+	include ../mixins/mixins
+	
+	-
+		// Список ссылок
+		ListData = [
+			"Creative Market",
+			"Design Inspiration",
+			"Designers List",
+			"Designs Mag",
+			"Dmonzon",
+			"Ginva",
+			"Photoshop Templates"
+		]
+	
+	-
+		//- Пункты меню
+		SocialData = [
+			{"icon": "icon-twitter"  , "title": "Twitter"},
+			{"icon": "icon-vimeo"    , "title": "Vimeo"},
+			{"icon": "icon-facebook" , "title": "Facebook"},
+			{"icon": "icon-instagram", "title": "Instagram"},
+			{"icon": "icon-dribbble" , "title": "Dribbble"},
+			{"icon": "icon-reddit"   , "title": "Reddit"}
+		]
+		
+	+b.FOOTER.footer
+		+b.wrapper
+			+b.container
+				+b.footer-slogan
+					+logo("Designdew")
+					|Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+				+b.footer-friends
+					+e.headline Friends
+					+list(ListData)
+				+b.footer-social
+					+e.headline Social Connect
+					+social(SocialData)
+				+b.IMG(src="images/footer-img.jpg", alt="#").footer-image

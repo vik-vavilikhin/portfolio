@@ -1,0 +1,63 @@
+include ../../vendor/bemto.pug/bemto
+- 
+	set_bemto_settings({
+		prefix: '',
+		element: '__',
+		modifier: '_'
+	})
+
+include ../layout/head/head
+include ../layout/body-scripts/hidden
+include ../layout/debug-grid/debug-grid
+
+include ../blocks/header/header
+include ../blocks/top-menu/top-menu
+include ../blocks/title/title
+include ../blocks/gallery/gallery
+include ../blocks/pagination/pagination
+include ../blocks/banner/banner
+include ../blocks/footer/footer
+include ../blocks/copyright/copyright
+
+
+doctype html
+html(lang='ru')
+	head
+		block head
+			+head({
+				"title": "DesignDew",
+				"author": "vav-integrity",
+				"description": "DesignDew"
+			})
+		
+	
+	block body   
+	+b.BODY.page
+		//- +debug-grid()
+		
+		block header
+			+b.HEADER.header
+			
+		block top-menu
+			+b.SECTION.top-menu
+			
+		block title
+			+b.SECTION.title
+			
+		block gallery
+			+b.SECTION.gallery
+			
+		block pagination
+			+b.SECTION.pagination
+			
+		block banner
+			+b.SECTION.banner
+			
+		block footer
+			+b.FOOTER.footer
+			
+		block copyright 
+			+b.SECTION.copyright
+			
+		block hidden
+			+hidden()

@@ -1,0 +1,17 @@
+mixin copyright()
+	include ../mixins/mixins
+	-
+		//- Пункты меню
+		BreadcrumbsData = [
+			"About",
+			"Blog",
+			"Contact"
+		]
+
+	+b.SECTION.copyrigth
+		+b.wrapper
+			+b.container
+				+e.P.copy &copy; 2016 designdew.  All rights reserved
+				+breadcrumbs(BreadcrumbsData)
+				+e.A(href="#").skype Skype: 
+					+e.SPAN Supershagar

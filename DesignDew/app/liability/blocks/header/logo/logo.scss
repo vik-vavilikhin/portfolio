@@ -1,0 +1,24 @@
+.logo {
+	@include col();
+	@include size-md(12);
+	@include md-block{
+		text-align: center;
+		margin: 0;
+	};
+	font-family: DR;
+	flex-grow: 1;
+	padding-bottom: 11px;
+	margin-left: 0;
+	&__link {
+		text-decoration: none;
+		font-size: 32px;
+		@include md-block {
+			font-size: 48px;
+		}
+		line-height: 1;
+		color: #dd5555;
+				&:hover {
+			text-shadow: 1px 1px 4px #000, 0 0 1em #dd5555;
+		}
+	}
+}

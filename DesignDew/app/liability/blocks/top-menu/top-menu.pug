@@ -1,0 +1,10 @@
+mixin top-menu()
+	include navbar/navbar
+	include search/search
+	
+	+b.SECTION.top-menu
+		+b.wrapper
+			+b.container   
+				+navbar()
+				+search()
+		

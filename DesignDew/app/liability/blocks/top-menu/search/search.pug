@@ -1,0 +1,5 @@
+mixin search()
+	+b.search
+		+e.FORM.form(name="search__form"  action="#" method="post" enctype="multipart/from-data")
+			+e.INPUT.field(type="text" name="search__field" placeholder="Search")
+			+e.BUTTON.btn(type="button")

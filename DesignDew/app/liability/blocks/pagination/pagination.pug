@@ -1,0 +1,11 @@
+mixin pagination()
+	include ../mixins/mixins
+	
+	-
+		PageNumber = ["1", "2", "3", "4", "...", "21", "22"]
+		
+	+b.SECTION.pagination
+		+b.wrapper
+			+b.container
+				+paginator(PageNumber)
+				

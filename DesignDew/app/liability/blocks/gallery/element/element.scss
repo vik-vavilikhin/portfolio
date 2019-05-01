@@ -1,0 +1,97 @@
+.element {
+	@include col();
+	@include size(3);
+	@include size-lg(4);
+	@include size-md(5);
+	@include size-sm(8);
+
+	margin-bottom: 30px;
+	border: 1px solid #bfbfbf;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
+
+	position: relative;
+	.top {
+		position: relative;
+		&:hover {
+			cursor: pointer;
+			&:before {
+				background-color: rgba(0, 0, 0, .2);
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+			.top__social {
+				display: block;
+			}
+		}
+		&__img {
+			display: block;
+			width: 100%;
+		}
+		&__social {
+			display: none;
+			position: absolute;
+			width: 115px;
+			height: 30px;
+			top: 10px;
+			left: 8px;
+			margin: 0;
+			border-radius: 2px;
+			background-color: #fefefe;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
+			color: #555555;
+			font-size: 14px;
+			line-height: 2.2;
+			padding-left: 10px;
+		}
+		.social {
+			&__download {
+				padding-left: 23px;
+				background: url('../images/icon/download.png') no-repeat left center;
+				margin-right: 10px;
+			}
+			&__like {
+				padding-left: 23px;
+				background: url('../images/icon/like.png') no-repeat left center;
+			}
+		}
+	}
+	.bottom {
+		padding: 1.0625rem;
+		overflow: hidden;
+		&__title,
+		&__date,
+		&__description {
+			@include lg-block{
+				font-size: 100%;
+			};
+		}
+		&__title {
+			text-decoration: none;
+			color: #555555;
+			font-weight: bold;
+			font-size: 15px;
+
+			&:hover {
+				color: #dd5555;
+			}
+		}
+		&__date {
+			margin-top: 8px;
+			padding-left: 2px;
+			letter-spacing: -.2px;
+			color: #b0afae;
+			font-size: 11px;
+		}
+		&__description {
+			margin-top: 9px;
+			padding-left: 2px;
+			letter-spacing: .1px;
+			color: #848484;
+			font-size: 12px;
+		}
+	}
+}

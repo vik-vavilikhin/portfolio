@@ -1,0 +1,30 @@
+.submenu {
+	@include md-block {
+		right: -10px;
+		top: 30px;
+	}
+	display: none;
+	background-color: #f9f9f9;
+	border: 1px solid #bfbfbf;
+	border-radius: 2px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.26);
+	position: absolute;
+	top: 48px;
+	width: 200px;
+	z-index: 1;
+	&__item {
+
+	}
+	&__link {
+		display: block;
+		text-decoration: none;
+		color: #3f3f3f;
+		font-size: 14px;
+		padding: 0 20px;
+		line-height: 3;
+		&:hover {
+			background: #dd5555;
+			color: #fff;
+		}
+	}
+}

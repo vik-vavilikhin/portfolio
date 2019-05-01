@@ -1,0 +1,28 @@
+mixin navbar()
+	//- Пункты меню
+	-
+		MenuData = [
+			{"title": "All",        "url": "#", "submenu": [
+				{"title": "Buttons", "url": "#"},
+				{"title": "Forms",   "url": "#"},
+				{"title": "Ui Kits", "url": "#"},
+				{"title": "Icons",   "url": "#"}
+			]},
+			{"title": "Buttons",    "url": "#", "submenu": false},
+			{"title": "Forms",      "url": "#", "submenu": false},
+			{"title": "Ui Kits",    "url": "#", "submenu": false},
+			{"title": "Icons",      "url": "#", "submenu": false},
+			{"title": "Knobs",      "url": "#", "submenu": false},
+			{"title": "Players",    "url": "#", "submenu": false},
+			{"title": "Modals",     "url": "#", "submenu": false},
+			{"title": "Nav",        "url": "#", "submenu": false},
+			{"title": "Progress",   "url": "#", "submenu": false},
+			{"title": "Scrollers",  "url": "#", "submenu": false},
+			{"title": "Search Box", "url": "#", "submenu": false},
+			{"title": "Sliders",    "url": "#", "submenu": false},
+			{"title": "Switches",   "url": "#", "submenu": false}
+		]
+
+	include ../../mixins/mixins
+	+menu(MenuData)
+		

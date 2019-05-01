@@ -1,0 +1,75 @@
+.pagination {
+	margin-top: 8px;
+	font-size: 14px;
+	.container {
+		justify-content: center;
+		.paginator {
+			flex-basis: 32.6%;
+			@include to(1040px){
+				flex-basis: 40%;
+			}
+			@include to(840px){
+				flex-basis: 50%;
+			}
+			@include sm-block {
+				flex-basis: 80%;
+			}
+
+			display: flex;
+			justify-content: space-between;
+			&__number {
+				width: 2rem;
+				height: 2rem;
+				line-height: 2rem;
+				border-radius: 50%;
+				border: 2px solid #ccc;
+				text-align: center;
+				color: #848484;
+				&:hover {
+					color: #dd5555;
+					cursor: pointer;
+				}
+				&:active {
+					color: #dd5555;
+					border: 2px solid #dd5555;
+				}
+			}
+			.ellipsis {
+				border: none;
+				line-height: 3;
+			}
+			.left,
+			.right {
+				&:after {
+					content: "";
+					display: inline-block;
+					width: 0;
+					height: 0;
+					vertical-align: -1px;
+				}
+			}
+			.left {
+				&:after {
+					margin-left: -4px;
+					border: {
+						top: .4em solid transparent;
+						right: .4em solid;
+						bottom: .4em solid transparent;
+						left: 0;
+					}
+				}
+			}
+			.right {
+				&:after {
+					margin-left: 4px;
+					border: {
+						top: .4em solid transparent;
+						right: 0;
+						bottom: .4em solid transparent;
+						left: .4em solid;
+					}
+				}
+			}
+		}
+	}
+}

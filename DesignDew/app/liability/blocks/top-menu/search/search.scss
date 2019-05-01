@@ -1,0 +1,48 @@
+.search {
+	margin-left: 25px;
+	@include size-lg(12);
+	@include size-sm(8);
+	@include lg-block{
+		margin-left: 0;
+		order: -1;
+	}
+	@include sm-block {
+		// order: 1;
+	}
+	&__form {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
+	&__field {
+		flex-grow: 1;
+		font-size: 12px;
+		min-width: 145px;
+		color: #b0afae;
+		background-color: #f9f9f9;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		padding: 8px 9px;
+		&:focus,
+		&:active {
+			outline-color: #d55;
+		}
+	}
+	&__btn {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 36px;
+		background: url('../images/icon/magnifier.png') no-repeat center;
+		border-radius: 3px;
+		border: none;
+		cursor: pointer;
+		&:focus,
+		&:active,
+		&:hover {
+			outline-color: #a2a0a0;
+			box-shadow: inset 0px 0px 10px 2px rgba(#d55, .5);
+		}
+	}
+}
