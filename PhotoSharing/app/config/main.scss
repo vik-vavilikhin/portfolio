@@ -1,0 +1,27 @@
+@import "../vendor/bourbon/core/bourbon";
+
+$DefaultWidth: 1280px;
+
+html {
+	font-size: 100%;
+}
+
+.clearfix::after,
+.upload::after,
+.description::after,
+.share::after,
+.form_mod::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.page {
+	width: 100%;
+	font-size: 1rem;
+}
+
+.row {
+	max-width: $DefaultWidth;
+	margin: 0 auto;
+}

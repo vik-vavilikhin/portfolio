@@ -1,0 +1,19 @@
+.logo {
+	text-align: center;
+	&_PosAsize {
+		font-size: 306%;
+		margin-left: 12.35%;
+	}
+	
+	&__link {
+		&_mod {
+			font-family: LB;
+			color: #676666;
+		}
+	}
+	&__part {
+		&_mod {
+			color: #F70;
+		}
+	}
+}

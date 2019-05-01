@@ -1,0 +1,32 @@
+.FileUpload {
+	position: relative;
+	cursor: pointer;
+	float: left;
+	&_mod {
+		padding: 8px;
+		margin-right: 14px;
+		width: 67%;
+		height: 49px;
+		border: 1px solid #cacaca;
+		border-radius: 4px;
+		background-image: linear-gradient(to top, white 0%, white 85%, white 90%, #e2dada 100%);
+	}
+	&__file {
+		opacity: 0;
+		cursor: pointer;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&__botton {
+		font-family: 'HNR';
+		font-size: 117%;
+		background: #C1BFBF;
+		color: #FFF;
+		padding: 5px 16px;
+		float: right;
+		border-radius: 4px;
+	}
+}

@@ -1,0 +1,23 @@
+.flex {
+	// Элементы в столбец
+	&DirectionCol {
+		flex-direction: column;
+	}
+	
+	// Элементы построчно
+	&Wrap {
+		flex-wrap: wrap;
+	}
+	
+	// Элементы по центру
+	&AiC {
+		align-items: center;
+	}
+	
+	// Элементы от края до края 
+	// с равными расстояниями между ними
+	&JcSb {
+		display: flex;
+		justify-content: space-between;
+	}
+}

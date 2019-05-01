@@ -1,0 +1,5 @@
+app/vendor
+maket/
+node_modules/
+bower.json
+package-lock.json

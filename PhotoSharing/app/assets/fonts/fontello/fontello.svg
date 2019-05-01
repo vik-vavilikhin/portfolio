@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="star-circled" unicode="&#xe800;" d="M0 350q0 207 147 354t353 146 354-146 146-354-146-354-354-146-353 146-147 354z m160 82l205-156-80-246 211 148 209-152-74 246 209 152-258 4-78 246-86-242-258 0z" horiz-adv-x="1000" />
+
+<glyph glyph-name="home" unicode="&#xe801;" d="M888 336q16-16 11-27t-27-11l-84 0 0-310q0-14-1-21t-8-13-23-6l-204 0 0 310-204 0 0-310-194 0q-28 0-35 10t-7 30l0 310-84 0q-22 0-27 11t11 27l400 402q16 16 38 16t38-16z" horiz-adv-x="900" />
+
+<glyph glyph-name="facebook" unicode="&#xf09a;" d="M535 843v-147h-87q-48 0-65-20t-17-60v-106h164l-22-165h-142v-424h-171v424h-142v165h142v122q0 104 58 161t155 57q82 0 127-7z" horiz-adv-x="571.4" />
+
+<glyph glyph-name="tumblr" unicode="&#xf173;" d="M527 108l44-132q-12-19-61-37t-99-18q-58-1-107 15t-79 41-53 59-31 67-9 66v304h-94v120q40 14 72 39t51 50 32 57 19 55 8 49q1 3 3 5t4 2h136v-237h186v-140h-186v-289q0-17 3-31t13-30 28-23 45-8q44 1 75 16z" horiz-adv-x="571.4" />
+
+<glyph glyph-name="pinterest" unicode="&#xf231;" d="M0 517q0 60 21 113t58 93 85 69 103 44 113 14q88 0 164-37t123-108 47-160q0-54-10-105t-34-99-56-83-80-58-106-21q-38 0-75 18t-54 49q-5-22-15-63t-14-53-11-40-15-39-17-35-26-44-35-48l-7-3-5 6q-9 88-9 105 0 51 12 115t37 161 29 113q-18 36-18 94 0 47 29 87t74 41q34 0 53-23t19-57q0-37-24-106t-25-105q0-35 25-58t61-23q31 0 57 14t44 38 31 53 21 61 11 62 4 56q0 96-61 150t-160 54q-111 0-186-72t-75-183q0-25 7-48t15-36 15-26 7-17q0-15-8-40t-21-25q-1 0-9 1-29 9-51 31t-34 53-18 60-6 60z" horiz-adv-x="714.3" />
+
+<glyph glyph-name="twitter" unicode="&#xf302;" d="M290 152l73 0c45 0 80-35 80-79 0-45-35-80-80-80l-79 0c-76 4-148 34-199 85-55 52-85 124-85 202l0 348c0 44 35 79 80 79 44 0 79-35 79-79l0-116 204 0c45 0 80-35 80-80 0-44-35-79-80-79l-204 0 0-73c0-70 55-123 131-128z" horiz-adv-x="443" />
+</font>
+</defs>
+</svg>

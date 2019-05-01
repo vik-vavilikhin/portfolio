@@ -1,0 +1,11 @@
+@import "../vendor/bourbon/core/bourbon";
+
+@include font-face("LB", "../fonts/Lobster/Lobster1.4", $file-formats: ttf);
+
+@include font-face("BN", "../fonts/BebasNeue/BebasNeue", $file-formats: ttf);
+
+@include font-face("HB", "../fonts/Helvetica/Helvetica CE Bold", $file-formats: ttf);
+
+@include font-face("HR", "../fonts/Helvetica/Helvetica CE Regular", $file-formats: ttf);
+
+@include font-face("HNR", "../fonts/Helvetica/HelveticaNeueLT Roman", $file-formats: ttf);

@@ -1,0 +1,25 @@
+@import "../vendor/bourbon/core/bourbon";
+
+/* =========================== */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+.hidden {
+	display: none;
+}
+
+body, ul, li, p, h1, h2, h3, a {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, li {
+	list-style: none;
+}

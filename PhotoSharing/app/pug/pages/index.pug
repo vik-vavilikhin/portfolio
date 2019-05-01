@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+	include ../blocks/head
+	body.page
+		include ../blocks/header/header
+		include ../blocks/upload/upload
+		include ../blocks/gallery/gallery
+		include ../blocks/footer/footer
+		// ================== БЛОК СКРИПТОВ ===================
+		.hidden
+		//if lt IE 9
+			script(src='libs/html5shiv/es5-shim.min.js')
+			script(src='libs/html5shiv/html5shiv.min.js')
+			script(src='libs/html5shiv/html5shiv-printshiv.min.js')
+			script(src='libs/respond/respond.min.js')
+		//- //
+			jQuery (necessary for Bootstrap's JavaScript plugins)
+		//- // <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		//- //
+			Include all compiled plugins (below), or include individual files as needed
+		//- // <script src="js/bootstrap.min.js"></script>

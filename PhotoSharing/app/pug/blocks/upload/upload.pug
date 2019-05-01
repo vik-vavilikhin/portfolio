@@ -1,0 +1,10 @@
+// ================== UPLOAD ==========================
+.row
+	.upload.upload_mod
+		p.upload__p.upload__p_mod Please select an image from your computer
+
+		form.form.form_mod(name="form-upload", action="#", method="post", enctype="multipart/from-data")
+			.FileUpload.FileUpload_mod
+				.FileUpload__botton Browse
+				input.FileUpload__file(type="file" name="file")
+			input.SubmitBotton(type="submit" name="submit" value="Upload image")

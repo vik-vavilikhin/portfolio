@@ -1,0 +1,10 @@
+// ================== GALLERY =========================
+include __slide
+.row
+	.gallery
+		- var n = 1
+		while n <= 12
+			if n < 10 
+				+slide("0" + n++)
+			else
+				+slide(n++)

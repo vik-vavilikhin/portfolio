@@ -1,0 +1,261 @@
+@import "../vendor/bourbon/core/bourbon";
+@import "../vendor/mediaqueries/media-queries";
+
+@include max-screen(1217px) {
+	.description__text {
+		line-height: 1.3;
+		font-size: 0.9rem;
+	}
+}
+// Large Devices, Wide Screens
+@include max-screen(1200px) {
+	.form_mod {
+		margin: 0 auto;
+		max-width: 55.8%;
+	}
+
+	.upload {
+		text-align: center;
+		&__p {
+			display: inline-block;
+			&_mod {
+				margin: 0 auto 21px;
+			}
+		}
+	}
+	
+	.FileUpload_mod {
+		margin: 0;
+	}
+
+	.SubmitBotton {
+		padding: 13px 10px;
+		font-size: 1.125rem;
+		float: right;
+	}
+
+	[class*=" icon-"]:before, 
+	[class^=icon-]:before {
+		font-size: 85%;
+	}
+
+	.icon-star-circled {
+		margin-left: 0;
+	}
+
+	.share__link {
+		width: 20px;
+		height: 20px;
+		line-height: 21px;
+	}
+}
+
+// Medium Devices, Desktops
+@include max-screen(992px) {
+	.SubmitBotton {
+		padding: 8px 23px;
+		font-size: 1.42rem;
+	}
+
+	.form_mod {
+		margin: 0 auto;
+		max-width: 80%;
+	}
+
+	.frame__date {
+		font-size: 1rem;
+	}
+
+	.logo_PosAsize,
+	.menu_PosAsize {
+		margin: 0 auto;
+	}
+
+	.upload__p {
+		font-size: 130%;
+	}
+
+	.description {
+		line-height: 2;
+	}
+
+	.share__text {
+		display: none;
+	}
+
+	.icon-star-circled {
+		margin-top: 0;
+	}
+
+	.share {
+		&__social {
+			display: flex;
+			justify-content: space-around;
+			width: 100%;
+			padding: 5px 0;
+		}
+		&__link {
+			margin: 0;
+			width: 25px;
+			height: 25px;
+			line-height: 26px;
+		}	
+		
+		[class*=" icon-"]:before, 
+		[class^=icon-]:before {
+			font-size: 100%;
+		}
+	}
+
+	.gallery,
+	.footer {
+		width: 90%;
+	}
+
+	.footer {
+		margin: 15px auto;
+		&__text {
+			font-size: 1rem;
+		}
+	}
+}
+
+@include max-screen(840px) {
+	.logo_PosAsize {
+		font-size: 260%;
+	}
+	.list__link_mod {
+		height: 100px;
+		width: 85px;
+	}
+	.FileUpload__botton {
+		font-size: 100%;
+	}
+	.SubmitBotton {
+		padding: 13px 10px;
+		font-size: 1.125rem;
+	}
+	.gallery {
+		flex-wrap: wrap;
+	}
+	.slide {
+		width: 30%;
+	}
+	.frame__date {
+		font-size: 1.1875rem;
+	}
+
+	.share__text {
+		display: inline-block;
+		line-height: 2.1;
+	}
+	.description__text {
+		font-size: 1rem;
+	}
+	.icon-star-circled {
+		font-size: 170%;
+	}
+}
+
+// Small Devices, Tablets
+@include max-screen(767px) {
+
+}
+@include max-screen(640px) {
+	.header_mod {
+		flex-direction: column;
+		min-height: 153px;
+		padding-top: 15px;
+	}
+	.menu_PosAsize {
+		width: 90%;
+	}
+	.list__item {
+		width: 25%;
+	}
+	.list__link_mod {
+		height: 65px;
+		width: 100%;
+		padding-top: 40px;
+	}
+	.slide {
+		width: 45%;
+	}
+	.footer__text {
+		text-align: center;
+	}
+}
+
+@include max-screen(580px) {
+	.FileUpload_mod {
+		height: 40px;
+		padding: 5px;
+		width: 65%;
+	}
+	.FileUpload__botton {
+		font-size: 90%;
+	}
+	.SubmitBotton {
+		font-size: 1rem;
+		padding: 9px 5px;
+	}
+}
+
+// Extra Small Devices, Phones
+@include max-screen(480px) {
+	.upload__p {
+		font-size: 85%;
+	}
+	.FileUpload_mod {
+		height: 35px;
+		padding: 3px;
+	}
+	.SubmitBotton {
+		font-size: 0.7rem;
+	}
+	.gallery {
+		justify-content: space-around;
+	}
+	.slide {
+		width: 90%;
+	}
+	.footer__text {
+		font-size: 0.8rem;
+	}
+}
+
+// Custom, iPhone Retina
+@include max-screen(320px) {
+
+}
+
+// ======================== //
+// Custom, iPhone Retina
+@include min-screen(320px) {
+
+}
+
+// Extra Small Devices, Phones
+@include min-screen(480px) {
+
+}
+
+// Small Devices, Tablets
+@include min-screen(768px) {
+
+}
+
+// Medium Devices, Desktops
+@include min-screen(992px) {
+
+}
+
+// Large Devices, Wide Screens
+@include min-screen(1200px) {
+
+}
+
+// Rules for a range of devices
+@include screen(320px, 768px) {
+
+}

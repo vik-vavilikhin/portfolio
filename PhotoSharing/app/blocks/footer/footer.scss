@@ -1,0 +1,10 @@
+.footer {
+	width: 77%;
+	margin: 32px auto;
+	text-align: right;
+	&__text {
+		padding-right: 12px;
+		color: #8B8A8A;
+		font-size: 1.21rem;
+	}
+}

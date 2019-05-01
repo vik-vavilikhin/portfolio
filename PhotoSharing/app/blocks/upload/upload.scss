@@ -1,0 +1,17 @@
+.upload {
+	margin: auto;
+	padding: 2.7% 0;
+	&__p {
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		&_mod {
+			color: #565555;
+			font-family: 'HB';
+			font-size: 168%;
+			margin-right: 7%;
+			letter-spacing: 0.55px;
+			margin-bottom: 21px;
+		}	
+	}
+}

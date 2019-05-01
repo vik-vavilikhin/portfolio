@@ -1,0 +1,14 @@
+.description {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+	margin-top: 0px;
+	border-bottom: 1px solid #e0dfdf;
+	&__text {
+		display: inline-block;
+		line-height: 2.3;
+		margin-left: 5px;
+		color: #979393;
+	}
+}
