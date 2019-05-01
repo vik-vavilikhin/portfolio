@@ -1,0 +1,20 @@
+/* HOME */
+
+body.home .content-wrapper{background-image:none;}
+body.home .content{
+	float:none;
+	width:100%;
+	padding:0;
+	margin:0px auto 0!important;
+}
+
+.nosidebars .article{
+	width:740px;
+}
+.table .article{
+	width:740px;  
+}
+
+.portfolio .article-block h1{
+	margin:0;
+}

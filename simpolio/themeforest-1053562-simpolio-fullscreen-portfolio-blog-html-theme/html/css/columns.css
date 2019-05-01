@@ -1,0 +1,85 @@
+
+.one_half {
+    float: left;
+    margin-right: 2%;
+	margin-bottom:35px;
+    width: 48%;
+}
+.one_half_last {
+    float: right;
+    margin: 0;
+	margin-bottom:35px;
+    width: 48%;
+}
+.one_third {
+    float: left;
+    margin-right: 5%;
+	margin-bottom:35px;
+    width: 30%;
+}
+.one_third_last {
+    float: right;
+    margin: 0;
+	margin-bottom:35px;
+    width: 30%;
+}
+.one_fourth {
+    float: left;
+    margin-right: 2.9%;
+	margin-bottom:35px;
+    width: 22.8%;
+}
+.one_fourth_last {
+    float: right;
+    margin: 0;
+	margin-bottom:35px;
+    width: 22.8%;
+}
+.one_fifth {
+    float: left;
+    margin-right: 2%;
+	margin-bottom:35px;
+    width: 18.4%;
+}
+.one_fifth_last {
+    float: right;
+    margin: 0;
+	margin-bottom:35px;
+    width: 18.4%;
+}
+.one_sixth {
+    float: left;
+    margin-right: 2%;
+	margin-bottom:35px;
+    width: 15%;
+}
+.one_sixth_last {
+    float: right;
+    margin: 0;
+	margin-bottom:35px;
+    width: 15%;
+}
+.two_thirds {
+    float: left;
+    margin-right: 2%;
+	margin-bottom:35px;
+    width: 66%;
+}
+.two_thirds_last {
+    float: right;
+    margin: 0;
+	margin-bottom:35px;
+    width: 32%;
+}
+.three_fourth {
+    float: left;
+    margin-right: 2%;
+	margin-bottom:35px;
+    width: 75.5%;
+}
+.three_fourth_last {
+    float: right;
+    margin: 0;
+	margin-bottom:35px;
+    width: 22.5%;
+}
