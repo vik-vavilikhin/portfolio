@@ -1,0 +1,26 @@
+form.form(name="feedback", id="#", method="post", action="#", enctype="multipart/from-data")
+   legend.legend 
+      h2.form__legend Contact Us
+   //- 
+   input.form__firstname(type="text", name="firstname", placeholder="Your Name")
+   input.form__date(type="date", name="date", placeholder="Daytime Number")
+   input.form__email(type="email", name="email", placeholder="Email Address")
+   input.form__city(type="text", name="city", placeholder="City")
+   //- 
+   select.form__problem(name="problem", placeholder="Problem With")
+      option(value="1") Admin panel
+      option(value="2") Shortcodes
+      option(value="3") Videos
+      optgroup(label=" ")
+      option(value="4") More...
+   //- 
+   select.form__brand(name="brand", placeholder="Brand")
+      option(value="1") Samsung
+      option(value="2") Apple
+      option(value="3") Xiaomi
+      optgroup(label=" ")
+      option(value="4", selected) More...
+   //- 
+   input.form__submit-btn(type="submit" name="submit" value="Lorem ipsum dolor")
+      
+      

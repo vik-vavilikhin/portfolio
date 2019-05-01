@@ -1,0 +1,32 @@
+@import "../vendor/smart-grid";
+
+/* =========================== */
+// @include reset;
+
+.hidden {
+   display: none;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+a {
+	margin: 0;
+	padding: 0;
+}

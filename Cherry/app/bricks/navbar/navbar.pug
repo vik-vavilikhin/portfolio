@@ -1,0 +1,23 @@
+nav.navbar
+   .navbar__btn
+      //- Вкадываем кнопку сворачивания/разворачивания меню
+      //- на маленьких экранах
+      include ../botton-closing/botton-closing
+      
+   //- Списку присвоим id=navbar-list для взаимодействия с ним
+   //- взаимодействия им из jQuery
+   ul#navbar-list.navbar__list.list
+      - 
+         //- Пункты меню
+         ListItem = [
+            "Home", 
+            "Sliders", 
+            "Portfolio", 
+            "Styles", 
+            "Blog", 
+            "Cherry", 
+            "Contact"
+         ]
+      for Item in ListItem
+         li.list__item
+            a.list__link(href="#")=Item

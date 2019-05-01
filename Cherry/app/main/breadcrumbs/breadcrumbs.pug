@@ -1,0 +1,11 @@
+section.breadcrumbs.flexible
+   .breadcrumbs__nav
+      -
+         //- Пункты меню
+         ListItem = [
+            "Home",
+            "Another page",
+            "This page"
+         ]
+      for Item in ListItem
+         a.breadcrumbs__link(href="#", target="")=Item

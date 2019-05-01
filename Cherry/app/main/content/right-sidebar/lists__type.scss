@@ -1,0 +1,64 @@
+.lists {
+   &__headline {
+      margin-bottom: 13px;
+   }
+   &__type {
+      @include xs(justify-content, center);
+      &_circle,
+      &_unstyled,
+      &_ordered {
+         @include sm(flex-basis, 32%);
+         @include xs(flex-basis, 80%);
+         @include xs(margin, 0px auto);
+         // @include xs(text-align, center);
+
+         flex-basis: 30%;
+      }
+   }
+   &__name {
+      @include sm(font-size, 60%);
+      @include xs(font-size, 100%);
+      color: #5c646e;
+      font-size: 14px;
+      margin-bottom: 4px;
+      .mnemonic {
+         @include sm(font-size, 90%);
+         @include xs(font-size, 100%);
+         font-size: 12px;
+         color: #5c646e;
+         background-color: #dedede;
+         border-radius: 2px;
+      }
+   }
+   &__nested {
+      list-style-type: disc;
+      padding-left: 1.1rem;
+      margin: 0;
+   }
+   &__ul,
+   &__unstyled,
+   &__ol {
+      @include sm(font-size, 65%);
+      @include sm(padding-left, 0.8rem);
+      @include xs(font-size, 100%);
+      @include xs(letter-spacing, 2px);
+      @include xx(font-size, 90%);
+      @include xs(letter-spacing, 1px);
+      font-size: 14px;
+      color: #6b6f74;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      padding-left: 1.5625rem;
+
+   }
+   &__unstyled {
+      @include sm(padding-left, 0.2rem);
+      list-style: none;
+      padding-left: 10px;
+   }
+   &__ol {
+      @include sm(padding-left, 1rem);
+      padding-left: 17px;
+      margin-top: 0;
+   }
+}

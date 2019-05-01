@@ -1,0 +1,18 @@
+.navbar {
+	@include xs(display, block);
+	@include xs(text-align, right);
+
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	background-color: #95161f;
+
+	&__btn {
+		@include xs(display, block);
+
+   	margin: 5px 15px;
+		// order: 1;
+		// первоночальное состояние
+   	display: none;
+	}
+}

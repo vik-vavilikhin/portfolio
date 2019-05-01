@@ -1,0 +1,6 @@
+.content {
+   @include sm(padding-bottom, 30px);
+   align-items: flex-start;
+   padding: 17px 23px 58px;
+   background-color: #fff;
+}

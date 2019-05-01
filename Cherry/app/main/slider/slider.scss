@@ -1,0 +1,38 @@
+.slider {
+   &__background {
+      background: url(../images/top-slide.png) rgba(0, 0, 0, .55) no-repeat center;
+      padding: 38px 38px 2px 38px;
+   }
+}
+
+.description {
+
+   @include size-md(9);
+   @include size-sm(12);
+   @include row-offsets();
+
+   height: 200px;
+   width: 52%;
+
+   &__title {
+      font-size: 30px;
+      color: #a5adb8;
+   }
+   &__slogan {
+      color: #282d33;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 13px;
+   }
+   &__text {
+      color: #a5adb8;
+      font-size: 18px;
+      margin-bottom: 4px;
+   }
+   &__lorem {
+      color: #d9dcdf;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.3;
+   }
+}

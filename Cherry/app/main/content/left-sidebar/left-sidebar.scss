@@ -1,0 +1,32 @@
+.left-sidebar {
+   display: flex;
+   flex-wrap: wrap;
+   flex-basis: 13.3rem;
+
+   @include md(flex, nowrap);
+   @include md(flex-grow, 1);
+   @include md(justify-content, space-between);
+   @include md(order, 1);
+   @include md(margin-top, 25px);
+
+   &__form {
+      // width: 100%;
+   }
+   &__annotation {
+      @include md(width, 100%);
+   }
+   &__headline {
+      font-size: 18px;
+      margin-bottom: 5px;
+   }
+   &__lorem {
+      color: #5c646e;
+      font-size: 12px;
+      line-height: 1.7;
+      margin-bottom: 7px;
+   }
+   &__link {
+      color: #95161f;
+      font-size: 12px;
+   }
+}

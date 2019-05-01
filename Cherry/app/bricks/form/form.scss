@@ -1,0 +1,7 @@
+.form {
+   @include md(flex-direction, row);
+   @include md(justify-content, space-around);
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+}

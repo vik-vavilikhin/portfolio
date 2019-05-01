@@ -1,0 +1,26 @@
+.logo {
+
+   @include size-sm(12);
+   @include sm(text-align, center);
+   @include sm(margin, 12px auto);
+
+   margin: 12px 9px;
+   &__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 30px;
+      color: #a5adb8;
+      span {
+         color: #ae4b5d;
+      }
+      &:hover {
+         text-shadow: 1px 1px 4px #000, 0 0 1em #fff;
+      }
+   }
+   &__slogan {
+      font-weight: bold;
+      font-size: 12px;
+      color: #656f7a;
+   }
+}

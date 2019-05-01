@@ -1,0 +1,51 @@
+.form {
+   // @include md();
+   @include sm(padding, 8px 10px 10px);
+   @include sm(margin-bottom, 20px);
+   padding: 14px 11px 31px;
+   margin-bottom: 24px;
+   background-color: #f3f3f3;
+   border: 1px solid #d8dbde;
+   .legend {
+      // @include md(width, 100%);
+      @include md(width, 60%);
+      @include md(text-align, center);
+   }
+   &__legend {
+      @include md(text-shadow, (1px 1px 4px #fff, 0 0 1em #000));
+      @include md(letter-spacing, 5px);
+      @include md(text-transform, uppercase);
+      @include sm(margin-bottom, 5px);
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 16px;
+   }
+   &__firstname,
+   &__date,
+   &__email,
+   &__city,
+   &__problem,
+   &__brand {
+      @include md(width, 45%);
+      @include sm(margin-bottom, 5px);
+      font-weight: normal;
+      font-size: 14px;
+      color: #757575;
+      padding: 7px;
+      margin-bottom: 13px;
+      background-color: #e3e4e5;
+      border: 1px solid #fffcfc;
+      border-radius: 3px;
+      box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+   }
+   &__submit-btn {
+      color: #fff;
+      font-size: 16px;
+      line-height: 2.2;
+      margin-top: 4px;
+      background-color: #95161f;
+      background-image: linear-gradient(to top, #95161f 0%, #b0252e 100%);
+      border: 5px solid white;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19);
+   }
+}

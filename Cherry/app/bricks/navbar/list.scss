@@ -1,0 +1,44 @@
+.list {
+
+	@include sm(width, 100%);
+	@include xs(display, none);
+	// @include xs(position, relative);
+
+	display: flex;
+	justify-content: space-between;
+	width: 68.4%;
+	list-style: none;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 2.2;
+	margin: 0 20px;
+	&_open {
+		// display: block;
+		@include xs(display, flex);
+		@include xs(flex-direction, column);
+		@include xs(text-align, center);
+		@include xs(letter-spacing, 4px);
+		@include xs(width, 50%);
+		@include xs(margin, 0 auto);
+		@include xs(background-color, rgba(#000, 0.2));
+		@include xs(position, relative);
+		@include xs(top, -20px);
+
+	}
+	&__item {
+		@include xs(padding, 0 10px);
+		&:hover {
+			@include xs(background-color, rgba(#fff, 0.2));
+		}
+
+		display: inline-block;
+	}
+	&__link {
+		text-decoration: none;
+		color: #fff;
+		&:hover {
+			text-shadow: 1px 1px 5px #000, 0 0 2em #fff;
+		}
+	}
+}

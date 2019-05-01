@@ -1,0 +1,34 @@
+.direction {
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 30px;
+   @include md(justify-content, space-between);
+   &__item {
+      @include md(margin-right, 0);
+      @include sm(width, 32%);
+      @include xs(width, 75%);
+      @include xs(margin, 25px auto);
+      margin-right: 16px;
+      width: 28%;
+   }
+   &__headline {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      @include md(text-align, center);
+      @include xs(text-shadow, (1px 1px 4px #fff, 0 0 1em #000));
+      @include xs(letter-spacing, .3125rem);
+      @include xs(text-transform, uppercase);
+   }
+   &__img {
+      // width: 97%;
+      border: 1px solid white;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+      > img {
+         @include xs(height, 228px);
+         display: flex;
+         // @include xs(height, 100%);
+
+      }
+   }
+}

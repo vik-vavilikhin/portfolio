@@ -1,0 +1,54 @@
+/*
+   Закругление углов таблицы
+   http://jsfiddle.net/Softlink/kF4mH/
+*/
+.table {
+   &__headline {
+      margin-bottom: 17px;
+   }
+   &__value {
+      @include md(width, 100%);
+      @include sm(height, 15rem);
+      @include sm(font-size, 9px);
+
+      @include xs(height, 13rem);
+
+      width: 43.5rem;
+      height: 17rem;
+      border-spacing: 1px;
+      font-size: 12px;
+      border-color: #fff;
+      border-radius: 10px;
+      .top-left {border-radius: 5px 0 0 0;}
+      .top-right {border-radius: 0 5px 0 0;}
+      .down-right {border-radius: 0 0 5px 0;}
+      .down-left {border-radius: 0 0 0 5px;}
+      background: #fff;
+      tbody {
+         background: #282d33;
+         // line-height: 1.5;
+      }
+      th, td {
+         @include xs(padding, 0 5px);
+         padding: 0 13px;
+      }
+      th {
+         background-color: #9c4757;
+         color: #fff;
+      }
+      td {
+         color: #9da4af;
+      }
+      .td__col-1 {
+         text-align: center;
+      }
+      .td__col-5 {
+         &_link {
+            color: #d08b98;
+            &:hover {
+               color: #9da4af;
+            }
+         }
+      }
+   }
+}

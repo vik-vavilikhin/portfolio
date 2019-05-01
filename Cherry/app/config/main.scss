@@ -1,0 +1,28 @@
+// @import "../vendor/bourbon/core/bourbon";
+@import "../vendor/smart-grid";
+html {
+	font-size: 100%;
+	font-family: Arial, sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+.page {
+   background-color: #e3e1e8;
+}
+
+.flexible {
+	max-width: 980px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.betony {
+	text-transform: uppercase;
+	color: #ae4b5d;
+}
