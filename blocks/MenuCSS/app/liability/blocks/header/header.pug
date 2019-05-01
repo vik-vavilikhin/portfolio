@@ -1,0 +1,48 @@
+-
+   MenuData = [
+      {"icon": "icon-home",             "title": "Главная",       "url": "https://github.com/vik-vavilikhin/MenuCSS", "submenu": false},
+      {"icon": "icon-basket",           "title": "Продукция",     "url": "#", "submenu":
+         [  
+            {"title": "Одежда",        "url": "#", "submenu": 
+               [
+                  {"title": "Обувь",     "url": "#", "submenu": false},
+                  {"title": "Куртки",     "url": "#", "submenu": false},
+                  {"title": "Брюки",     "url": "#", "submenu": false}
+               ]
+            },
+            {"title": "Электроника",   "url": "#", "submenu":
+               [
+                  {"title": "Камеры",     "url": "#", "submenu": false},
+                  {"title": "Компьютеры", "url": "#", "submenu": false},
+                  {"title": "Телефоны",   "url": "#", "submenu": 
+                     [
+                        {"title": "LG",     "url": "#", "submenu": false},
+                        {"title": "SONY",     "url": "#", "submenu": false},
+                        {"title": "SAMSUNG",     "url": "#", "submenu": false},
+                        {"title": "APPLE",     "url": "#", "submenu": false}
+                     ]
+                  },
+               ]
+            },
+            {"title": "Продукты питания", "url": "#", "submenu": false},
+            {"title": "Инструменты",      "url": "#", "submenu": false},
+            {"title": "Бытовая химия",    "url": "#", "submenu": false}
+         ]         
+      },
+      {"icon": "icon-cog-alt",          "title": "Услуги",    "url": "#", "submenu": 
+         [
+            {"title": "Услуга 1",      "url": "#", "submenu": false},
+            {"title": "Услуга 2",      "url": "#", "submenu": false},
+            {"title": "Услуга 3",      "url": "#", "submenu": false}
+         ]
+      },
+      {"icon": "icon-th-list",          "title": "Новости",   "url": "#", "submenu": false},
+      {"icon": "icon-envelope-open-o",  "title": "Контакты",  "url": "#", "submenu": false}
+   ]
+      
+mixin header()
+   include ../menu/menu
+   +b.HEADER.header
+      +b.wrapper
+         +b.container
+            +menu(MenuData, 'icon-menu')

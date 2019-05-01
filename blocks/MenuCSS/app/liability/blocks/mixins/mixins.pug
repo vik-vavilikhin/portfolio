@@ -1,0 +1,141 @@
+//- ========================================================
+//- Меню и сабменю
+//- Исходники взяты с форума:
+//- https://toster.ru/q/345616
+
+//- Пункты меню
+//- -
+	var MenuData = [
+		{"title": "All",        "url": "#", "submenu": [
+																		{"title": "Icons",   "url": "#"}
+																	]},
+		{"title": "Buttons",    "url": "#", "submenu": false},
+		{"title": "Sliders",    "url": "#", "submenu": false},
+		{"title": "Switches",   "url": "#", "submenu": false}
+	]
+mixin botton-closing()
+	+e.btn
+		+b.BUTTON.botton-closing(type="button" data-opener="#navbar-list")
+			+e.P.title MENU
+			+e.SPAN.line
+			+e.SPAN.line
+			+e.SPAN.line
+	
+mixin submenu(data)
+	+b.UL.__submenu.submenu__&attributes(attributes)
+		each item in data
+			+e.LI.item
+				+e.A(href= item.url).link= item.title
+
+ 
+mixin menu(data)
+	+b.NAV.navbar&attributes(attributes)
+		+botton-closing()
+		+b.UL.menu#navbar-list
+			each item in data
+				- var itemClasses = ['item']
+				//- Доп класс для пунктов с подменю
+				if (item.submenu !== false)
+					- itemClasses = itemClasses + '_dropdown'
+		  
+				+e.LI(class= itemClasses)
+					+e.A(href= item.url).link= item.title
+					if (item.submenu !== false)
+						+submenu(item.submenu)
+
+//- ===========================================================================
+//- Элемент галереи/карточка товара и т.д.
+//- -
+	DataCard = [
+		{
+			'img'      :   '01.jpg', 
+			'download' :   '10',
+			'like'     :   '130',
+			'url'      :   '#', 
+			'linkTitle':   'Latest Free PSD', 
+			'date'     :   'February 11, 2014', 
+			'desc'     :   'Simply dummy text of the printing and typesetting industry...'
+		}
+	]
+mixin element(data)
+	each item in data
+		+b.element
+			+b.__top.top__
+				+b.P.__social.social__
+					+e.download= item.download
+					+e.like= item.like
+				+e.IMG(src= 'images/' + item.img, alt="#").img
+			+b.__bottom.bottom__
+				+e.A(href= item.url).title= item.linkTitle
+				+e.P.date= item.date
+				+e.P.description= item.desc
+				
+//- ===========================================================================
+//- Логотип
+mixin logo(data)
+	+b.logo
+		+e.A(href="#").link= data
+		
+//- ===========================================================================
+//- Блок социальных иконок
+
+//- -
+	//- Пункты
+	SocialData = [
+		{"icon": "icon-twitter"	 , "title": "Twitter"},
+		{"icon": "icon-reddit"	 , "title": ""}
+	]
+	
+mixin social(data)
+	+b.social
+		+e.UL.list
+			each Item in data 
+				+e.LI.item
+					+e.A(href="#").link
+						i(class= Item.icon) 
+						|#{Item.title}
+						
+//- ===========================================================================
+//- Хлебные крошки
+
+//- -
+	//- Пункты
+	BreadcrumbsData = [
+		"Contact"
+	]
+mixin breadcrumbs(data)
+	+b.breadcrumbs
+		+e.UL.list
+			for Item in data
+				+e.LI.item
+					+e.A.link(href="#")= Item
+					
+//- ===========================================================================
+//- Список
+
+//- -
+	// Список ссылок
+	ListData = [
+		"Photoshop Templates"
+	]
+mixin list(data)
+	+b.UL.__list.list__
+		each Item in data
+			+e.LI.item: +e.A(href="#").link= Item
+
+//- ===========================================================================
+//- Нумерация страниц
+
+//- -
+		PageNumber = ["1", "2", "3", "4", "...", "21", "22"]
+
+mixin paginator(data)
+	+b.paginator
+		+e.number.left
+		each Item in data
+			- itemClasses = ['number']
+			if Item === "..."
+				+e(class= itemClasses + ' ellipsis')= Item
+			else
+				+e(class= itemClasses)= Item
+		+e.number.right

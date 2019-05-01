@@ -1,0 +1,58 @@
+mixin submenu(data, subLVL, idNum)
+   - var iconLabel      = ['icon-down-open']       //- Стрелка-иконка
+   - var SubMenuLvl     = ['submenu-' + subLVL]    //- Класс для уровня подменю
+   - var itemClasses    = ['item']                 //- Класс для пунктов подменю 
+   - var idNum          = 1                        //- ID для работы Input и Label
+   - subLVL++                                      //- Увеличиваем уровень подменю на 1
+                                                   //- после каждого прохода
+   //- Формируем подменю
+   +b.UL(class= SubMenuLvl + "__")&attributes(attributes)
+      each value in data
+         //- Пункты подменю   
+         +e.LI(class= itemClasses)
+            if (value.submenu == false)
+               +e.A(href= value.url).link= value.title
+         
+            if (value.submenu !== false)
+               //- Проверяем наличие следующего уровня подменю
+               //- в случае наличия данных в "submenu", повторяем mixin
+               +b.INPUT(id="submenu-" + subLVL + "-" + idNum name="toggle" type="checkbox").input.toggleSubMenu
+               +e.A(href= value.url).link= value.title
+               +b.LABEL(for="submenu-" + subLVL + "-" + idNum).label.toggleSubMenu
+                  +b.I(class= "icon " + iconLabel)
+               - idNum++
+               +submenu(value.submenu, subLVL)
+            
+mixin menu(data, iconMenu)
+   - var iconLabel      = ['icon-down-open']       //- Стрелка-иконка
+   - var itemClasses    = ['item']                 //- Класс для пунктов меню
+   - var subLVL         = 1                        //- Уровень подменю
+   - var idNum          = 1                        //- ID для работы Input и Label
+   
+   +b.NAV.navbar&attributes(attributes)
+      //- Кнопка для адаптиного меню
+      +b.INPUT(id="menu" name="toggle" type="checkbox").input.toggleMenu
+      +b.LABEL(for="menu").label.toggleMenu
+         +b.I(class= "icon " + iconMenu)
+         |МЕНЮ
+      
+      //- Формируем главное меню
+      +b.UL.menu
+         each value in data
+            //- Пункты Главного меню
+            +e.LI(class= itemClasses)
+               if (value.submenu == false)
+                  +e.A(href= value.url).link
+                     +b.I(class= "icon " + value.icon)
+                     |#{value.title}
+               //- Если значение "submenu" не пустое, добавляем метку подменю
+               //- и формируем первый уровнь подменю
+               if (value.submenu !== false)
+                  +b.INPUT(id="submenu-" + subLVL + "-" + idNum name="toggle" type="checkbox").input.toggleSubMenu
+                  +e.A(href= value.url).link
+                     +b.I(class= "icon " + value.icon)
+                     |#{value.title}
+                  +b.LABEL(for="submenu-" + subLVL + "-" + idNum).label.toggleSubMenu
+                        +b.I(class= "icon " + iconLabel)
+                  - idNum++
+                  +submenu(value.submenu, subLVL)

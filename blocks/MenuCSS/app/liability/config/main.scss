@@ -1,0 +1,26 @@
+@import "../../vendor/smart-grid";
+// @import "../../vendor/font-face";
+
+// @include font-face("DR", "../fonts/Damion Regular", 400, normal, eof ttf woff woff2 svg);
+// @include font-face("RS", "../fonts/RobotoSlab Bold", 700, bold, eof ttf woff woff2 svg);
+// @include font-face("RS", "../fonts/RobotoSlab Regular", 400, normal, eof ttf woff woff2 svg);
+// @include font-face("RS", "../fonts/RobotoSlab Light", 300, light, eof ttf woff woff2 svg);
+
+@include reset;
+
+html {
+	font-size: 100%;
+	font-family: Arial, sans-serif;
+}
+.page {
+	background-image: url(../images/ep_naturalwhite.png);
+}
+
+.wrapper {
+	@include wrapper();
+}
+
+.container {
+	@include row-flex();
+	justify-content: center;
+}

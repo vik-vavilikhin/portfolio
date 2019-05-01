@@ -1,0 +1,239 @@
+$border-color: #868684;
+$background-color: #b1b1b1;
+$main-gradient: linear-gradient(to bottom, #eee 0%, $background-color 100%);
+$hover-gradient: linear-gradient(to bottom, #7d7e7d 0%, #0e0e0e 100%);
+$lvl: 3;
+
+.navbar {
+   flex-basis: 100%;
+   position: relative;
+   .input {
+      &.toggleMenu,
+      &.toggleSubMenu {
+         &[type="checkbox"]{
+            display: none;
+         }
+      }
+   }
+   .label {
+      display: block;
+      &.toggleSubMenu {
+         position: absolute;
+         top: 0;
+         right: 40px;
+      }
+   }
+}
+
+.icon {
+   position: absolute;
+   top: 13px;
+   left: 18px;
+   font-size: 18px;
+   &.icon-down-open {
+      font-size: 12px;
+      &:before {
+         transition: all 0.2s;
+      }
+   }
+}
+
+.menu {
+   display: flex;
+   justify-content: center;
+   &__item {
+      border-right: 1px solid $border-color;
+      &:first-child {
+         border-left: 1px solid $border-color;
+      }
+      &:last-child {
+         border-right: 1px solid $border-color;
+      }
+   }
+}
+
+@for $i from 1 through $lvl {
+   .menu,
+   .submenu-#{$i} {
+      &__item {
+         position: relative;
+         @for $i from 1 through $lvl {
+            &:hover {
+               > .submenu-#{$i} {
+                  display: block;
+               }
+               > .label {
+                  &.toggleSubMenu {
+                     .icon-down-open {
+                        &:before {
+                           transform: rotate(-90deg);
+                           color: #fff;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      &__link {
+         color: #000;
+         display: block;
+         background: $main-gradient;
+         padding: 15px 30px 15px 45px;
+         font-size: 14px;
+         text-decoration: none;
+         text-transform: uppercase;
+         transition: all 0.3s ease;
+         &:hover {
+            background: $hover-gradient;
+            color: #fff;
+            box-shadow: 1px 5px 10px -5px #000;
+            transition: all 0.3s ease;
+         }
+      }
+   }
+}
+
+@for $i from 1 through $lvl {
+   .submenu-#{$i} {
+      display: block;
+      position: absolute;
+      min-width: 150px;
+      display: none;
+      &__item {
+         border: 1px solid lighten($border-color, 15%);
+         margin: 1px 0;
+      }
+      &__link {
+         padding: 10px;
+         text-transform: none;
+         background: lighten($background-color, 20%);
+         &:hover {
+            background: $hover-gradient;
+         }
+      }
+   }
+}
+
+@for $i from 2 through $lvl {
+   .submenu-#{$i} {
+      &__submenu {
+         position: relative;
+      }
+   }
+}
+
+@for $i from 2 through $lvl {
+   .submenu-#{$i} {
+      position: absolute;
+      right: -152px;
+      top: -2px;
+   }
+}
+
+/* =============================
+   Настройка адаптивного меню
+============================= */
+.label.toggleMenu {
+   background: $main-gradient;
+   display: block;
+   padding: 15px 45px;
+   text-transform: uppercase;
+   font-size: 14px;
+   cursor: pointer;
+   position: relative;
+   display: none;
+}
+
+@media all and(max-width: 800px) {
+   .menu {
+      overflow: hidden;
+      display: none;
+      // display: block;
+      // min-height: 0;
+   }
+
+   @for $i from 1 through $lvl {
+      .submenu-#{$i} {
+         right: auto;
+         top: auto;
+         &__item {
+            margin: 0;
+         }
+      }
+   }
+   @for $i from 1 through $lvl {
+      .menu,
+      .submenu-#{$i} {
+         display: block;
+         max-height: 0;
+         transition: max-height 0.5s;
+      }
+   }
+   .navbar{
+      .label {
+         display: block;
+         &.toggleSubMenu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            display: block;
+
+            > .icon{
+               position: relative;
+               display: block;
+               &:before {
+                  position: absolute;
+                  right: 30px;
+                  transition: all 0.2s;
+               }
+            }
+         }
+      }
+
+      .input {
+         &:checked {
+            + .label {
+               background-image: $hover-gradient;
+               color: #fff;
+            }
+         }
+      }
+
+      .input {
+         &.toggleMenu,
+         &.toggleSubMenu {
+            &:checked {
+               @for $i from 1 through $lvl {
+                  ~ .menu,
+                  ~ .submenu-#{$i} {
+                     display: block;
+                     position: relative;
+                     max-height: 5000px;
+                     transition: max-height 2s ease-in;
+                  }
+                  ~ .menu__link,
+                  ~ .submenu-#{$i}__link {
+                     background: $hover-gradient;
+                     color: #fff;
+                  }
+               }
+               ~ .label {
+                  &.toggleSubMenu {
+                     .icon-down-open {
+                        &:before {
+                           transform: rotate(-180deg);
+                           color: #fff;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
