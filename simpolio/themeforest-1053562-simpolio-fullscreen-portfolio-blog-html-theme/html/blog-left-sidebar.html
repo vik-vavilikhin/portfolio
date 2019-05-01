@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head>
+	<title>Simpolio - Fullscreen HTML template</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+
+<!-- styles -->
+	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/classes.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/pages.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/feedback.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/columns.css" type="text/css" media="screen" />
+	<!--[if IE 7]>
+		<style type='text/css'>
+			body{
+			  word-wrap:break-word;
+			}
+			.main-wrapper {
+				top: 80px;
+			}
+		</style>  
+	<![endif]-->
+<!-- end styles -->
+
+<!-- start scripts -->
+	<script type="text/javascript" src="js/jquery.min.1.6.2.js"></script>
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/supersized.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/Colaborate.js"></script>
+<!-- end scripts -->
+
+<!-- background slides -->
+	<script type="text/javascript">
+	jQuery(function($){
+		jQuery.supersized({
+			slides:
+				[
+					{image:'http://placehold.it/1000&text=Your+custom+image+size'},
+					{image:'http://placehold.it/1000&text=Your+custom+image+size'},
+					{image:'http://placehold.it/1000&text=Your+custom+image+size'},
+					{image:'http://placehold.it/1000&text=Your+custom+image+size'}
+				]
+		});
+	});
+	</script> 
+
+</head>
+<body class="page">
+	<div class="home-bg"></div> 
+	<!-- start left wrapper -->	
+	<div class="menu-logo">
+		<!-- start logo -->
+		<div class="logo">
+			<a href="index.html">
+				<img src="i/logo.png" alt="Simpolio" />
+			</a>
+		</div>
+		<!-- end logo -->
+
+		<!-- start navigation -->
+		<div class="nav-top-wrapper">
+			<ul class="nav-top">
+				<li>
+					<a title="title" href="index.html">Home</a>
+				</li>
+				<li>
+					<a title="What’s new?" href="blog-right-sidebar.html">Blog</a>					
+				</li>
+				<li>
+					<a title="Only fresh ideas!" href="portfolio-three-column.html">Portfolio</a>
+						<!-- start sub-menu -->
+						<ul class="sub-menu sub-menu-wrapper">
+							<li>
+								<a title="" href="portfolio-one-column.html">One column</a>
+							</li>
+							<li>
+								<a title="" href="portfolio-two-column.html">Two columns</a>
+							</li>
+							<li>
+								<a title="" href="portfolio-three-column.html">Three columns</a>
+							</li>
+						</ul>
+						<!-- end sub-menu -->
+				</li>
+				<li>
+					<a title="What’s new?" href="gallery.html">Gallery</a>				
+				</li>
+				<li>
+					<a title="What’s new?" href="#">Pages</a>
+					<!-- start sub-menu -->
+						<ul class="sub-menu sub-menu-wrapper">
+							<li>
+								<a title="" href="portfolio-single.html">Portfolio Item</a>
+							</li>
+							<li>
+								<a title="" href="blog-single.html">Blog Item</a>
+							</li>	
+							<li>
+								<a title="" href="single.html">About me</a>
+							</li>
+						</ul>
+						<!-- end sub-menu -->					
+				</li>
+				<li>
+					<a title="Contact" href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</div>
+		<!-- end navigation -->
+	</div>
+	<!-- end left wrapper -->	
+
+	<!-- start main wrapper -->	
+	<div class="main-wrapper">
+		<div class="main">
+			<!-- srart title wrapper -->
+			<div class="title-wrapper">
+				<div class="title clearfix">
+					<h1>Blog</h1>
+					<div class="desc">/ What's new?</div>			
+				</div>
+			</div>
+			<!-- end title wrapper -->
+			<!-- start content wrapper -->
+			<div class="content-wrapper clearfix">
+				<div class="content clearfix">
+					<!-- start sidebar -->
+					<ul id="sidebar-left">
+						<li class="widget widget_search">
+							<h4>Search</h4>
+							<form id="searchform" method="get" action="">
+								<div>
+									<label class="screen-reader-text" for="s">Search for:</label>
+									<input id="s" name="s" value="" type="text" />
+									<input id="searchsubmit" value="Search" type="submit" />
+								</div>
+							</form>
+						</li>
+						
+						<li class="widget widget_recent_comments">
+							<h4>Recent Comments</h4>
+							<ul id="recentcomments">
+								<li class="recentcomments">admin on 
+									<a href="#">Consectetuer adipiscing</a>
+								</li>
+								<li class="recentcomments">admin on 
+									<a href="#">Consectetuer adipiscing</a>
+								</li>
+								<li class="recentcomments">admin on 
+									<a href="#">Consectetuer adipiscing</a>
+								</li>
+								<li class="recentcomments">admin on 
+									<a href="#">Consectetuer adipiscing</a>
+								</li>
+							</ul>
+						</li>
+								
+						<li class="widget simpolio_twitter_widget">
+							<h4>Twitter updates</h4>
+							<div class="simpolio-twitter-widget clearfix">
+								<ul id="twitter_update_list">
+									<li></li>
+								</ul>
+								<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+								<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/envato.json?callback=twitterCallback2&amp;count=3"></script>
+							</div>
+						</li>
+					
+						<li class="widget widget_links">
+							<h4>Blogroll</h4>
+							<ul class="xoxo blogroll">
+								<li>
+									<a href="http://codex.wordpress.org/">Documentation</a>
+								</li>
+								<li>
+									<a href="http://wordpress.org/extend/plugins/">Plugins</a>
+								</li>
+								<li>
+									<a href="http://wordpress.org/extend/ideas/">Suggest Ideas</a>
+								</li>
+								<li>
+									<a href="http://wordpress.org/support/">Support Forum</a>
+								</li>
+								<li>
+									<a href="http://wordpress.org/extend/themes/">Themes</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- end sidebar -->
+					<!-- start content -->
+					<div class="article">
+						<!-- start blog item -->
+						<div class="content-area"> 
+							<h2>  
+								<a href="#">Consectetuer adipiscing</a>	 
+							</h2>
+							<!-- start image -->
+							<div class="image-full">
+								<div class="preload">
+									<a class="hover" title="" href="#" rel=" hover">
+										<img title="Image title" alt="Image" src="http://placehold.it/490x188" width="490" height="188" />
+										<span class="hover"></span>
+										<span class="zoom"></span>
+									</a>
+								</div>
+							</div>
+							<!-- end image -->
+							<!-- start meta -->
+							<div class="info clearfix">
+								<span class="time">Posted at May 10, 2011</span>  
+								<span class="tags">In 
+									<a title="View all posts in Business" href="#" rel="category tag">Business</a>,
+									<a title="View all posts in Freelance" href="#" rel="category tag">Freelance</a>
+								</span>		
+								<span class="author">By admin</span>		
+								<span class="comments"><a href="#">5 Comments</a></span>
+							</div>
+							<!-- end meta -->
+							<!-- start entry -->
+							<div class="post-entry">
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+								<p style="padding-top: 10px;">
+									<a class="read-more-a" href="#">
+										<span class="read-more">read more</span>
+									</a>
+								</p>
+							</div>
+							<!-- end entry -->
+						</div>
+						<!-- end blog item -->
+						
+						<!-- start blog item -->
+						<div class="content-area"> 
+							<h2>  
+								<a href="#">Lorem Ipsum which looks reasonable</a>	 
+							</h2>
+							<!-- start image -->
+							<div class="image-full">
+								<div class="preload">
+									<a class="hover" title="" href="#" rel=" hover">
+										<img title="Image title" alt="Image" src="http://placehold.it/490x188" width="490" height="188" />
+										<span class="hover"></span>
+										<span class="zoom"></span>
+									</a>
+								</div>
+							</div>
+							<!-- end image -->
+							<!-- start meta -->
+							<div class="info clearfix">
+								<span class="time">Posted at Apr 26, 2011</span>
+								<span class="tags">In 
+									<a title="View all posts in Freelance" href="#" rel="category tag">Freelance</a>,
+									<a title="View all posts in Web-sites" href="#" rel="category tag">Web-sites</a>
+								</span>
+								<span class="author">By admin</span>
+								<span class="comments">
+									<a href="#">2 Comments</a>
+								</span>
+							</div>
+							<!-- end meta -->
+							<!-- start entry -->
+							<div class="post-entry">
+								<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle</p>
+								<p style="padding-top: 10px;">
+									<a class="read-more-a" href="#">
+										<span class="read-more">read more</span>
+									</a>
+								</p>
+							</div>
+							<!-- end entry -->
+						</div>
+						<!-- end blog item -->
+			  
+						<!-- start blog item -->
+						<div class="content-area"> 
+							<h2>  
+								<a href="#">The first line of Lorem Ipsum</a>	 
+							</h2>
+							<!-- start image -->
+							<div class="image-full">
+								<div class="preload">
+									<a class=" hover" title="" href="#" rel=" hover">
+										<img title="Image title" alt="Image" src="http://placehold.it/490x188" width="490" height="188" />
+										<span class="hover"></span>
+										<span class="zoom"></span>
+									</a>
+								</div>
+							</div>
+							<!-- end image -->
+							<!-- start meta -->
+							<div class="info clearfix">
+								<span class="time">Posted at Apr 26, 2011</span>
+								<span class="tags">In 
+									<a title="View all posts in Freelance" href="#" rel="category tag">Freelance</a>
+								</span>
+								<span class="author"> By admin</span>
+								<span class="comments">
+									<a href="#">1 Comment</a>
+								</span>
+							</div>
+							<!-- end meta -->
+							<!-- start entry -->
+							<div class="post-entry"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+							<p style="padding-top: 10px;">
+								<a class="read-more-a" href="#">
+									<span class="read-more">read more</span>
+								</a>
+							</p>
+							</div>
+							<!-- end entry -->
+						</div>
+						<!-- end blog item -->	
+						<!-- start pagenav -->
+						<div class="pagenav">
+							<span class="pages">Page 1 of 2</span>
+							<a class="page active" title="1" href="#">1</a>
+							<a class="page" title="2" href="#">2</a>
+						</div>
+						<!-- end pagenav -->
+					</div>
+					<!-- end content -->
+				</div>
+			</div>
+			<!-- end content wrapper -->
+			<!-- srart footer -->
+			<div class="footer">
+				<!-- srart copyright -->
+				<div class="copywrap">
+					Copyright &copy; 2011 SimpolioTheme by
+					<a href="http://themeforest.net/user/kotofey?ref=kotofey">kotofey</a> 
+					for 
+					<a href="http://themeforest.net/?ref=kotofey">ThemeForest.net</a> 
+				</div>
+				<!-- end copyright -->
+				
+				<!-- srart footer menu -->
+				<div class="footer-links">
+					<ul class="footer_menu">
+						<li>
+							<a href="#">About me</a>
+						</li>
+						<li>
+							<a href="#">My works</a>
+						</li>
+						<li>
+							<a href="#">Sitemap</a>
+						</li>
+						<li>
+							<a href="#">Blog</a>
+						</li>
+						<li>
+							<a href="#">Buy now</a>
+						</li>
+					</ul>
+				</div>
+				<!-- end footer menu -->
+			</div>
+			<!-- end footer -->
+		</div>  
+	</div>
+	<!-- end main wrapper -->
+	
+</body>
+</html>
