@@ -1,0 +1,47 @@
+mixin menu(data)
+	+b.NAV.navbar
+		+b.UL.menu
+			each Item in data
+				+e.LI.item
+					+e.A(href= Item.link).link #{Item.title}
+					
+mixin gallery-teams(data)
+	+b.DIV.gallery
+		each Item in data
+			+b.DIV.item
+				+e.IMG(src="" + Item.img, alt= Item.alt).img
+				+e.DIV.popup
+					+e.A(href= Item.link).link sokina jue
+
+
+mixin teams()
+	- 
+		dataMenu = [
+			{"title": "Facebook", "link": "#"},
+			{"title": "Dribble",  "link": "#"},
+			{"title": "Behance",  "link": "#"},
+			{"title": "Twiter",   "link": "#"}
+		]
+	-
+		dataGallery = [
+			{"img": "https://picsum.photos/197/214?random", "alt": "01", "link": "#"},
+			{"img": "https://picsum.photos/197/214?random", "alt": "02", "link": "#"},
+			{"img": "https://picsum.photos/197/214?random", "alt": "03", "link": "#"},
+			{"img": "https://picsum.photos/197/214?random", "alt": "04", "link": "#"}
+		]
+	+b.SECTION.teams
+		+b.DIV.container
+			+b.DIV.description
+				+e.H2.title Meet our team
+				+e.text Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore Ui / Ux , print template.
+			
+			+b.DIV.presentations
+				+b.DIV.main-team
+					+e.IMG(src="https://picsum.photos/321/458?random" alt="#")
+				
+				+b.DIV.mark-waugh
+					+e.H3.title mark waugh
+					+e.P.text Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore Ui / Ux , print template.
+					+b.DIV.social-block
+						+menu(dataMenu)
+					+gallery-teams(dataGallery)

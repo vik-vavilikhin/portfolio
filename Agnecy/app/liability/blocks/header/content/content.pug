@@ -1,0 +1,20 @@
+mixin content()
+	script.
+		function movieUp(element) {
+			//- element.style = "display: none;";
+			//- +e.IFRAME(src="https://www.youtube.com/embed/mGAhp4RPWH8" frameborder="2" allow="autoplay; encrypted-media" allowfullscreen);
+		}
+		
+			
+	include ../../button/button
+	+b.DIV.content
+		+b.DIV.description
+			+e.H1.title our strong organaisation
+			+e.P.text Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt  ut labore et. ectetur adig ipis cing elit, sed do eiusmod tempor incididunt.
+			+button('Contact Us')
+		+b.DIV.relation
+			+e.DIV.offset
+			+e.DIV.content
+				+e.DIV.video
+					img(src="images/icon/Vedio-Icon.png", alt="#" onclick="movieUp(this)")
+			

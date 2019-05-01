@@ -1,0 +1,40 @@
+mixin item(data)
+	each Item in data
+		+b.DIV.item
+			+e.IMG(src="images/icon/" + Item.img).img
+			+e.H3.title #{Item.title}
+			+e.P.text #{Item.text}
+		
+mixin amenities()
+	include ../button/button
+	-
+		dataServices = [
+			{
+				"title": "Management",       
+				"img":   "Settings.png",  
+				"text":  "Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioe.Lorem ipsum new idolor"
+			},
+			{
+				"title": "UI /UX Design",    
+				"img":   "Pencil.png",    
+				"text":  "Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioe.Lorem ipsum new idolor sit amet,"
+			},
+			{
+				"title": "Logo / Branding",  
+				"img":   "Diamond.png",   
+				"text":  "Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioeew idolor sit amet,"
+			},
+			{
+				"title": "Animation",        
+				"img":   "Truck.png",     
+				"text":  "Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioe.Lorem ipsum new idolor sit amet, consect netur."
+			}
+		]
+	+b.SECTION.amenities
+		+b.DIV.container
+			+b.DIV.description
+				+e.H2.title do you know we can provide for you ?
+				+e.text Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.Lorem ni ipsum dolor sit amet, consectetur adipis cing elit, ed doi eiusmod tempor incididunt ut labore et.
+				+button("Learn More")
+			+b.DIV.services
+				+item(dataServices)

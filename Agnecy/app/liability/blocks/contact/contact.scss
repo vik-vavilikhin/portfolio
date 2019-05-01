@@ -1,0 +1,107 @@
+.contact {
+	margin-top: 92px;
+	// position: relative;
+	.description,
+	.contact-form {
+		width: 58.5%;
+	}
+	.description {
+		&:after {
+			margin-bottom: 75px;
+		}
+		&__title,
+		&__text {
+			text-align: left;
+		}
+		&__title {
+			margin-bottom: 34px;
+		}
+		&__text {
+			margin-bottom: 49px;
+		}
+	}
+	.wrapper {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.container {
+			width: 100%;
+		}
+		.contact-form {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			&__input-name,
+			&__input-email,
+			&__message,
+			&__button {
+				background: #ccc;
+				line-height: 1.89;
+				font-size: 18px;
+				letter-spacing: .5px;
+				color: rgba(0, 0, 0, .7);
+				border-radius: 10px;
+				border: none;
+				padding: 18px 52px;
+				&:active,
+				&:focus {
+					outline-color: $active-color;
+					box-shadow: inset (0px 0px 10px lighten($active-color, 10%));
+				}
+			}
+			
+			&__input {
+				&-name,
+				&-email {
+					flex-basis: 32%;
+				}
+			}
+
+			&__message,
+			&__button {
+				flex-basis: 100%;
+			}
+			&__button {
+				background: $active-color;
+				color: #ffffff;
+				text-transform: uppercase;
+				padding: 19px 0;
+			}
+			&__message {
+				margin: 43px 0;
+				padding: 25px 51px;
+			}
+		}
+	}
+	.contact-info {
+		display: flex;
+		width: 33.6%;
+		// max-width: 36.46%;
+		background-color: #2d2d2d;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		&__filling {
+			opacity: 0.8;
+			color: #ffffff;
+			line-height: 1.75;
+			margin: auto 25px auto 79px;
+		}
+		&__title {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 1.89;
+			letter-spacing: 0.5px;
+			margin-bottom: 20px;
+		}
+		&__address {
+			margin-bottom: 20px;
+		}
+		&__mail {
+			margin-bottom: 20px;
+		}
+	}
+}

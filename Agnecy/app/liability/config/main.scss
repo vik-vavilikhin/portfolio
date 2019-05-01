@@ -1,0 +1,64 @@
+// ============== variables ==================
+$bg-block: #f5f0dd;
+$active-color: #ff2d2d;
+$dark-color: #313030;
+
+// ============= imports =====================
+@import "../../vendor/smart-grid";
+@import "../../vendor/font-face";
+
+// ============= includes ====================
+@include reset;
+
+@include font-face("R", "../fonts/OpenSansRegular", 400, normal, eof ttf woff woff2 svg);
+@include font-face("I", "../fonts/OpenSansItalic", 400, italic, eof ttf woff woff2 svg);
+@include font-face("SB", "../fonts/OpenSansSemiBold", 600, semi-bold, eof ttf woff woff2 svg);
+@include font-face("B", "../fonts/OpenSansBold", 700, bold, eof ttf woff woff2 svg);
+@include font-face("EB", "../fonts/OpenSansExtraBold", 800, extra-bold, eof ttf woff woff2 svg);
+
+html {
+	font-size: 100%;
+	font-family: 'R';
+}
+
+.page {
+	h1 {
+		font-family: 'EB';
+	}
+	h2 {
+		font-family: 'B';
+	}
+	h3, a {
+		font-family: 'SB';
+	}
+}
+
+.container {
+	@include wrapper();
+	padding-left: 26px;
+	padding-right: 24px;
+}
+
+.description {
+	&:after {
+		content: "";
+		display: block;
+		width: 132px;
+		height: 3px;
+		background: $active-color;
+	}
+	&__title {
+		text-transform: uppercase;
+		font-weight: bold;
+		line-height: 1.31;
+		opacity: 0.8;
+		font-size: 42px;
+		letter-spacing: 0.4px;
+		color: rgba(0, 0, 0, 0.8);
+	}
+	&__text {
+		line-height: 1.75;
+		opacity: 0.7;
+		color: rgba(0, 0, 0, 0.7);
+	}
+}

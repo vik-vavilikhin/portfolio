@@ -1,0 +1,8 @@
+mixin subscribe()
+	+b.SECTION.subscribe
+		+b.DIV.container
+			+b.H3.subscribe-title Design tips, tricks, and freebies. Delivered weekly.
+			+b.P.subscribe-text Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod.
+			+b.FORM(action="#" method="post").subscribe-form
+				+e.INPUT(type="email" name="email" id="email" placeholder="Email Address...").input-email
+				+e.BUTTON(type="submit").button subscribe

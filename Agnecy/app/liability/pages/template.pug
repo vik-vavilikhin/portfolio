@@ -1,0 +1,59 @@
+include ../../vendor/bemto.pug/bemto
+- 
+	set_bemto_settings({
+		prefix: '',
+		element: '__',
+		modifier: '_'
+	})
+
+include ../layout/head/head
+include ../layout/body-scripts/hidden
+include ../layout/debug-grid/debug-grid
+
+include ../blocks/header/header
+include ../blocks/amenities/amenities
+include ../blocks/products/products
+include ../blocks/teams/teams
+include ../blocks/subscribe/subscribe
+include ../blocks/contact/contact
+include ../blocks/footer/footer
+
+
+doctype html
+html(lang='ru')
+	head
+		block head
+			+head({
+				"title": "Agnecy",
+				"author": "vav-integrity",
+				"description": "Agnecy",
+			})
+		
+	
+	block body   
+	+b.BODY.page
+		//- +debug-grid()
+		
+		block header
+			+b.HEADER.header
+		
+		block amenities
+			+b.SECTION.amenities
+			
+		block products
+			+b.SECTION.products
+			
+		block teams
+			+b.SECTION.teams
+			
+		block subscribe
+			+b.SECTION.subscribe
+			
+		block contact
+			+b.SECTION.contact
+			
+		block footer
+			+b.SECTION.footer
+			
+		block hidden
+			+hidden()

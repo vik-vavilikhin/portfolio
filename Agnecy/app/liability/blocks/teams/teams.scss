@@ -1,0 +1,107 @@
+.teams {
+	margin-top: 105px;
+	.description {
+	width: 36%;
+		&:after {
+			margin-bottom: 69px;
+		}
+		&__title,
+		&__text {
+			text-align: left;
+		}
+		&__title {
+			margin-bottom: 23px;
+		}
+		&__text {
+			margin-bottom: 28px;
+		}
+	}
+	.presentations {
+		display: flex;
+		justify-content: space-between;
+		.main-team {
+			flex-basis: 25.6%;
+			width: 321px;
+			height: 458px;
+		}
+		.mark-waugh {
+			flex-basis: 68.5%;
+			display: flex;
+			flex-direction: column;
+			&__title {
+				padding-top: 6px;
+				font-size: 30px;
+				opacity: 0.8;
+				text-transform: uppercase;
+				font-weight: 600;
+				letter-spacing: 0.3px;
+				color: rgba(0, 0, 0, 0.8);
+				margin-bottom: 20px;
+			}
+			&__text {
+				width: 74%;
+				opacity: 0.7;
+				line-height: 1.75;
+				color: rgba(0, 0, 0, 0.7);
+				margin-bottom: 36px;
+			}
+			.social-block {
+				margin-bottom: 63px;
+				.menu {
+					display: flex;
+					flex-direction: row;
+					margin: auto -11px;
+					opacity: 0.8;
+					&__item {
+						margin: 0 11px;
+					}
+					&__link {
+						font-style: italic;
+						text-decoration: none;
+						font-size: 18px;
+						line-height: 1.33;
+						letter-spacing: 0.9px;
+						color: rgba(0, 0, 0, 0.8);
+						&:hover {
+							opacity: 1;
+							color: $active-color;
+						}
+					}
+				}
+			}
+			.gallery {
+				display: flex;
+				justify-content: space-between;
+				.item {
+					position: relative;
+					overflow: hidden;
+					&__popup {
+						transition: all .3s;
+						position: absolute;
+						bottom: -37px;
+						left: 0;
+						width: 100%;
+						height: 37px;
+						background: rgba(0,0,0,.5);
+						text-align: center;
+					}
+					&__img {
+						&:hover ~ .item__popup {
+							bottom: 5px;
+						}
+					}
+					&__link {
+						display: block;
+						line-height: 2.2;
+						text-decoration: none;
+						text-transform: uppercase;
+						font-size: 18px;
+						font-weight: 600;
+						letter-spacing: 0.2px;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
