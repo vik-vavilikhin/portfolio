@@ -38,4 +38,4 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   } tabTarget(parentTabs, tabs, tabContent);
-})
+});
