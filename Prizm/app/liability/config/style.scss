@@ -87,7 +87,8 @@ a {
 b, strong {
 	font-weight: bold;
 }
-/* ========= nav =========== */
+
+/* ========= button ======== */
 .button {
   display: inline-block;
   width: 100%;
@@ -117,10 +118,19 @@ b, strong {
   }
 }
 /* ========= nav =========== */
-.nav {
+.scroll {
   position: fixed;
+  overflow-y: auto;
   left: 0;
   top: 0;
+  width: calc(308px - 15px);
+  height: 100vh;
+  overflow: hidden;
+  &__nav {
+    overflow-y: auto;
+  }
+}
+.nav {
   width: 308px;
   height: 100vh;
   max-height: 720px;

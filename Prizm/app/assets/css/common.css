@@ -286,10 +286,20 @@ strong {
 .button:active {
   background-color: rgba(166,2,237,.1)
 }
-.nav {
+.scroll {
   position: fixed;
+  overflow-y: auto;
   left: 0;
   top: 0;
+  width: -webkit-calc(308px - 15px);
+  width: calc(308px - 15px);
+  height: 100vh;
+  overflow: hidden
+}
+.scroll__nav {
+  overflow-y: auto
+}
+.nav {
   width: 308px;
   height: 100vh;
   max-height: 720px;
