@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function showTabContent(b) {
       if (tabContent[b].classList.contains('hide')) {
         tabContent[b].classList.add('show');
-        tabContent[b].classList.hide('hide');
+        tabContent[b].classList.remove('hide');
       }
     }
 
