@@ -1,1 +1,1 @@
-[Слайдер на CSS](https://www.youtube.com/watch?v=Rn5HeWbFNOc)
+[Слайдер](https://vik-vavilikhin.github.io/portfolio/blocks/slider/) на чистом CSS. [Источник](https://www.youtube.com/watch?v=Rn5HeWbFNOc)
