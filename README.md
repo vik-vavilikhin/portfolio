@@ -1,7 +1,7 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) |
 
 -------------------------------------------------------------------------------
-### **[Странцы. Блоки. Элементы. Модули](https://github.com/vik-vavilikhin/portfolio)**
+### **Странцы. Блоки. Элементы. Модули**
 |**Сайты**                                               |             |      |
 |:-------------------------------------------------------|:------------|:-----|
 |Aditii - Адаптивная верстка магазина с элементами: слайдеры, карусели +  Gulp + Pug + Scss|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/Aditii)|[демо](https://vik-vavilikhin.github.io/portfolio/Aditii/app)|
