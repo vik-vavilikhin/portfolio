@@ -18,8 +18,8 @@
 |[MenuCSS](https://www.youtube.com/watch?v=K3C4NdzFHg0) - меню на чистом CSS.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/MenuCSS)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/MenuCSS/dist/)|
 |[MenuResponsive](https://www.youtube.com/watch?v=cQ6YQ8K5MRw) - меню на чистом CSS.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/MenuResponsive)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/MenuResponsive/)|
 |[Pure CSS Slider](https://www.youtube.com/watch?v=Rn5HeWbFNOc) - слайдер на чистом CSS.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/slider)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/slider/)|
-|Закладки / Tabs - Написаны в виде модуля для встраивания в проект.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/tabs_01)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/tabs_01/)|
-|Закладки / Tabs - Написаны в виде модуля для встраивания в проект. Взяты из учебного пректа.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/tabs_02)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/tabs_02/)|
+|Tabs - Написаны в виде модуля для встраивания в проект. Взяты из учебного пректа.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/tabs_01)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/tabs_01/)|
+|[Табы на чистом JavaScript. Native Javascript Tabs](https://www.youtube.com/watch?v=Ta3RGu0bIhY)|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/tabs_02)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/tabs_02/)|
 -------------------------------------------------------------------------------
 <!-- ### **[Компьютерная школа Hillel](https://ithillel.ua/)**
 |                      Наименование                      | Репозиторий | Демо |
