@@ -20,6 +20,7 @@
 |[Pure CSS Slider](https://www.youtube.com/watch?v=Rn5HeWbFNOc) - слайдер на чистом CSS.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/slider)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/slider/)|
 |Tabs - Написаны в виде модуля для встраивания в проект. Взяты из учебного пректа.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/tabs_01)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/tabs_01/)|
 |[Табы на чистом JavaScript. Native Javascript Tabs](https://www.youtube.com/watch?v=Ta3RGu0bIhY)|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/tabs_02)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/tabs_02/)|
+|Карусель - Взята из учебного пректа.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/blocks/carousel)|[демо](https://vik-vavilikhin.github.io/portfolio/blocks/carousel/)|
 -------------------------------------------------------------------------------
 <!-- ### **[Компьютерная школа Hillel](https://ithillel.ua/)**
 |                      Наименование                      | Репозиторий | Демо |
