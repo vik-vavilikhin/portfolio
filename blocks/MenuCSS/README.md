@@ -1,5 +1,5 @@
 | [HOME](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io) 
-| [Кталог примеров](https://github.com/vik-vavilikhin/vik-vavilikhin.github.io/blob/master/readme/Examples.md) |
+| [Кталог примеров](https://github.com/vik-vavilikhin/portfolio) |
 
 -------------------------------------------------------------------------------
 [Меню](https://vik-vavilikhin.github.io/portfolio/blocks/MenuCSS/dist/) реализовано без применения JavaScript, были задействованы: 
