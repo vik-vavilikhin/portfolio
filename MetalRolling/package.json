@@ -1,0 +1,40 @@
+{
+  "name": "gulp-project",
+  "description": "Template for website development with Gulp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vik-vavilikhin",
+  "license": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vik-vavilikhin/education.git"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "bower": "latest",
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-csso": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-plumber": "latest",
+    "gulp-pug": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-stylus": "latest",
+    "gulp-ttf2woff": "latest",
+    "gulp-ttf2woff2": "latest",
+    "gulp-uglify": "latest",
+    "imagemin-pngquant": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  }
+}

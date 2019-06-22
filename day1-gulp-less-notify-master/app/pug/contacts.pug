@@ -1,0 +1,9 @@
+extend templates/main-template.pug
+block variables
+   - var pageTitle = 'Contacts page'
+   
+block body
+   h1 Контакты
+   
+   - var current = "Контакты"
+   include modules/nav.pug

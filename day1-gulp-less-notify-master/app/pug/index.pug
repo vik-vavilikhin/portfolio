@@ -1,0 +1,17 @@
+extend templates/main-template.pug
+block variables
+   - var pageTitle = 'Index page'
+   
+block body
+   h1 Главная
+   
+   - var current = "Главная"
+   include modules/nav.pug
+      
+   .items   
+      +product("Nokinesa", "49", "http://via.placeholder.com/150x100")
+      +product("Phones", "59", "http://via.placeholder.com/150x100")
+      +product("Asseta", "29", "http://via.placeholder.com/150x100")
+      +product("Samuska", "69", "http://via.placeholder.com/150x100")
+      +product("Luzha", "19", "http://via.placeholder.com/150x100")
+      +product("HatuSi", "79", "http://via.placeholder.com/150x100")

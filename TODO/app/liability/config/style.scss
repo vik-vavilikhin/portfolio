@@ -1,0 +1,96 @@
+// @import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../vendor/_smart-grid";
+@include reset;
+// @import "../../vendor/animate/animate.css";
+// @import "../../vendor/Magnific-Popup/magnific-popup.css";
+/* === Slick-slider === */
+// @import "../../vendor/slick/slick.scss";
+// @import "../../vendor/animate/animate.css";
+// @import "../../vendor/fotorama-4.6.4/fotorama.css";
+/* ==================== */
+
+@import "./app/liability/config/font-face";
+@import "./app/liability/config/vars";
+@import "./app/liability/config/angle";
+
+@include font-face('HN', "../fonts/HelveticaNeueCyr-Roman", 400, Normal, eof ttf woff woff2 svg);
+@include font-face('HN', "../fonts/HelveticaNeueCyr-Medium", 500, Medium, eof ttf woff woff2 svg);
+@include font-face('HN', "../fonts/HelveticaNeueCyr-Bold", 700, Bold, eof ttf woff woff2 svg);
+@include font-face('HN', "../fonts/HelveticaNeueCyr-Black", 900, Black, eof ttf woff woff2 svg);
+
+
+/* Basic settings */
+html {
+	font-size: 10px;
+}
+
+.page {
+	font-family: 'HN', Arial, sans-serif;
+	font-weight: 400;
+	font-size: 1.7rem;
+}
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+button, input, textarea, a {
+	&:active, &:focus {
+		outline: none
+	}
+}
+
+.container {
+	@include wrapper();
+}
+
+.section-header {
+	&__h2 {
+		font-size: 3.5rem;
+		font-weight: 900;
+		display: inline-block;
+		&::after {
+			content: '';
+			display: block;
+			margin: auto;
+			margin-top: 1rem;
+			width: 5.6rem;
+			height: 0.5rem;
+			background-color: $icons-color;
+		}
+	}
+	&__h3 {
+		font-size: 1.6rem;
+	}
+}
+
+.button {
+	// display: inline-block;
+	[class*='-btn'] {
+		cursor: pointer;
+		display: inline-block;
+		padding: 2.1rem 4.3rem;
+		border: none;
+		border-radius: 3px;
+		text-transform: uppercase;
+		font-size: 1.8rem;
+		font-weight: bold;
+		background-color: $btn-color;
+		color: white;
+		text-shadow: 0 1px 2px $btn-text-shadow;
+		@include md-block() {
+			font-size: 1.4rem;
+		}
+		@include sm-block() {
+			padding: 1.7rem 3.3rem;
+			font-size: 1.2rem;
+		}
+		@include xx-block() {
+			padding: 1.1rem 1.7rem;
+			font-size: 1rem;
+		}
+	}
+}

@@ -1,0 +1,146 @@
+doctype html
+html(lang='ru')
+head
+	meta(charset='UTF-8')
+	meta(name='viewport', content='width=device-width,initial-scale=1')
+	meta(http-equiv='X-UA-Compatible', content='ie=edge')
+	title БЭМагазин
+	link(rel='stylesheet', href='assets/css/common.min.css')
+body.Page
+	header.Header
+		.Header-Inner.Container
+			a.Logo(href='/')
+				span.Logo-Icon
+				| БЭМагазин
+			form.Search(action='/')
+				input.Input(type='search')
+				input.Button.Search-Button(type='submit', value='Найти')
+			.User
+				img.Avatar(src='https://avatars1.githubusercontent.com/u/475746?s=460&v=4', alt='')
+	nav.Nav
+		.Nav-List.Container
+			a.Nav-Item(href='#') Электроника
+			a.Nav-Item(href='#') Компьютеры
+			a.Nav-Item(href='#') Бытовая техника
+			a.Nav-Item(href='#') Детские товары
+			a.Nav-Item(href='#') Зоотовары
+			a.Nav-Item(href='#') Дом, дача, ремонт
+			a.Nav-Item(href='#') Одежда и обувь
+			a.Nav-Item(href='#') Авто
+	.Body
+		.Promo.Container
+			a.Promo-Item(href='#promo1')
+				img.Promo-ItemImage(src='http://via.placeholder.com/256x356', alt='')
+			a.Promo-Item(href='#promo2')
+				img.Promo-ItemImage(src='http://via.placeholder.com/256x356', alt='')
+			a.Promo-Item.Promo-Item_size_big(href='#promo3')
+				img.Promo-ItemImage(src='http://via.placeholder.com/400x356', alt='')
+		main.Main
+			.Main-Inner.Container
+				h2.Heading Приглядитесь к этим предложениям
+				.Goods
+					.Snippet
+						.Snippet-Headline Рекомендуем
+						img.Snippet-Image(src='http://placeimg.com/180/180/tech??2', alt='')
+						a.Snippet-Category(href='') Ноутбуки
+						a.Snippet-Title(href='') Apple MacBook Pro 13 with Retina display Early 2015
+						.Snippet-Price от 84 999 ₽
+
+					.Snippet
+						.Snippet-Headline Хит продаж
+						img.Snippet-Image(src='http://placeimg.com/180/180/tech??2', alt='')
+						a.Snippet-Category(href='') VoIP-оборудование
+						a.Snippet-Title(href='') VoIP-телефон Yealink SIP-T21 E2
+						.Snippet-Price от 2 796 ₽
+
+					.Snippet
+						.Snippet-Headline Товар недели
+						img.Snippet-Image(src='http://placeimg.com/180/180/tech??3', alt='')
+						a.Snippet-Category(href='') Лампочки
+						a.Snippet-Title(href='') Лампа ASD E27 11Вт 4000K
+						.Snippet-Price от 53 ₽
+
+					.Snippet
+						.Snippet-Headline
+							| Скидки до 
+							span.Snippet-HeadlineHighlight -18%
+						img.Snippet-Image(src='http://placeimg.com/180/180/tech??5', alt='')
+						a.Snippet-Category(href='') Тюбинги
+						a.Snippet-Title(href='') Тюбинг Small Rider Space Race
+						.Snippet-Price от 1 890 ₽
+
+					.Snippet
+						.Snippet-Headline Рекомендуем
+						img.Snippet-Image(src='http://placeimg.com/180/180/tech??6', alt='')
+						a.Snippet-Category(href='') Ноутбуки
+						a.Snippet-Title(href='') Apple MacBook Pro 13 with Retina display Early 2015
+						.Snippet-Price от 84 999 ₽
+
+					.Snippet
+						.Snippet-Headline Хит продаж
+						img.Snippet-Image(src='http://placeimg.com/180/180/tech??7', alt='')
+						a.Snippet-Category(href='') VoIP-оборудование
+						a.Snippet-Title(href='') VoIP-телефон Yealink SIP-T21 E2
+						.Snippet-Price от 2 796 ₽
+
+					.Snippet
+						.Snippet-Headline Товар недели
+						img.Snippet-Image(src='http://placeimg.com/180/180/tech??8', alt='')
+						a.Snippet-Category(href='') Лампочки
+						a.Snippet-Title(href='') Лампа ASD E27 11Вт 4000K
+						.Snippet-Price от 53 ₽
+
+					.Snippet
+						.Snippet-Headline
+							| Скидки до 
+							span.Snippet-HeadlineHighlight -18%
+						img.Snippet-Image(src='http://placeimg.com/180/180/tech??9', alt='')
+						a.Snippet-Category(href='') Тюбинги
+						a.Snippet-Title(href='') Тюбинг Small Rider Space Race
+						.Snippet-Price от 1 890 ₽
+				button.More(href='#') Показать ещё
+		.Subscribe
+			.Container Узнавайте о выгодных предложениях и получайте личные рекомендации
+		.History.Container
+			h2.Heading Вы смотрели
+			.History-List
+				a.SmallSnippet(href='#')
+					span.SmallSnippet-Cell
+						img.SmallSnippet-Image(src='http://placeimg.com/50/50/tech?16', alt='')
+					span.SmallSnippet-Cell
+						span.SmallSnippet-Title(href='') Apple MacBook Pro 13 with Retina display Early 2015
+						span.SmallSnippet-Price от 84 999 ₽
+
+				a.SmallSnippet(href='#')
+					span.SmallSnippet-Cell
+						img.SmallSnippet-Image(src='http://placeimg.com/50/50/tech?17', alt='')
+					span.SmallSnippet-Cell
+						span.SmallSnippet-Title(href='') Apple MacBook Pro 13 with Retina display Early 2015
+						span.SmallSnippet-Price от 84 999 ₽
+
+				a.SmallSnippet(href='#')
+					span.SmallSnippet-Cell
+						img.SmallSnippet-Image(src='http://placeimg.com/50/50/tech?18', alt='')
+					span.SmallSnippet-Cell
+						span.SmallSnippet-Title(href='') Apple MacBook Pro 13 with Retina display Early 2015
+						span.SmallSnippet-Price от 84 999 ₽
+
+				a.SmallSnippet(href='#')
+					span.SmallSnippet-Cell
+						img.SmallSnippet-Image(src='http://placeimg.com/50/50/tech?19', alt='')
+					span.SmallSnippet-Cell
+						span.SmallSnippet-Title(href='') Apple MacBook Pro 13 with Retina display Early 2015
+						span.SmallSnippet-Price от 84 999 ₽
+
+	footer.Footer
+		.Footer-Inner.Container
+			a.Link.Footer-Item(href='#') Мобильная версия
+			a.Link.Footer-Item(href='#') Статистика
+			a.Link.Footer-Item(href='#') Реклама
+			span.Footer-Item
+				| &copy; 2018 ООО
+				| «
+				a.Link(href='#') Яндекс.Маркет
+				| »
+	script(src="assets/js/react.development.js")
+	script(src="assets/js/react-dom.production.min.js")

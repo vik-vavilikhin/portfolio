@@ -1,0 +1,49 @@
+body {
+	font-family: 'PT Sans', Arial, Sans-serif;
+	/*background-color: green;*/
+	background-color: #FFE082;
+}
+
+@blue: #1976D2;
+@size: 18px;
+
+h3 {
+	color: @blue;
+	font-size: @size;
+}
+
+.items {
+	display: flex;
+	flex-wrap: wrap;
+}
+.card {
+	background: #eee;
+	padding: 10px;
+	margin: 10px;
+	width: 170px;
+}
+
+.nav {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	&__item {
+		margin: 0 10px;
+		width: 100px;
+		text-align: center;
+	}
+	&__link {
+		background-color: #e2a567;
+		display: block;
+		color: #000;
+		margin: auto;
+		font-size: 18px;
+		font-weight: bold;
+		&_active {
+			background-color: darken(#e2a567, 30%);
+			color: #fff;
+
+		}
+	}
+}

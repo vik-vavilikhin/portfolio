@@ -1,0 +1,9 @@
+extend templates/main-template.pug
+block variables
+   - var pageTitle = 'About page'
+   
+block body
+   h1 О нас
+   
+   - var current = "О нас"
+   include modules/nav.pug

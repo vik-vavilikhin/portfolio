@@ -1,0 +1,12 @@
+//- =================== MENU ================================
+mixin navLink(link, name)
+   li.nav__item: a.nav__link(href= link class={ nav__link_active : name === current }) #{name}
+
+//- =================== PRODUCTS CARD =======================
+mixin product(title, price, img)   
+   .card
+      h3 #{title}
+      img(src= img, alt="#")
+      .price $#{price}
+      button(type="#") Кнопка
+         

@@ -1,0 +1,48 @@
+include ../../../node_modules/bemto.pug/bemto
+- 
+	set_bemto_settings({
+		prefix: '',
+		element: '__',
+		modifier: '_'
+	})
+
+include ../layout/head/head
+include ../layout/head/metrics
+include ../layout/scripts/scripts
+include ../layout/debug-grid/debug-grid
+
+//- include ../blocks/s-header/s-header
+
+doctype html
+html(lang='ru')
+	head
+		block head
+			+head({
+				"title": "Наименование проекта",
+				"author": "vav-integrity",
+				"description": "Описание проекта",
+				/* Подключаем файлы стилей */
+				"css": [
+					/*"vendor.min.css",*/
+					/*"http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css",*/
+					"css/common.min.css"
+				]
+			})
+		
+	
+	block body   
+	+b.BODY.page
+		//- +metrics()
+		//- +debug-grid(12)
+		
+		block header
+			+b.HEADER.s-header
+		
+		block hidden
+			+hidden([
+				"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+				/*"http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js",*/
+				/* Подключаем файлы скриптов */
+				/*"vendor.min.js",*/
+				"js/common.min.js"
+			])
