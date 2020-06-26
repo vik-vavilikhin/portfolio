@@ -4,15 +4,16 @@
 // ====== ШРИФТЫ ===========================
 // &display=swap&subset=cyrillic-ext
 // @import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700&display=swap&subset=cyrillic-ext");
+// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap");
 
 @import "fonts";
 
 // ------ Шрифт по умолчанию ---------------
-$fontfamily: "";
+$fontfamily: "OpenSans";
 
 // ------ Переменные -----------------------
 $minwidth: 320px;
-$mw: 950;
+$mw: 1250;
 $md1: $mw+12;
 $md2: 991.98;
 $md3: 767.98;
@@ -49,7 +50,7 @@ body {
 }
 
 // ------ Основная сетка -------------------
-._container {
+.container {
   max-width: $mw + px;
   margin: 0 auto;
 
@@ -69,12 +70,11 @@ body {
 
 // ====== UI СТИЛИ, ФОРМЫ, КЛАССЫ ==========
 @import "null";
-// @import "../layout/forms/forms";
+@import "../layout/forms/forms";
 // @import "ui";
 
 // ====== СТИЛИ СТРАНИЦ и ЭЛЕМЕНТОВ ========
 @import "../layout/s-header/s-header";
-// @import "../layout/home/home";
 
 // @import "../layout/footer/footer";
 // @import "../layout/popup/popup";

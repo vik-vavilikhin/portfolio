@@ -26,7 +26,7 @@ const path = {
   watch: {
     // html: `${sourceFolder}/**/*.html`,
     html: `${sourceFolder}/**/*.pug`,
-    css: `${sourceFolder}/scss/**/*.scss`,
+    css: `${sourceFolder}/**/*.scss`,
     js: `${sourceFolder}/js/**/*.js`,
     img: `${sourceFolder}/img/**/*.+(png|jpg|gif|ico|svg|webp)`,
   },
@@ -61,7 +61,6 @@ const ttf2woff2 = require('gulp-ttf2woff2');
 const svgSprite = require('gulp-svg-sprite');
 const fonter = require('gulp-fonter');
 const pug = require('gulp-pug');
-const htmlbeautify = require('gulp-html-beautify');
 
 function browserSync() {
   browsersync.init({
@@ -215,7 +214,8 @@ function cb() {}
 
 function watchFiles() {
   watch([path.watch.html], html);
-  watch([path.watch.css], css);
+  watch([path.watch.css], css)
+    .on('change', browsersync.reload);
   watch([path.watch.js], js);
   watch([path.watch.img], images);
 }

@@ -12,8 +12,8 @@ include ./layout/head/_head
 include ./layout/scripts/_scripts
 
 include ./layout/s-header/_s-header
-include ./layout/s-footer/_s-footer
-include ./layout/popup/_popup
+//- include ./layout/s-footer/_s-footer
+//- include ./layout/popup/_popup
 
 doctype html
 html(lang='ru')
@@ -41,10 +41,10 @@ html(lang='ru')
 			+s-header
 		
 		block footer
-			+s-footer
+			//- +s-footer
 
 		block popup
-			+popup
+			//- +popup
 		
 		block hidden
 			+hidden([

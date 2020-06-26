@@ -1,0 +1,33 @@
+.menu-header {
+  background-color: #313030;
+
+  // .menu-header__list
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  // .menu-header__item
+  &__item {}
+
+  // .menu-header__link
+  &__link {
+    padding: 40px 25px 35px;
+    display: inline-flex;
+    color: #e0e0e0;
+    font-weight: 700;
+    line-height: calc(24 / 14);
+    text-transform: uppercase;
+    letter-spacing: 0.49px;
+    transition: all .5s ease 0s;
+
+    // .menu-header__link_active
+    &_active,
+    &:hover,
+    &:focus {
+      background-color: #FF3F40;
+    }
+  }
+}

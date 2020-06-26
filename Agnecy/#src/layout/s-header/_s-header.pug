@@ -1,2 +1,13 @@
+include ./b-menu-header/_menu-header.pug
+
 mixin s-header()
-  +b.HEADER.s-header
+  +b.HEADER.header
+    .container
+      +b-menu-header
+      .row
+        +e.column
+          +e.H1.title our strong organaisation
+          +e.P.text Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt  ut labore et. ectetur adig ipis cing elit, sed do eiusmod tempor incididunt.
+          +e.A.btn.btn(href="#") Contact Us
+        +e.column
+          +e.video.video
