@@ -1,0 +1,56 @@
+include ../node_modules/bemto.pug/bemto
+- 
+	set_bemto_settings({
+		prefix: '',
+		element: '__',
+		modifier: '_'
+	})
+
+include ./layout/head/_head
+//- include ./layout/head/_metrics
+//- include ./layout/debug-grid/debug-grid
+include ./layout/scripts/_scripts
+
+include ./layout/s-header/_s-header
+include ./layout/s-footer/_s-footer
+include ./layout/popup/_popup
+
+doctype html
+html(lang='ru')
+	head
+		block head
+			+head({
+				"title": "Наименование проекта",
+				"author": "vik-vavilikhin",
+				"description": "Описание проекта",
+				/* Подключаем файлы стилей */
+				"css": [
+					/*"vendor.min.css",*/
+					/*"http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css",*/
+					"css/style.css"
+				]
+			})
+		
+	
+	block body
+	+b.BODY.page
+		//- +metrics()
+		//- +debug-grid(12)
+		
+		block header
+			+s-header
+		
+		block footer
+			+s-footer
+
+		block popup
+			+popup
+		
+		block hidden
+			+hidden([
+				/*CDN*/
+				/*"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",*/
+
+				/* Подключаем файлы скриптов */
+				"js/script.js"
+			])

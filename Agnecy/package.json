@@ -1,47 +1,39 @@
 {
-  "name": "gulp-project",
-  "description": "Template for website development with Gulp",
+  "name": "fl-gulp",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Сборка gulp",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "vik-vavilikhin",
-  "license": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vik-vavilikhin/education.git"
-  },
-  "engines": {
-    "node": ">=4"
-  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "bemto.pug": "latest",
-    "bower": "latest",
-    "browser-sync": "latest",
-    "clean-css": "latest",
-    "del": "latest",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "latest",
-    "gulp-clean-css": "latest",
-    "gulp-concat": "latest",
-    "gulp-csso": "latest",
-    "gulp-group-css-media-queries": "latest",
-    "gulp-imagemin": "latest",
-    "gulp-plumber": "latest",
-    "gulp-pug": "latest",
-    "gulp-pxtorem": "latest",
-    "gulp-rename": "latest",
-    "gulp-sass": "latest",
-    "gulp-sourcemaps": "latest",
-    "gulp-ttf-svg": "latest",
-    "gulp-ttf2eot": "latest",
-    "gulp-ttf2woff": "latest",
-    "gulp-ttf2woff2": "latest",
-    "gulp-uglify": "latest",
-    "gulp-uncss": "latest",
-    "imagemin-pngquant": "latest",
-    "smart-grid": "latest",
-    "ttf2woff2": "latest"
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.2.2",
+    "gulp-fonter": "^0.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-html": "^1.0.2",
+    "gulp-webpcss": "^1.1.1"
+  },
+  "dependencies": {
+    "bemto.pug": "^2.1.0"
   }
 }
