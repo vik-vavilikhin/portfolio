@@ -12,6 +12,7 @@ include ./layout/head/_head
 include ./layout/scripts/_scripts
 
 include ./layout/s-header/_s-header
+include ./layout/s-services/_s-services
 //- include ./layout/s-footer/_s-footer
 //- include ./layout/popup/_popup
 
@@ -33,12 +34,14 @@ html(lang='ru')
 		
 	
 	block body
-	+b.BODY.page
+	+b.BODY.page.wrapper
 		//- +metrics()
 		//- +debug-grid(12)
 		
 		block header
-			+s-header
+			+s-header()
+		block s-services
+			+s-services()
 		
 		block footer
 			//- +s-footer

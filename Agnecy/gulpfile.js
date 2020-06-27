@@ -27,7 +27,7 @@ const path = {
     // html: `${sourceFolder}/**/*.html`,
     html: `${sourceFolder}/**/*.pug`,
     css: `${sourceFolder}/**/*.scss`,
-    js: `${sourceFolder}/js/**/*.js`,
+    js: `${sourceFolder}/**/*.js`,
     img: `${sourceFolder}/img/**/*.+(png|jpg|gif|ico|svg|webp)`,
   },
   clean: `./${projectFolder}/`
@@ -75,10 +75,10 @@ function browserSync() {
 function html() {
   return src(path.src.html)
     // .pipe(fileinclude())
-    .pipe(webpHTML())
     .pipe(pug({
       pretty: true
     }))
+    .pipe(webpHTML())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }

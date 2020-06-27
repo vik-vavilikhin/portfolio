@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
   // ---------------------------------------------
-  // const userHeaderIcon = document.querySelector('.user-header__icon');
-  // const userHeaderMenu = document.querySelector('.user-header__menu');
+  const userHeaderIcon = document.querySelector('.user-header__icon');
+  const userHeaderMenu = document.querySelector('.user-header__menu');
+
   // ---------------------------------------------
   // @@include('../vendor/swiper/js/swiper.js')
   // @@include('../vendor/smothScroll/smothScroll.js')
   // @@include('./modules/gotoBlock.js')
+  // @@include('./modules/ytSettings.js')
 
   // // ====== inspectUserAgent =================
 /*
@@ -77,14 +79,23 @@ function testWebP() {
 }
 
 // ===== bodyLock ==========================
+/*
+ * Блокировка прокрутки страницы 
+ */
 function bodyLock(delay) {
   document.querySelector('body')
+    // Если BODY содержит класс '_lock'
     .classList.contains('_lock') ?
+    // удалить блокировку
     bodyLockRemove(delay) :
+    // иначе добавить блокировку
     bodyLockAdd(delay);
 }
 
 // ===== bodyLockRemove ====================
+/*
+ * Удаление блокировки прокрутки страницы
+ */
 function bodyLockRemove(delay) {
   let body = document.querySelector('body');
 
@@ -108,6 +119,9 @@ function bodyLockRemove(delay) {
 }
 
 // ===== bodyLockAdd =======================
+/*
+ * Добавить блокировку на страницу
+ */
 function bodyLockAdd(delay) {
   let body = document.querySelector('body');
 
@@ -158,41 +172,6 @@ function backgroundImage() {
       item.style.backgroundImage = `url(${src})`;
     }
   });
-}
-
-// ====== burgerActive =====================
-/*
- * - iconMenuElem - меню-бургер '.icon-menu'
- * - menuBodyElem - основное меню навигации '.menu__body'
- */
-function burgerActive() {
-  const iconMenu = document.querySelector('.icon-menu');
-  const menuBody = document.querySelector('.menu__body');
-
-  if (iconMenu != null) {
-    const body = document.querySelector('body');
-
-    let delay = 500;
-    iconMenu.addEventListener('click', (e) => {
-      if (!body.classList.contains('_wait')) {
-        bodyLock(delay);
-        iconMenu.classList.toggle('_active');
-        menuBody.classList.toggle('_active');
-      }
-    });
-  }
-}
-
-// ===== menuClose =========================
-/*
- * - iconMenuElem - меню-бургер '.icon-menu'
- * - menuBodyElem - основное меню навигации '.menu__body'
- */
-function menuClose() {
-  let iconMenu = document.querySelector('.icon-menu');
-  let menuBody = document.querySelector('.menu__body');
-  iconMenu.classList.remove('_active');
-  menuBody.classList.remove('_active');
 }
 
 // ====== elemReplace =====================
@@ -321,18 +300,60 @@ function elemReplace() {
     });
   });
 }
+  // // ===== menuClose =========================
+/*
+ * - iconMenuElem - меню-бургер '.icon-menu'
+ * - menuBodyElem - основное меню навигации '.menu__body'
+ */
+function menuClose() {
+  const iconMenu = document.querySelector('.icon-menu');
+  const menuBody = document.querySelector('.menu__body');
+  iconMenu.classList.remove('icon-menu_active');
+  menuBody.classList.remove('menu__body_active');
+}
+
+document.addEventListener('click', (e) => {
+  const target = e.target;
+  if (!target.closest('.menu__body_active')) {
+    // menuClose();
+  }
+});
+
+// ====== burgerActive =====================
+/*
+ * - iconMenuElem - меню-бургер '.icon-menu'
+ * - menuBodyElem - основное меню навигации '.menu__body'
+ */
+function burgerActive() {
+  const iconMenu = document.querySelector('.icon-menu');
+  const menuBody = document.querySelector('.menu__body');
+
+  if (iconMenu != null) {
+    const body = document.querySelector('body');
+
+    let delay = 500;
+    iconMenu.addEventListener('click', (e) => {
+      if (!body.classList.contains('_wait')) {
+        // bodyLock(delay);
+        iconMenu.classList.toggle('icon-menu_active');
+        menuBody.classList.toggle('menu__body_active');
+      }
+    });
+  }
+}
   // ---------------------------------------------
-  document.addEventListener('click', (e) => {
-    const target = e.target;
-    if (!target.closest('.user-header__icon')) {
-      // userHeaderMenu.classList.remove('_active');
-    }
-  });
-  // ---------------------------------------------
-  // userHeaderIcon.addEventListener('click', () => {
-  //   // userHeaderMenu.classList.toggle('_active');
+  // document.addEventListener('click', (e) => {
+  //   const target = e.target;
+  //   if (!target.closest('.user-header__icon')) {
+  //     userHeaderMenu.classList.remove('_active');
+  //   }
   // });
   // ---------------------------------------------
+  // userHeaderIcon.addEventListener('click', () => {
+  //   userHeaderMenu.classList.toggle('_active');
+  // });
+  // ---------------------------------------------
+
   inspectUserAgent();
   testWebP();
   backgroundImage();

@@ -23,15 +23,36 @@
 
   border-radius: 5px;
   background-color: #FF2D2D;
-
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
   padding: 20px 63px;
-  transition: all .3s ease 0s;
+
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    transition: all .3s ease 0s;
+  }
 
   &:hover {
-    background-color: darken(#FF2D2D, 17%);
+    &:before {
+      content: '';
+      width: 150%;
+      height: 150%;
+      left: -25%;
+      top: -25%;
+      border-radius: 50%;
+      opacity: 1;
+      background-color: rgba(#000, .3);
+    }
   }
 
   &_border {
@@ -40,7 +61,16 @@
     border: 2px solid #ff0000;
 
     &:hover {
-      background-color: rgba(#FF2D2D, .1);
+      &:before {
+        content: '';
+        width: 150%;
+        height: 150%;
+        left: -25%;
+        top: -25%;
+        border-radius: 50%;
+        opacity: 1;
+        background-color: rgba(#f00, .3);
+      }
     }
   }
 

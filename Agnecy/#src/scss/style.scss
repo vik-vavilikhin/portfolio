@@ -19,6 +19,21 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
+$maxW: $mw * 1px;
+
+$main-color: #FF2D2D;
+$bg-menu: #313030;
+
+
+.fluid-font-size {
+  /* ==== ОТЗЫВЧИВЫЙ ШРИФТ ==== */
+  $fMin: 14px; // - минимальное значение
+  $fMax: 48px; // - максимальное значение
+  $fallback: 18px; // - оптимальный размер шрифта на случай, когда vw не поддерживается
+
+  @include fluidFontSize($fMin, $fMax, $minwidth, $maxW, $fallback);
+}
+
 // ------ Обнуление, Общие параметры -------
 // @import "null";
 
@@ -40,11 +55,11 @@ body {
 
 // ------ Оболочка -------------------------
 .wrapper {
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  // width: 100%;
+  // min-height: 100%;
+  // overflow: hidden;
+  // display: flex;
+  // flex-direction: column;
 
   &._loaded {}
 }
@@ -53,17 +68,19 @@ body {
 .container {
   max-width: $mw + px;
   margin: 0 auto;
+  padding: 0 15px;
+
 
   @media (max-width: $md1 + px) {
-    max-width: 970px;
+    // max-width: 970px;
   }
 
   @media (max-width: $md2 + px) {
-    max-width: 750px;
+    // max-width: 750px;
   }
 
   @media (max-width: $md3 + px) {
-    max-width: none;
+    // max-width: none;
     padding: 0 10px;
   }
 }
@@ -75,6 +92,7 @@ body {
 
 // ====== СТИЛИ СТРАНИЦ и ЭЛЕМЕНТОВ ========
 @import "../layout/s-header/s-header";
+@import "../layout/s-services/s-services";
 
 // @import "../layout/footer/footer";
 // @import "../layout/popup/popup";

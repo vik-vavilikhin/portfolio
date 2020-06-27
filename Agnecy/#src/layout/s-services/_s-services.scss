@@ -1,0 +1,50 @@
+.services {
+  padding: 115px 0px 110px 0px;
+
+  // .services__container
+  &__container {
+    overflow: hidden;
+  }
+
+  // .services__row
+  &__row {
+    display: flex;
+    margin: 0 -20px;
+    flex-wrap: wrap;
+
+    @media (max-width:$md3+px) {
+      margin: 0;
+    }
+  }
+
+  // .services__column
+  &__column {
+    padding: 0 20px;
+    flex: 1 1 50%;
+    flex-wrap: wrap;
+
+  }
+
+  // .services__title
+  &__title {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: calc(55 / 42);
+    text-transform: uppercase;
+    letter-spacing: 0.42px;
+    margin: 0px 0px 50px 0px;
+  }
+
+  // .services__text
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(28 / 16);
+    margin: 0px 0px 60px 0px;
+  }
+
+  // .services__btn
+  &__btn {}
+}
+
+@import './b-item-services';

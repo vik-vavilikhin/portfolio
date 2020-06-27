@@ -1,0 +1,31 @@
+mixin item(data)
+  +b.__item.item-services__
+    +e.IMG.ico(src=`./img/icons/${data.img}.svg` alt="ico")
+    +e.H3.title=data.title
+    +e.P.text=data.text
+
+mixin s-services()
+  +b.SECTION.services
+    +e.container.container
+      +e.row.row
+        +e.column.column
+          +e.H2.title do you know we can provide for you ?
+          +e.P.text Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.Lorem ni ipsum dolor sit amet, consectetur adipis cing elit, ed doi eiusmod tempor incididunt ut labore et.
+          +e.A.btn.btn_border(href="#") Learn More
+        +e.column.column
+          +item({
+            img: '01',
+            title: 'Management',
+            text: 'Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioe.Lorem ipsum new idolor'})
+          +item({
+            img: '02',
+            title: 'UI / UX Design',
+            text: 'Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioe.Lorem ipsum new idolor sit amet,'})
+          +item({
+            img: '03',
+            title: 'Logo / Branding',
+            text: 'Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioeew idolor sit amet,'})
+          +item({
+          img: '04',
+          title: 'Animation',
+          text: 'Lorem ipsum dolor sitea amet, zixf conseit  adipi cing elit, seddi do eiusmod btdempor in didunt utlae ore etioe.Lorem ipsum new idolor sit amet, consect netur.'})

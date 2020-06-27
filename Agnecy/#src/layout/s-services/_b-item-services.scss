@@ -1,0 +1,26 @@
+.item-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 50%;
+  margin: 0px 0px 50px 0px;
+
+  // .item-services__ico
+  &__ico {
+    margin: 0px 0px 30px 0px;
+  }
+
+  // .item-services__title
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0px 0px 15px 0px;
+  }
+
+  // .item-services__text
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(28 / 16);
+  }
+}

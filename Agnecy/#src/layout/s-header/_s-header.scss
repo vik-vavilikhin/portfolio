@@ -1,5 +1,5 @@
 // =========================================
-@import "b-menu-header/menu-header";
+@import "../b-menu/menu";
 
 .header {
   padding: 30px 0px 110px 0px;
@@ -8,10 +8,26 @@
   // .header__menu
   &__menu {
     margin: 0px 0px 108px 0px;
+
+    @media (max-width:$md3+px) {
+      margin: 0px 0px 30px 0px;
+    }
   }
 
-  .row {
+  // .container__menu
+  &__container {
+    overflow: hidden;
+  }
+
+  &__row {
     display: flex;
+    justify-content: space-between;
+    margin: 0 -20px;
+    flex-wrap: wrap;
+
+    @media (max-width:$md3+px) {
+      margin: 0;
+    }
   }
 
   // .header__content
@@ -19,31 +35,41 @@
 
   // .header__column
   &__column {
+    width: 50%;
     flex: 1 1 50%;
+    padding: 0 20px;
 
-    &:last-child {
-      display: flex;
-      justify-content: flex-end;
+    @media (max-width:$md3+px) {
+      width: 70%;
+      // flex: 1 1 70%;
+      padding: 0 12px/$maxW * 100%;
+      margin: 0px auto 60px;
     }
   }
 
   // .header__title
   &__title {
-    font-size: 60px;
+    @include fluidFontSize(24px, 60px, $minwidth, $maxW, 24px);
     font-weight: 800;
     line-height: calc(72 / 60);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin: 0px 0px 35px 0px;
+    margin: 0px 0px 70px/$maxW * 100% 0px;
   }
 
   // .header__text
   &__text {
     opacity: 0.7;
     font-size: 16px;
+    @include fluidFontSize(14px, 16px, $md3*1px, $maxW, 14px);
     font-weight: 400;
     line-height: calc(28 / 16);
-    margin: 0px 0px 60px 0px;
+    margin: 0px 0px 120px/$maxW * 100% 0px;
+
+    @media (max-width:$md3+px) {
+      margin: 0px 0px 40px/$maxW * 100% 0px;
+
+    }
   }
 
   // .header__btn
@@ -59,13 +85,23 @@
 }
 
 .video {
-  display: flex;
-  width: 550px;
-  height: 355px;
+  height: 0;
+  padding-top: 60%;
   background-color: #C4C0B1;
   position: relative;
-  box-shadow: 7px 7px 20px 6px rgba(0, 0, 0, 0.2),
-    -7px -7px 20px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 20px 5px rgba(0, 0, 0, 0.2),
+    -7px -7px 20px 5px rgba(0, 0, 0, 0.2);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgba($main-color, 1);
+    border-radius: 3px;
+    z-index: 1;
+  }
 
   &:before,
   &:after {

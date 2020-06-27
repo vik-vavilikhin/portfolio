@@ -1,13 +1,14 @@
-include ./b-menu-header/_menu-header.pug
+include ../b-menu/_menu.pug
 
 mixin s-header()
   +b.HEADER.header
-    .container
-      +b-menu-header
-      .row
-        +e.column
+    +e.container.container
+      +b-menu()
+      +e.row.row-header
+        +e.column.column-header
           +e.H1.title our strong organaisation
           +e.P.text Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt  ut labore et. ectetur adig ipis cing elit, sed do eiusmod tempor incididunt.
           +e.A.btn.btn(href="#") Contact Us
-        +e.column
+        +e.column.column-header
           +e.video.video
+            //- <iframe src="https://www.youtube.com/embed/OgmqTESLCYk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
