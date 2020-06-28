@@ -144,9 +144,9 @@ const bodyLockAdd = function (delay) {
 * ИСХОДНИК: http://fls.guru/ibg.html
 */
 const backgroundImage = function () {
-  // '._ibg' - родительский элемент
+  // '.ibg' - родительский элемент
   // Получить все родительские элементы в массив
-  const ibg = document.querySelectorAll('._ibg');
+  const ibg = document.querySelectorAll('.ibg');
   // ...перебрать все элементы массива
   ibg.forEach(item => {
     // ...найти в каждом элементе вложенный тег 'img'

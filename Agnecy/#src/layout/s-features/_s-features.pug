@@ -1,0 +1,28 @@
+include ./../b-section-header/_b-section-header
+
+mixin s-features()
+  +b.SECTION.features
+    +e.container.container
+      +section-header({
+        title: 'feature products', 
+        text: 'Lorem ipsum dolor sit amet, consectetur adipis cing elit,sed do eiusmod tempor incididunt ut labore et.'})
+      
+      +e.row.row-features
+        +e.menu.menu-features__
+          +e.NAV.body
+            +e.UL.list
+              +e.LI.item: +e.A.link(href="#") all
+              +e.LI.item: +e.A.link(href="#") print template
+              +e.LI.item: +e.A.link(href="#") web template
+              +e.LI.item: +e.A.link(href="#") user interface
+              +e.LI.item: +e.A.link(href="#") mock-up
+
+        +e.gallery.gallery-features__
+          +e.A.item.ibg(href="#"): img(src="http://lorempixel.com/g/500/600/nightlife" alt="img")
+          +e.A.item.ibg(href="#"): img(src="http://lorempixel.com/g/500/600/nightlife" alt="img")
+          +e.A.item.ibg(href="#"): img(src="http://lorempixel.com/g/500/600/nightlife" alt="img")
+          +e.A.item.ibg(href="#"): img(src="http://lorempixel.com/g/500/600/nightlife" alt="img")
+          +e.A.item.ibg(href="#"): img(src="http://lorempixel.com/g/500/600/nightlife" alt="img")
+          +e.A.item.ibg(href="#"): img(src="http://lorempixel.com/g/500/600/nightlife" alt="img")
+          +e.A.item.ibg(href="#"): img(src="http://lorempixel.com/g/500/600/nightlife" alt="img")
+          +e.A.item.ibg(href="#"): img(src="http://lorempixel.com/g/500/600/nightlife" alt="img")
