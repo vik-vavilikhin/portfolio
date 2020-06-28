@@ -5,7 +5,7 @@
 |**Сайты**                                               |             |      |
 |:-------------------------------------------------------|:------------|:-----|
 |Aditii - Адаптивная верстка магазина с элементами: слайдеры, карусели +  Gulp + Pug + Scss|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/Aditii)|[демо](https://vik-vavilikhin.github.io/portfolio/Aditii/app)|
-|Agnecy - Попытка сделать шаблон. Нужна коренная доработка или полная переделка.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/Agnecy)|[демо](https://vik-vavilikhin.github.io/portfolio/Agnecy/app/assets)|
+|Agnecy - Попытка сделать шаблон. Нужна коренная доработка или полная переделка.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/Agnecy)|[демо](https://vik-vavilikhin.github.io/portfolio/Agnecy/Agnecy/)|
 |Cherry - Одностраничник. Содержит таблицу. Требует адаптации меню.|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/Cherry)|[демо](https://vik-vavilikhin.github.io/portfolio/Cherry/app)|
 |DesignDew - Верстка PerfectPixel + Gulp + Pug + Scss|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/DesignDew)|[демо](https://vik-vavilikhin.github.io/portfolio/DesignDew/app/assets)|
 |PhotoSharing - Верстка PerfectPixel + Gulp + Pug + Scss|[репозиторий](https://github.com/vik-vavilikhin/portfolio/tree/master/PhotoSharing)|[демо](https://vik-vavilikhin.github.io/portfolio/PhotoSharing/app)|
