@@ -1,5 +1,7 @@
+import '../../vendor/smothScroll/smothScroll';
+
 // ===== offset ============================
-function offset(el) {
+const offset = function (el) {
   /*
    * https://developer.mozilla.org/ru/docs/Web/API/Element/getBoundingClientRect 
    */
@@ -10,10 +12,10 @@ function offset(el) {
     top: rect.top + scrollTop,
     left: rect.left + scrollLeft
   };
-}
+};
 
 // ===== _goto =============================
-function _goto(targetBlock, speed) {
+const _goto = function (targetBlock, speed) {
   let offset = arguments.length > 2 && arguments[2] !== undefined ?
     arguments[2] : 0;
   let header = ''; //OffsetHeader
@@ -27,7 +29,7 @@ function _goto(targetBlock, speed) {
   };
   let scr = new SmoothScroll();
   scr.animateScroll(targetBlock, '', options);
-}
+};
 
 // -----------------------------------------
 /*
@@ -100,3 +102,8 @@ if (link) {
     }
   });
 } //ScrollOnClick (Simple)
+
+export {
+  offset,
+  _goto,
+};

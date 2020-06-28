@@ -2,7 +2,7 @@
 /*
  *  Определение браузера пользователя и ОС
  */
-function inspectUserAgent() {
+const inspectUserAgent = function () {
   let ua = window.navigator.userAgent;
   let msie = ua.indexOf('MSIE ');
   let isMobile = {
@@ -43,13 +43,13 @@ function inspectUserAgent() {
   if (isMobile.any()) {
     document.querySelector('body').classList.add('touch');
   }
-}
+};
 
 // ====== testWebP =========================
 /*
  * Функция определяет поддкржку браузером WebP
  */
-function testWebP() {
+const testWebP = function () {
   const webP = new Image();
   const cb = (support) => {
     if (support == true) {
@@ -64,13 +64,13 @@ function testWebP() {
   };
 
   webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-}
+};
 
 // ===== bodyLock ==========================
 /*
  * Блокировка прокрутки страницы 
  */
-function bodyLock(delay) {
+const bodyLock = function (delay) {
   document.querySelector('body')
     // Если BODY содержит класс '_lock'
     .classList.contains('_lock') ?
@@ -78,13 +78,13 @@ function bodyLock(delay) {
     bodyLockRemove(delay) :
     // иначе добавить блокировку
     bodyLockAdd(delay);
-}
+};
 
 // ===== bodyLockRemove ====================
 /*
  * Удаление блокировки прокрутки страницы
  */
-function bodyLockRemove(delay) {
+const bodyLockRemove = function (delay) {
   let body = document.querySelector('body');
 
   if (!body.classList.contains('_wait')) {
@@ -104,13 +104,13 @@ function bodyLockRemove(delay) {
       body.classList.remove('_wait');
     }, delay);
   }
-}
+};
 
 // ===== bodyLockAdd =======================
 /*
  * Добавить блокировку на страницу
  */
-function bodyLockAdd(delay) {
+const bodyLockAdd = function (delay) {
   let body = document.querySelector('body');
 
   if (!body.classList.contains('_wait')) {
@@ -131,7 +131,7 @@ function bodyLockAdd(delay) {
       body.classList.remove('_wait');
     }, delay);
   }
-}
+};
 
 // ====== backgroundImage ==================
 /*
@@ -143,7 +143,7 @@ function bodyLockAdd(delay) {
 * ИСТОЧНИК: https://www.youtube.com/watch?v=nTtuiBXKp88&list
 * ИСХОДНИК: http://fls.guru/ibg.html
 */
-function backgroundImage() {
+const backgroundImage = function () {
   // '._ibg' - родительский элемент
   // Получить все родительские элементы в массив
   const ibg = document.querySelectorAll('._ibg');
@@ -160,7 +160,7 @@ function backgroundImage() {
       item.style.backgroundImage = `url(${src})`;
     }
   });
-}
+};
 
 // ====== elemReplace =====================
 /*
@@ -175,7 +175,7 @@ function backgroundImage() {
 !             <span>Выбор региона</span>
 !           </a>
 */
-function elemReplace() {
+const elemReplace = function () {
   const dataAttribute = 'data-move';
   // Определить текущую ширину открытого документа
   let clientWidth = document.documentElement.clientWidth;
@@ -287,4 +287,14 @@ function elemReplace() {
       screenSize();
     });
   });
+};
+
+export {
+  inspectUserAgent,
+  testWebP,
+  bodyLock,
+  bodyLockRemove,
+  bodyLockAdd,
+  backgroundImage,
+  elemReplace,
 }

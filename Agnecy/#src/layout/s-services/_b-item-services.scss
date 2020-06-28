@@ -7,14 +7,14 @@
 
   // .item-services__title
   &__title {
-    font-size: 24px;
+    @include fluidFontSize(16px, 24px, 640px, $maxW, 16px);
     font-weight: 600;
     margin: 0px 0px 15px 0px;
   }
 
   // .item-services__text
   &__text {
-    font-size: 16px;
+    @include fluidFontSize(14px, 16px, 640px, $maxW, 14px);
     font-weight: 400;
     line-height: calc(28 / 16);
   }

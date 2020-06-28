@@ -810,7 +810,7 @@ textarea.input {
 }
 
 .services__title {
-  font-size: 42px;
+  font-size: 24px;
   font-weight: 600;
   line-height: calc(55 / 42);
   text-transform: uppercase;
@@ -819,7 +819,7 @@ textarea.input {
 }
 
 .services__text {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: calc(28 / 16);
   margin: 0px 0px 60px 0px;
@@ -835,13 +835,13 @@ textarea.input {
 }
 
 .item-services__title {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
   margin: 0px 0px 15px 0px;
 }
 
 .item-services__text {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: calc(28 / 16);
 }
@@ -869,6 +869,28 @@ textarea.input {
   }
 }
 
+@media (min-width: 640px) {
+  .services__title {
+    font-size: 24px;
+    font-size: calc(0.02951 * 100vw + 5.11475px);
+  }
+
+  .services__text {
+    font-size: 14px;
+    font-size: calc(0.00328 * 100vw + 11.90164px);
+  }
+
+  .item-services__title {
+    font-size: 16px;
+    font-size: calc(0.01311 * 100vw + 7.60656px);
+  }
+
+  .item-services__text {
+    font-size: 14px;
+    font-size: calc(0.00328 * 100vw + 11.90164px);
+  }
+}
+
 @media (min-width: 767.98px) {
   .header__text {
     font-size: 14px;
@@ -888,11 +910,41 @@ textarea.input {
   .header__text {
     font-size: 16px;
   }
+
+  .services__title {
+    font-size: 42px;
+  }
+
+  .services__text {
+    font-size: 16px;
+  }
+
+  .item-services__title {
+    font-size: 24px;
+  }
+
+  .item-services__text {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 1280px) {
   .fluid-font-size {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .services__row {
+    margin: 0 -15px;
+  }
+
+  .services__column {
+    padding: 0 15px;
+  }
+
+  .services__item {
+    width: 48%;
   }
 }
 
@@ -1016,6 +1068,10 @@ textarea.input {
             transform: scale(0);
   }
 
+  .header {
+    padding: 30px 0px 50px 0px;
+  }
+
   .header__menu {
     margin: 0px 0px 30px 0px;
   }
@@ -1034,8 +1090,42 @@ textarea.input {
     margin: 0px 0px 3.2% 0px;
   }
 
+  .services {
+    padding: 50px 0px 0px 0px;
+  }
+
   .services__row {
     margin: 0;
+  }
+
+  .services__column {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin: 0px 0px 60px 0px;
+  }
+
+  .services__column:last-child {
+    margin: 0;
+  }
+
+  .services__title {
+    margin: 0px 0px 25px 0px;
+  }
+
+  .services__text {
+    margin: 0px 0px 30px 0px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .header {
+    padding: 0;
+  }
+
+  .services__item {
+    width: 100%;
   }
 }
 

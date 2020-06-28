@@ -1,30 +1,49 @@
+import {
+  bodyLock,
+  bodyLockRemove,
+  bodyLockAdd,
+} from './../../js/modules/app';
+// ===== CONSTANTS =========================
+const constants = function (burger, menu) {
+  const iconMenu = document.querySelector(burger);
+  const menuBody = document.querySelector(menu);
+  const activeiconMenu = (`${burger}_active`).replace('.', '');
+  const activemenuBody = (`${menu}_active`).replace('.', '');
+  return {
+    iconMenu,
+    menuBody,
+    activeiconMenu,
+    activemenuBody,
+  };
+};
 // ===== menuClose =========================
 /*
  * - iconMenuElem - меню-бургер '.icon-menu'
  * - menuBodyElem - основное меню навигации '.menu__body'
  */
-function menuClose() {
-  const iconMenu = document.querySelector('.icon-menu');
-  const menuBody = document.querySelector('.menu__body');
-  iconMenu.classList.remove('icon-menu_active');
-  menuBody.classList.remove('menu__body_active');
-}
+const menuClose = function (burger, menu) {
+  const iconMenu = document.querySelector(burger);
+  const menuBody = document.querySelector(menu);
+  const activeiconMenu = (`${burger}_active`).replace('.', '');
+  const activemenuBody = (`${menu}_active`).replace('.', '');
 
-document.addEventListener('click', (e) => {
-  const target = e.target;
-  if (!target.closest('.menu__body_active')) {
-    // menuClose();
-  }
-});
+  iconMenu.classList.remove(activeiconMenu);
+  menuBody.classList.remove(activemenuBody);
+};
 
 // ====== burgerActive =====================
 /*
  * - iconMenuElem - меню-бургер '.icon-menu'
  * - menuBodyElem - основное меню навигации '.menu__body'
  */
-function burgerActive() {
-  const iconMenu = document.querySelector('.icon-menu');
-  const menuBody = document.querySelector('.menu__body');
+const burgerActive = function (
+  burger,
+  menu,
+) {
+  const iconMenu = document.querySelector(burger);
+  const menuBody = document.querySelector(menu);
+  const activeiconMenu = (`${burger}_active`).replace('.', '');
+  const activemenuBody = (`${menu}_active`).replace('.', '');
 
   if (iconMenu != null) {
     const body = document.querySelector('body');
@@ -32,10 +51,15 @@ function burgerActive() {
     let delay = 500;
     iconMenu.addEventListener('click', (e) => {
       if (!body.classList.contains('_wait')) {
-        // bodyLock(delay);
-        iconMenu.classList.toggle('icon-menu_active');
-        menuBody.classList.toggle('menu__body_active');
+        bodyLock(delay);
+        iconMenu.classList.toggle(activeiconMenu);
+        menuBody.classList.toggle(activemenuBody);
       }
     });
   }
-}
+};
+
+export {
+  menuClose,
+  burgerActive
+};

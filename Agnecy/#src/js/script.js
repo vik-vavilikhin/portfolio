@@ -1,33 +1,25 @@
+import * as app from './modules/app';
+import * as menu from './../layout/b-menu/menu';
+
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
-  // ---------------------------------------------
-  const userHeaderIcon = document.querySelector('.user-header__icon');
-  const userHeaderMenu = document.querySelector('.user-header__menu');
+  // =========================================
+  const burgerMenu = '.icon-menu';
+  const mainMenu = '.menu__body';
 
-  // ---------------------------------------------
-  // @@include('../vendor/swiper/js/swiper.js')
-  // @@include('../vendor/smothScroll/smothScroll.js')
-  // @@include('./modules/gotoBlock.js')
-  // @@include('./modules/ytSettings.js')
+  app.inspectUserAgent();
+  app.testWebP();
+  app.backgroundImage();
+  app.elemReplace();
+  menu.burgerActive(burgerMenu, mainMenu);
+  // =========================================
 
-  // @ @include('./modules/app.js')
-  // @ @include('../layout/b-menu/menu.js')
-  // ---------------------------------------------
-  // document.addEventListener('click', (e) => {
-  //   const target = e.target;
-  //   if (!target.closest('.user-header__icon')) {
-  //     userHeaderMenu.classList.remove('_active');
-  //   }
-  // });
-  // ---------------------------------------------
-  // userHeaderIcon.addEventListener('click', () => {
-  //   userHeaderMenu.classList.toggle('_active');
-  // });
-  // ---------------------------------------------
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!target.closest(burgerMenu) &&
+      !target.closest(mainMenu)) {
+      menu.menuClose(burgerMenu, mainMenu);
+    }
+  });
 
-  inspectUserAgent();
-  testWebP();
-  backgroundImage();
-  burgerActive();
-  elemReplace();
 });

@@ -1,6 +1,10 @@
 .services {
   padding: 115px 0px 110px 0px;
 
+  @media (max-width:$md3+px) {
+    padding: 50px 0px 0px 0px;
+  }
+
   // .services__container
   &__container {
     overflow: hidden;
@@ -11,6 +15,10 @@
     display: flex;
     margin: 0 -30px;
     flex-wrap: wrap;
+
+    @media (max-width: 1000px) {
+      margin: 0 -15px;
+    }
 
     @media (max-width:$md3+px) {
       margin: 0;
@@ -23,30 +31,52 @@
     padding: 0 30px;
     flex: 0 0 50%;
 
+    @media (max-width: 1000px) {
+      padding: 0 15px;
+    }
+
+    @media (max-width:$md3+px) {
+      width: 100%;
+      flex: 1 1 auto;
+      margin: 0px 0px 60px 0px;
+    }
+
     &:last-child {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
+      @media (max-width:$md3+px) {
+        margin: 0;
+      }
     }
 
   }
 
   // .services__title
   &__title {
-    font-size: 42px;
+    @include fluidFontSize(24px, 42px, 640px, $maxW, 24px);
     font-weight: 600;
     line-height: calc(55 / 42);
     text-transform: uppercase;
     letter-spacing: 0.42px;
     margin: 0px 0px 50px 0px;
+
+    @media (max-width:$md3+px) {
+      margin: 0px 0px 25px 0px;
+    }
   }
 
   // .services__text
   &__text {
-    font-size: 16px;
+    @include fluidFontSize(14px, 16px, 640px, $maxW, 14px);
     font-weight: 400;
     line-height: calc(28 / 16);
     margin: 0px 0px 60px 0px;
+
+    @media (max-width:$md3+px) {
+      margin: 0px 0px 30px 0px;
+    }
   }
 
   // .services__btn
@@ -56,6 +86,13 @@
     width: 45%;
     margin: 0px 0px 50px 0px;
 
+    @media (max-width: 1000px) {
+      width: 48%;
+    }
+
+    @media (max-width:$md4+px) {
+      width: 100%;
+    }
   }
 }
 

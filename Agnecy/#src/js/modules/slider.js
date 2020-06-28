@@ -1,3 +1,5 @@
+import '../../vendor/swiper/js/swiper';
+
 // ====== SLIDER SETTINGS ==================
 /*
  * Подготовка к применению слайдера Swiper.
@@ -100,4 +102,4 @@ const sliderSettings = () => {
     }
   });
 };
-sliderSettings();
+export default sliderSettings;

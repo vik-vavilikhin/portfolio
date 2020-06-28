@@ -20,6 +20,7 @@ const path = {
     html: [`${sourceFolder}/*.pug`, `!${sourceFolder}/_*.pug`],
     css: `${sourceFolder}/scss/style.scss`,
     js: `${sourceFolder}/js/script.js`,
+    // js: `${sourceFolder}/js/index.js`,
     img: `${sourceFolder}/img/**/*.+(png|jpg|gif|ico|svg|webp)`,
     fonts: `${sourceFolder}/fonts/*.ttf`,
   },
@@ -50,8 +51,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const gcmq = require('gulp-group-css-media-queries');
 const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify-es').default;
-const babel = require('gulp-babel');
+const webpack = require('webpack-stream');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const webpHTML = require('gulp-webp-html');
@@ -61,6 +61,24 @@ const ttf2woff2 = require('gulp-ttf2woff2');
 const svgSprite = require('gulp-svg-sprite');
 const fonter = require('gulp-fonter');
 const pug = require('gulp-pug');
+
+let isDev = false; //
+let isProd = !isDev;
+
+let webPackConfig = {
+  output: {
+    filename: 'script.js'
+  },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      loader: 'babel-loader',
+      exclude: '/node_modules/'
+    }]
+  },
+  mode: isDev ? 'development' : 'production',
+  devtool: isDev ? 'eval-source-map' : 'none'
+};
 
 function browserSync() {
   browsersync.init({
@@ -111,21 +129,25 @@ function css() {
 
 function js() {
   return src(path.src.js)
-    .pipe(
-      fileinclude({
-        prefix: '@ @'
-      })
-    )
-    .pipe(dest(path.build.js))
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(uglify())
-    .pipe(
-      rename({
-        extname: '.min.js'
-      })
-    )
+    .pipe(webpack(webPackConfig))
+    .on('error', function handleError() {
+      this.emit('end'); // Recover from errors
+    })
+    // .pipe(
+    //   fileinclude({
+    //     prefix: '@ @'
+    //   })
+    // )
+    // .pipe(dest(path.build.js))
+    // .pipe(babel({
+    //   presets: ['@babel/env']
+    // }))
+    // .pipe(uglify())
+    // .pipe(
+    //   rename({
+    //     extname: '.min.js'
+    //   })
+    // )
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream());
 }
