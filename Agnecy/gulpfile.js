@@ -16,16 +16,13 @@ const path = {
     fonts: `${projectFolder}/fonts/`,
   },
   src: {
-    // html: [`${sourceFolder}/*.html`, `!${sourceFolder}/_*.html`],
     html: [`${sourceFolder}/*.pug`, `!${sourceFolder}/_*.pug`],
     css: `${sourceFolder}/scss/style.scss`,
     js: `${sourceFolder}/js/script.js`,
-    // js: `${sourceFolder}/js/index.js`,
     img: `${sourceFolder}/img/**/*.+(png|jpg|gif|ico|svg|webp)`,
     fonts: `${sourceFolder}/fonts/*.ttf`,
   },
   watch: {
-    // html: `${sourceFolder}/**/*.html`,
     html: `${sourceFolder}/**/*.pug`,
     css: `${sourceFolder}/**/*.scss`,
     js: `${sourceFolder}/**/*.js`,
@@ -44,7 +41,6 @@ const {
 } = require('gulp');
 const gulp = require('gulp');
 const browsersync = require('browser-sync').create();
-const fileinclude = require('gulp-file-include');
 const del = require('del');
 const scss = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -61,6 +57,7 @@ const ttf2woff2 = require('gulp-ttf2woff2');
 const svgSprite = require('gulp-svg-sprite');
 const fonter = require('gulp-fonter');
 const pug = require('gulp-pug');
+const prettyHtml = require('gulp-pretty-html');
 
 let isDev = false; //
 let isProd = !isDev;
@@ -92,11 +89,14 @@ function browserSync() {
 
 function html() {
   return src(path.src.html)
-    // .pipe(fileinclude())
     .pipe(pug({
       pretty: true
     }))
     .pipe(webpHTML())
+    .pipe(prettyHtml({
+      'indent_size': 2,
+      'extra_liners': ['header', 'section', 'footer'],
+    }))
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }
@@ -133,21 +133,6 @@ function js() {
     .on('error', function handleError() {
       this.emit('end'); // Recover from errors
     })
-    // .pipe(
-    //   fileinclude({
-    //     prefix: '@ @'
-    //   })
-    // )
-    // .pipe(dest(path.build.js))
-    // .pipe(babel({
-    //   presets: ['@babel/env']
-    // }))
-    // .pipe(uglify())
-    // .pipe(
-    //   rename({
-    //     extname: '.min.js'
-    //   })
-    // )
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream());
 }

@@ -39,7 +39,9 @@ const menuClose = function (burger, menu) {
 const burgerActive = function (
   burger,
   menu,
+  lockBody = true
 ) {
+
   const iconMenu = document.querySelector(burger);
   const menuBody = document.querySelector(menu);
   const activeiconMenu = (`${burger}_active`).replace('.', '');
@@ -51,7 +53,9 @@ const burgerActive = function (
     let delay = 500;
     iconMenu.addEventListener('click', (e) => {
       if (!body.classList.contains('_wait')) {
-        bodyLock(delay);
+        if (lockBody) {
+          // bodyLock(delay);
+        }
         iconMenu.classList.toggle(activeiconMenu);
         menuBody.classList.toggle(activemenuBody);
       }

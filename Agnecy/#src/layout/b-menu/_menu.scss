@@ -7,7 +7,7 @@
   // .menu__body
   &__body {
     @media (max-width: $md3+px) {
-      background-color: $bg-menu + fa;
+      background-color: rgba($bg-menu, .9);
       position: fixed;
       width: 0%;
       height: 0%;
@@ -32,7 +32,7 @@
 
       &_active {
         opacity: 1;
-        width: 50%;
+        width: 100%;
         height: 100%;
         visibility: visible;
       }
