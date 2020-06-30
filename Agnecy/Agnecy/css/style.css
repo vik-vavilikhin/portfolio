@@ -1256,7 +1256,9 @@ body.ie .ibg img {
   text-transform: uppercase;
 }
 
-.menu-features__link:hover {
+.menu-features__link_active,
+.menu-features__link:hover,
+.menu-features__link:focus {
   color: #FF2D2D;
 }
 

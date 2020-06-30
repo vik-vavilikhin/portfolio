@@ -8,11 +8,9 @@ menu.burgerActive(selFIconMenu, selFListMenu, false);
 
 document.addEventListener('click', (e) => {
   const target = e.target;
-  if (document.querySelector(selFLinkMenu)) {
-    e.preventDefault();
-  }
 
   if (target.closest(selFLinkMenu)) {
+    e.preventDefault();
     const valueLink = target.textContent;
     const headFilter = document.querySelector(selFIconMenu);
 

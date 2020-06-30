@@ -142,7 +142,9 @@
       }
     }
 
-    &:hover {
+    &_active,
+    &:hover,
+    &:focus {
       color: $main-color;
     }
   }
