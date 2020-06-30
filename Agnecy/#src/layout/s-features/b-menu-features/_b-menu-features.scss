@@ -7,55 +7,58 @@
     flex-direction: column;
   }
 
-  //.menu-features__mini-hedear
-  // &__mini-hedear {
-  //   display: none;
+  .menu-features__mini-hedear {
+    display: none;
 
-  //   @media (max-width:$md3+px) {
-  //     display: block;
-  //     color: #ffffff;
-  //     font-size: 20px;
-  //     display: block;
-  //     padding: 25px 0;
-  //     text-align: center;
-  //     text-transform: uppercase;
-  //     cursor: pointer;
+    @media (max-width:$md3+px) {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-size: 20px;
+      text-transform: uppercase;
+      cursor: pointer;
 
-  //     height: 60px;
-  //     width: 50%;
-  //     margin: 0 auto;
-  //     background-color: #cccccc;
-  //     border-top-left-radius: 30%;
-  //     border-top-right-radius: 30%;
-  //   }
-  // }
+      height: 60px;
+      width: calc(50% - 120px);
+      margin: 0 auto;
+      background-color: $main-color;
+      color: #ffffff;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        display: block;
+        top: 0;
+        background-color: inherit;
+        width: 61px;
+        height: 60px;
+      }
+
+      &:before {
+        content: '';
+        left: -60px;
+        border-top-left-radius: 100%;
+
+      }
+
+      &:after {
+        content: '';
+        right: -60px;
+        border-top-right-radius: 100%;
+
+      }
+    }
+  }
 
   // .menu-features__body
   &__body {
     width: 100%;
 
-    @media (max-width:$md3+px) {
-      position: absolute;
-      top: -60px;
-      left: 50%;
-      width: calc(50% - 5px);
-      transform: translateX(-50%);
-      bottom: 0;
-      overflow: hidden;
-
-      &:hover .menu-features__link {
-        // background-color: rgba(#000, .3);
-      }
-
-      &_active {
-        z-index: 2;
-        bottom: auto;
-
-        &:hover .menu-features__link {
-          // background-color: $main-color;
-        }
-      }
-    }
   }
 
   // .menu-features__list
@@ -67,15 +70,21 @@
 
     @media (max-width:$md3+px) {
       flex-direction: column;
+      background-color: rgba($bg-menu, .9);
 
-      background-color: $main-color;
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      width: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
       overflow: hidden;
-      border-top-left-radius: 20%;
-      border-top-right-radius: 20%;
-      transition: all .3s ease 0s;
+      z-index: 2;
+      transition: all .3s;
 
       &_active {
-        background-color: rgba($bg-menu, .9);
+        height: auto;
+        opacity: 1;
       }
     }
   }

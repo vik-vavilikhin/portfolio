@@ -35,15 +35,15 @@ const menuClose = function (burger, menu) {
  * - menuBodyElem - основное меню навигации '.menu__body'
  */
 const burgerActive = function (
-  burger,
-  menu,
+  selectorIcon,
+  selectorBodyMenu,
   lockBody = true
 ) {
 
-  const iconMenu = document.querySelector(burger);
-  const menuBody = document.querySelector(menu);
-  const activeiconMenu = (`${burger}_active`).replace('.', '');
-  const activemenuBody = (`${menu}_active`).replace('.', '');
+  const iconMenu = document.querySelector(selectorIcon);
+  const menuBody = document.querySelector(selectorBodyMenu);
+  const activeiconMenu = (`${selectorIcon}_active`).replace('.', '');
+  const activemenuBody = (`${selectorBodyMenu}_active`).replace('.', '');
 
   if (iconMenu != null) {
     const body = document.querySelector('body');
