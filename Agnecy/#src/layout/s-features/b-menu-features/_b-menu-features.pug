@@ -1,10 +1,10 @@
 -
   itemList = [
-    {t:'all', l:'#', a: ''},
-    {t:'print template', l:'#', a: ''},
-    {t:'web template', l:'#', a: ''},
-    {t:'user interface', l:'#', a: ''},
-    {t:'mock-up', l:'#', a: ''},
+    {t:'all', l:'#', a: true},
+    {t:'print template', l:'#'},
+    {t:'web template', l:'#'},
+    {t:'user interface', l:'#'},
+    {t:'mock-up', l:'#'},
   ]
 
 mixin menu-features()
@@ -13,4 +13,7 @@ mixin menu-features()
     +e.NAV.body
       +e.UL.list
         for item in itemList
-          +e.LI.item: +e.A.link(href=item.l)=item.t
+          - let classLink = 'link'
+          if item.a 
+            - classLink += '_active'
+          +e.LI.item: +e.A(class=classLink href=item.l)=item.t

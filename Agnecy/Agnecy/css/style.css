@@ -1573,6 +1573,17 @@ body.ie .ibg img {
     margin: 0;
   }
 
+  .gallery-features {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .gallery-features__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 48%;
+            flex: 0 1 48%;
+  }
+
   .menu-features {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1679,6 +1690,26 @@ body.ie .ibg img {
   }
 }
 
+@media (max-width: 767.98px) and (max-width: 640px) {
+  .menu-features .menu-features__mini-hedear {
+    width: calc(60%);
+  }
+
+  .menu-features__list {
+    width: calc(60% + 120px);
+  }
+}
+
+@media (max-width: 767.98px) and (max-width: 479.98px) {
+  .menu-features .menu-features__mini-hedear {
+    width: calc(100% - 120px);
+  }
+
+  .menu-features__list {
+    width: 100%;
+  }
+}
+
 @media (max-width: 479.98px) {
   .header {
     padding: 0;
@@ -1686,6 +1717,12 @@ body.ie .ibg img {
 
   .services__item {
     width: 100%;
+  }
+
+  .gallery-features__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 

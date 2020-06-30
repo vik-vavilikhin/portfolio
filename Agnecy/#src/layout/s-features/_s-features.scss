@@ -50,17 +50,28 @@
 
 .row-features {}
 
-
 .gallery-features {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (max-width:$md3+px) {
+    justify-content: space-around;
+  }
 
   // .gallery-features__item
   &__item {
     margin: 10px 0;
     flex: 0 1 24%;
     height: 290px;
+
+    @media (max-width:$md3+px) {
+      flex: 0 1 48%;
+    }
+
+    @media (max-width:$md4+px) {
+      flex: 0 1 100%;
+    }
   }
 }
 

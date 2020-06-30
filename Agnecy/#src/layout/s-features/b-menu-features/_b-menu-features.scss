@@ -27,6 +27,14 @@
       color: #ffffff;
       position: relative;
 
+      @media (max-width: 640px) {
+        width: calc(60%);
+      }
+
+      @media (max-width:$md4+px) {
+        width: calc(100% - 120px);
+      }
+
       &:before,
       &:after {
         content: '';
@@ -81,6 +89,14 @@
       overflow: hidden;
       z-index: 2;
       transition: all .3s;
+
+      @media (max-width: 640px) {
+        width: calc(60% + 120px);
+      }
+
+      @media (max-width:$md4+px) {
+        width: 100%;
+      }
 
       &_active {
         height: auto;

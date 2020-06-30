@@ -1,7 +1,6 @@
 import * as menu from './../../../layout/b-menu/menu';
 
 const selFIconMenu = '.menu-features__mini-hedear';
-const selFBodyMenu = '.menu-features__body';
 const selFListMenu = '.menu-features__list';
 const selFLinkMenu = '.menu-features__link';
 
