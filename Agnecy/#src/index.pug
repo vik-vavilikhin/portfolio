@@ -14,6 +14,7 @@ include ./layout/scripts/_scripts
 include ./layout/s-header/_s-header
 include ./layout/s-services/_s-services
 include ./layout/s-features/_s-features
+include ./layout/s-team/_s-team
 //- include ./layout/s-footer/_s-footer
 //- include ./layout/popup/_popup
 
@@ -25,10 +26,7 @@ html(lang='ru')
 				"title": "Наименование проекта",
 				"author": "vik-vavilikhin",
 				"description": "Описание проекта",
-				/* Подключаем файлы стилей */
 				"css": [
-					/*"vendor.min.css",*/
-					/*"http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css",*/
 					"css/style.css"
 				]
 			})
@@ -45,6 +43,8 @@ html(lang='ru')
 			+s-services()
 		block s-feature
 			+s-features()
+		block s-team
+			+s-team()
 		
 		block footer
 			//- +s-footer
@@ -54,9 +54,5 @@ html(lang='ru')
 		
 		block hidden
 			+hidden([
-				/*CDN*/
-				/*"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",*/
-
-				/* Подключаем файлы скриптов */
 				"js/script.js"
 			])

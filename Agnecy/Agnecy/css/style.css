@@ -1260,6 +1260,102 @@ body.ie .ibg img {
   color: #FF2D2D;
 }
 
+.team {
+  padding: 0px 0px 110px 0px;
+}
+
+.team__header {
+  -moz-text-align-last: left;
+       text-align-last: left;
+  width: 40%;
+  margin: 0px 0px 70px 0px;
+}
+
+.team__header:after {
+  content: '';
+  width: 132px;
+  display: block;
+  margin: initial;
+  height: 3px;
+  background-color: #FF2D2D;
+}
+
+.team__header .section-header__text {
+  text-align: initial;
+}
+
+.team__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.team__column:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  margin: 0px 75px 0px 0px;
+}
+
+.team__photo {
+  width: 100%;
+  height: 100%;
+}
+
+.person__info {
+  width: 50%;
+  margin: 0px 0px 65px 0px;
+}
+
+.person__name {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0px 0px 35px 0px;
+}
+
+.person__desc {
+  font-weight: 400;
+  line-height: calc(28 / 16);
+  margin: 0px 0px 45px 0px;
+}
+
+.contacts-person__link {
+  font-size: 18px;
+  line-height: calc(24 / 18);
+  font-style: italic;
+  color: #000000;
+  margin: 0px 30px 0px 0px;
+}
+
+.contacts-person__link:hover {
+  text-decoration: underline;
+  color: #FF2D2D;
+}
+
+.works-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works-person__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 24%;
+          flex: 0 1 24%;
+  height: 200px;
+}
+
 .hidden {
   display: none;
 }

@@ -1,0 +1,27 @@
+include ./../b-section-header/_b-section-header
+
+mixin s-team()
+  +b.SECTION.team
+    +e.container.container
+      +section-header({
+        title: 'Meet our team', 
+        text: 'Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore Ui / Ux , print template.'})
+      +e.slider-team.team-slider
+        +e.row.row-team
+          +e.column.column
+            +e.photo.ibg: img(src='http://fakeimg.pl/320x460?text=Photo')
+          +e.column.column
+            +e.person.person__
+              +e.info
+                +e.H3.name mark waugh
+                +e.P.desc Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore Ui / Ux , print template.
+                +e.contacts.contacts-person__
+                  +e.link(href='#') Facebook
+                  +e.link(href='#') Dribble
+                  +e.link(href='#') Behance
+                  +e.link(href='#') Twiter
+              +e.works.works-person__
+                +e.A.item.ibg(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
+                +e.A.item.ibg(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
+                +e.A.item.ibg(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
+                +e.A.item.ibg(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
