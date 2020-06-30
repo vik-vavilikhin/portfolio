@@ -1,4 +1,5 @@
 include ./../b-section-header/_b-section-header
+include b-menu-features/_b-menu-features
 
 mixin s-features()
   +b.SECTION.features
@@ -8,15 +9,7 @@ mixin s-features()
         text: 'Lorem ipsum dolor sit amet, consectetur adipis cing elit,sed do eiusmod tempor incididunt ut labore et.'})
       
       +e.row.row-features
-        +e.menu.menu-features__
-          +e.SPAN.mini-hedear
-          +e.NAV.body
-            +e.UL.list
-              +e.LI.item: +e.A.link(href="#") all
-              +e.LI.item: +e.A.link(href="#") print template
-              +e.LI.item: +e.A.link(href="#") web template
-              +e.LI.item: +e.A.link(href="#") user interface
-              +e.LI.item: +e.A.link(href="#") mock-up
+        +menu-features()
 
         +e.gallery.gallery-features__
           +e.A.item.ibg(href="#"): img(src="http://lorempixel.com/g/300/300/nightlife" alt="img")

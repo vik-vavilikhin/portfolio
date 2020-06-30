@@ -27,20 +27,14 @@
   &__row {
     display: flex;
     flex-direction: column;
-
-    // @media (max-width: 680px) {
-    //   flex-direction: row;
-    //   flex-wrap: wrap;
-    // }
   }
 
   // .features__menu
   &__menu {
     margin: 0px 0px 65px 0px;
 
-    @media (max-width: 680px) {
+    @media (max-width:$md3+px) {
       margin: 0;
-      //   order: 1;
     }
   }
 
@@ -52,130 +46,6 @@
 
 .row-features {}
 
-.menu-features {
-  display: inline-flex;
-
-  @media (max-width: 680px) {
-    justify-content: center;
-    position: relative;
-    flex-direction: column;
-  }
-
-  //.menu-features__mini-hedear
-  // &__mini-hedear {
-  //   display: none;
-
-  //   @media (max-width: 680px) {
-  //     display: block;
-  //     color: #ffffff;
-  //     font-size: 20px;
-  //     display: block;
-  //     padding: 25px 0;
-  //     text-align: center;
-  //     text-transform: uppercase;
-  //     cursor: pointer;
-
-  //     height: 60px;
-  //     width: 50%;
-  //     margin: 0 auto;
-  //     background-color: #cccccc;
-  //     border-top-left-radius: 30%;
-  //     border-top-right-radius: 30%;
-  //   }
-  // }
-
-  // .menu-features__body
-  &__body {
-    width: 100%;
-
-    @media (max-width: 680px) {
-      position: absolute;
-      top: -60px;
-      left: 50%;
-      width: 50%;
-      transform: translateX(-50%);
-      bottom: 0;
-      overflow: hidden;
-
-      &:hover .menu-features__link {
-        // background-color: rgba(#000, .3);
-      }
-
-      &_active {
-        z-index: 2;
-        bottom: auto;
-
-        &:hover .menu-features__link {
-          // background-color: $main-color;
-        }
-      }
-    }
-  }
-
-  // .menu-features__list
-  &__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 auto;
-
-    @media (max-width: 680px) {
-      flex-direction: column;
-
-      background-color: $main-color;
-      overflow: hidden;
-      border-top-left-radius: 20%;
-      border-top-right-radius: 20%;
-      transition: all .3s ease 0s;
-
-      &_active {
-        background-color: rgba($bg-menu, .9);
-      }
-    }
-  }
-
-  // .menu-features__item
-  &__item {
-    margin: 0px 44px/890px*100% 0px 0px;
-
-    @media (max-width: 680px) {
-      width: 100%;
-      text-align: center;
-      margin: 0;
-    }
-
-    &:last-child {
-      margin: 0px 0px 0px 0px;
-    }
-  }
-
-  // .menu-features__link
-  &__link {
-    color: #000000;
-    @include fluidFontSize(16px, 22px, 681px, $maxW, 16px);
-    font-weight: 400;
-    line-height: calc(22 / 24);
-    text-transform: uppercase;
-
-    @media (max-width: 680px) {
-      color: #ffffff;
-      font-size: 20px;
-      display: block;
-      padding: 25px 0;
-
-      &_active,
-      &:hover,
-      &:focus {
-        color: #e0e0e0;
-        background-color: $main-color;
-      }
-    }
-
-    &:hover {
-      color: $main-color;
-    }
-  }
-}
 
 .gallery-features {
   display: flex;
@@ -192,3 +62,4 @@
 
 
 @import './../b-section-header/b-section-header';
+@import 'b-menu-features/b-menu-features';

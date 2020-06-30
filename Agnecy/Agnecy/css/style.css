@@ -1165,51 +1165,6 @@ body.ie .ibg img {
           flex: 1 1 auto;
 }
 
-.menu-features {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.menu-features__body {
-  width: 100%;
-}
-
-.menu-features__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.menu-features__item {
-  margin: 0px 4.94382% 0px 0px;
-}
-
-.menu-features__item:last-child {
-  margin: 0px 0px 0px 0px;
-}
-
-.menu-features__link {
-  color: #000000;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: calc(22 / 24);
-  text-transform: uppercase;
-}
-
-.menu-features__link:hover {
-  color: #FF2D2D;
-}
-
 .gallery-features {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1254,6 +1209,51 @@ body.ie .ibg img {
   font-weight: 400;
   line-height: calc(24 / 16);
   margin: 0px 0px 30px 0px;
+}
+
+.menu-features {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.menu-features__body {
+  width: 100%;
+}
+
+.menu-features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.menu-features__item {
+  margin: 0px 4.94382% 0px 0px;
+}
+
+.menu-features__item:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.menu-features__link {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: calc(22 / 24);
+  text-transform: uppercase;
+}
+
+.menu-features__link:hover {
+  color: #FF2D2D;
 }
 
 .hidden {
@@ -1354,16 +1354,16 @@ body.ie .ibg img {
     font-size: 16px;
   }
 
-  .menu-features__link {
-    font-size: 22px;
-  }
-
   .section-header__title {
     font-size: 42px;
   }
 
   .section-header__text {
     font-size: 16px;
+  }
+
+  .menu-features__link {
+    font-size: 22px;
   }
 }
 
@@ -1556,9 +1556,7 @@ body.ie .ibg img {
   .services__text {
     margin: 0px 0px 30px 0px;
   }
-}
 
-@media (max-width: 680px) {
   .features__menu {
     margin: 0;
   }
@@ -1578,7 +1576,7 @@ body.ie .ibg img {
     position: absolute;
     top: -60px;
     left: 50%;
-    width: 50%;
+    width: calc(50% - 5px);
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);

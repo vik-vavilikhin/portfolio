@@ -1,0 +1,16 @@
+-
+  itemList = [
+    {t:'all', l:'#', a: ''},
+    {t:'print template', l:'#', a: ''},
+    {t:'web template', l:'#', a: ''},
+    {t:'user interface', l:'#', a: ''},
+    {t:'mock-up', l:'#', a: ''},
+  ]
+
+mixin menu-features()
+  +e.menu.menu-features__
+    +e.SPAN.mini-hedear
+    +e.NAV.body
+      +e.UL.list
+        for item in itemList
+          +e.LI.item: +e.A.link(href=item.l)=item.t

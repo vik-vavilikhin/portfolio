@@ -1,7 +1,5 @@
 import {
   bodyLock,
-  bodyLockRemove,
-  bodyLockAdd,
 } from './../../js/modules/app';
 // ===== CONSTANTS =========================
 const constants = function (burger, menu) {
@@ -54,7 +52,7 @@ const burgerActive = function (
     iconMenu.addEventListener('click', (e) => {
       if (!body.classList.contains('_wait')) {
         if (lockBody) {
-          // bodyLock(delay);
+          bodyLock(delay);
         }
         iconMenu.classList.toggle(activeiconMenu);
         menuBody.classList.toggle(activemenuBody);

@@ -59,7 +59,7 @@ const fonter = require('gulp-fonter');
 const pug = require('gulp-pug');
 const prettyHtml = require('gulp-pretty-html');
 
-let isDev = false; //
+let isDev = true; //
 let isProd = !isDev;
 
 let webPackConfig = {
