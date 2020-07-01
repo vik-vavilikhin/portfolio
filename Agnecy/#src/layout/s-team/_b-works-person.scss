@@ -1,0 +1,38 @@
+.works-person {
+  display: flex;
+  justify-content: space-between;
+
+  // .works-person__item
+  &__item {
+    height: 20vw;
+    max-height: 200px;
+    flex: 0 0 24%;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width:$md3+px) {
+      height: 25vw;
+    }
+
+    span {
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      height: 40px;
+      width: 100%;
+      background-color: rgba(#000, .5);
+      text-transform: uppercase;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: bottom .3s ease 0s;
+    }
+
+    &:hover {
+      span {
+        bottom: 0;
+      }
+    }
+  }
+}

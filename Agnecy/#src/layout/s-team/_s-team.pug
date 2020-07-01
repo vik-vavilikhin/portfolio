@@ -9,7 +9,7 @@ mixin s-team()
       +e.slider-team.team-slider
         +e.row.row-team
           +e.column.column
-            +e.photo(data-move='person, 0, 767'): img(src='http://fakeimg.pl/320x460?text=Photo')
+            +e.photo.ibg(data-move='person, 0, 767'): img(src='http://fakeimg.pl/320x460/F5F0DD?text=Photo')
           +e.column.column.person__
             //- +e.person
             +e.info
@@ -21,7 +21,15 @@ mixin s-team()
                 +e.link.icon-behance-squared(href='#'): span Behance
                 +e.link.icon-twitter-squared(href='#'): span Twiter
             +e.works.works-person__(data-move='row-team, 2, 767')
-              +e.A.item(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
-              +e.A.item(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
-              +e.A.item(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
-              +e.A.item(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
+              +e.A.item.ibg(href="#")
+                img(src="http://fakeimg.pl/300x200/F5F0DD")
+                span SOKINA JUE
+              +e.A.item.ibg(href="#")
+                img(src="http://fakeimg.pl/200x200/F5F0DD")
+                span SOKINA JUE
+              +e.A.item.ibg(href="#")
+                img(src="http://fakeimg.pl/100x400/F5F0DD")
+                span SOKINA JUE
+              +e.A.item.ibg(href="#")
+                img(src="http://fakeimg.pl/200x200/F5F0DD")
+                span SOKINA JUE

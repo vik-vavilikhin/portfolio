@@ -57,14 +57,19 @@
   &__column {
     display: flex;
     flex-direction: column;
+    flex: 0 1 auto;
 
     @media (max-width:$md3+px) {
       flex-direction: row;
       margin: 0px 0px 25px 0px;
     }
 
+    @media (max-width:$md4+px) {
+      flex-direction: column;
+    }
+
     &:first-child {
-      // flex: 1 1 25%;
+      flex: 0 0 25%;
       margin: 0px 6% 0px 0px;
 
       @media (max-width:$md3+px) {
@@ -75,23 +80,22 @@
 
   // .team__photo
   &__photo {
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    flex: 1 1 auto;
+    // height: auto;
 
     @media (max-width:$md3+px) {
-      max-width: 25%;
-      min-width: 130px;
+      // max-width: 25%;
+      // min-width: 130px;
+      flex: 0 0 24%;
       margin: 0px 35px 0px 0px;
     }
 
-    @media (max-width: 400px) {
-      margin: 0px 15px 0px 0px;
-    }
-
-    picture,
-    img {
-      width: 100%;
-      height: auto;
+    @media (max-width:$md4+px) {
+      margin: 0 auto 30px;
+      width: 60%;
+      min-height: 50vw;
+      flex: 1 1 auto;
     }
   }
 
@@ -112,10 +116,10 @@
     flex-direction: column;
     flex: 1 1 auto;
     width: 70%;
-    margin: 0px 0px 65px 0px;
+    // margin: 0px 0px 65px 0px;
 
     @media (max-width: 1040px) {
-      margin: 0px 0px 35px 0px;
+      // margin: 0px 0px 35px 0px;
     }
 
     @media (max-width: 880px) {
@@ -148,6 +152,10 @@
       @include fluidFontSize(18px, 30px, 320px, 768px, 18px);
       // font-size: 30px;
     }
+
+    @media (max-width:$md4+px) {
+      text-align: center;
+    }
   }
 
   // .person__desc
@@ -159,100 +167,17 @@
   }
 
   // .person__contacts
-  &__contacts {}
+  &__contacts {
+    margin: 7% 0px 11% 0px;
+
+    @media (max-width:$md4+px) {
+      margin: 7% 0px 0px 0px;
+    }
+  }
 
   // .person__works
   &__works {}
 }
 
-.contacts-person {
-  display: flex;
-  flex-wrap: wrap;
-
-  @media (max-width:$md3+px) {
-    margin: 0px 0px 35px 0px;
-  }
-
-  @media (max-width: 580px) {
-    margin: 0;
-  }
-
-  // .contacts-person__link
-  &__link {
-    font-size: 18px;
-    line-height: calc(24 / 18);
-    font-style: italic;
-    color: #000000;
-    margin: 0px 30px 0px 0px;
-
-    &:before {
-      display: none;
-    }
-
-    @media (max-width:$md3+px) {
-      // font-size: 14px;
-      margin: 0px 20px 0px 0px;
-    }
-
-    @media (max-width: 540px) {
-      font-size: 14px;
-    }
-
-    @media (max-width:$md4+px) {
-      font-size: 25px;
-
-      &:before {
-        display: block;
-      }
-
-      span {
-        display: none;
-      }
-    }
-
-    @media (max-width: 390px) {
-      margin: 0px 5px 0px 0px;
-      font-size: 20px;
-    }
-
-    &:last-child {
-      margin: 0;
-    }
-
-    &:hover {
-      text-decoration: underline;
-      color: $main-color;
-    }
-  }
-}
-
-.works-person {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width:$md3+px) {
-    flex: 1 1 auto;
-  }
-
-  @media (max-width:$md4+px) {
-    // justify-content: space-around;
-  }
-
-  // .works-person__item
-  &__item {
-    width: 24%;
-
-    @media (max-width:$md4+px) {
-      // width: 40%;
-      // margin: 0px 0px 20px 0px;
-    }
-
-    picture,
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-}
+@import './b-contacts-person';
+@import './b-works-person';
