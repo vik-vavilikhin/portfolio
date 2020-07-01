@@ -36,6 +36,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "fontello";
+  font-display: swap;
+  src: url("../fonts/fontello.woff") format("woff"), url("../fonts/fontello.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
 .fluid-font-size {
   /* ==== ОТЗЫВЧИВЫЙ ШРИФТ ==== */
   font-size: 14px;
@@ -886,6 +894,80 @@ body.ie .ibg img {
   top: 18px !important;
 }
 
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?87317043");
+  src: url("../font/fontello.eot?87317043#iefix") format("embedded-opentype"), url("../font/fontello.woff2?87317043") format("woff2"), url("../font/fontello.woff?87317043") format("woff"), url("../font/fontello.ttf?87317043") format("truetype"), url("../font/fontello.svg?87317043#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?87317043#fontello') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-dribbble:before {
+  content: '\f17d';
+}
+
+/* '' */
+
+.icon-behance-squared:before {
+  content: '\f1b5';
+}
+
+/* '' */
+
+.icon-twitter-squared:before {
+  content: '\f304';
+}
+
+/* '' */
+
+.icon-facebook-squared:before {
+  content: '\f308';
+}
+
+/* '' */
+
 .menu {
   background-color: #313030;
 }
@@ -1178,10 +1260,18 @@ body.ie .ibg img {
 
 .gallery-features__item {
   margin: 10px 0;
+  width: 24%;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 24%;
-          flex: 0 1 24%;
-  height: 290px;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  height: auto;
+}
+
+.gallery-features__item picture,
+.gallery-features__item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section-header {
@@ -1267,19 +1357,13 @@ body.ie .ibg img {
 }
 
 .team__header {
-  -moz-text-align-last: left;
-       text-align-last: left;
-  width: 40%;
+  text-align: left;
+  max-width: 500px;
   margin: 0px 0px 70px 0px;
 }
 
 .team__header:after {
-  content: '';
-  width: 132px;
-  display: block;
   margin: initial;
-  height: 3px;
-  background-color: #FF2D2D;
 }
 
 .team__header .section-header__text {
@@ -1290,15 +1374,20 @@ body.ie .ibg img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+}
+
+.team__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .team__column:first-child {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 25%;
-          flex: 1 1 25%;
-  margin: 0px 75px 0px 0px;
+  margin: 0px 6% 0px 0px;
 }
 
 .team__photo {
@@ -1306,22 +1395,48 @@ body.ie .ibg img {
   height: 100%;
 }
 
+.team__photo picture,
+.team__photo img {
+  width: 100%;
+  height: auto;
+}
+
 .person__info {
-  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 70%;
   margin: 0px 0px 65px 0px;
 }
 
 .person__name {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 0px 0px 35px 0px;
+  margin: 0px 0px 6% 0px;
 }
 
 .person__desc {
   font-weight: 400;
   line-height: calc(28 / 16);
-  margin: 0px 0px 45px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.contacts-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contacts-person__link {
@@ -1330,6 +1445,14 @@ body.ie .ibg img {
   font-style: italic;
   color: #000000;
   margin: 0px 30px 0px 0px;
+}
+
+.contacts-person__link:before {
+  display: none;
+}
+
+.contacts-person__link:last-child {
+  margin: 0;
 }
 
 .contacts-person__link:hover {
@@ -1352,10 +1475,13 @@ body.ie .ibg img {
 }
 
 .works-person__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 24%;
-          flex: 0 1 24%;
-  height: 200px;
+  width: 24%;
+}
+
+.works-person__item picture,
+.works-person__item img {
+  width: 100%;
+  height: auto;
 }
 
 .hidden {
@@ -1410,6 +1536,11 @@ body.ie .ibg img {
   .section-header__text {
     font-size: 14px;
     font-size: calc(0.00328 * 100vw + 11.90164px);
+  }
+
+  .person__name {
+    font-size: 24px;
+    font-size: calc(0.00984 * 100vw + 17.70492px);
   }
 }
 
@@ -1467,11 +1598,21 @@ body.ie .ibg img {
   .menu-features__link {
     font-size: 22px;
   }
+
+  .person__name {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 1280px) {
   .fluid-font-size {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .person__info {
+    margin: 0px 0px 35px 0px;
   }
 }
 
@@ -1486,6 +1627,16 @@ body.ie .ibg img {
 
   .services__item {
     width: 48%;
+  }
+}
+
+@media (max-width: 880px) {
+  .person__info {
+    width: 100%;
+  }
+
+  .person__name {
+    margin: 0px 0px 3% 0px;
   }
 }
 
@@ -1677,9 +1828,10 @@ body.ie .ibg img {
   }
 
   .gallery-features__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 48%;
-            flex: 0 1 48%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 48%;
   }
 
   .menu-features {
@@ -1786,6 +1938,67 @@ body.ie .ibg img {
     color: #e0e0e0;
     background-color: #FF2D2D;
   }
+
+  .team__header {
+    text-align: center;
+    margin: 0 auto 70px;
+  }
+
+  .team__header:after {
+    margin: 0 auto;
+  }
+
+  .team__header .section-header__text {
+    text-align: center;
+  }
+
+  .team__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .team__column {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0px 0px 25px 0px;
+  }
+
+  .team__column:first-child {
+    display: none;
+  }
+
+  .team__photo {
+    max-width: 25%;
+    min-width: 130px;
+    margin: 0px 35px 0px 0px;
+  }
+
+  .person__info {
+    margin: 0;
+  }
+
+  .person__name {
+    margin: 0px 0px 6% 0px;
+    font-size: 18px;
+  }
+
+  .contacts-person {
+    margin: 0px 0px 35px 0px;
+  }
+
+  .contacts-person__link {
+    margin: 0px 20px 0px 0px;
+  }
+
+  .works-person {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
 }
 
 @media (max-width: 767.98px) and (max-width: 640px) {
@@ -1808,6 +2021,18 @@ body.ie .ibg img {
   }
 }
 
+@media (max-width: 580px) {
+  .contacts-person {
+    margin: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .contacts-person__link {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 479.98px) {
   .header {
     padding: 0;
@@ -1821,6 +2046,60 @@ body.ie .ibg img {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
+  }
+
+  .team {
+    padding: 0px 0px 55px 0px;
+  }
+
+  .team__header {
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+
+  .contacts-person__link {
+    font-size: 25px;
+  }
+
+  .contacts-person__link:before {
+    display: block;
+  }
+
+  .contacts-person__link span {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .team__photo {
+    margin: 0px 15px 0px 0px;
+  }
+}
+
+@media (max-width: 390px) {
+  .contacts-person__link {
+    margin: 0px 5px 0px 0px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 370px) {
+  .person__info {
+    line-height: .7;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 767.98px) and (min-width: 320px) {
+  .person__name {
+    font-size: 18px;
+    font-size: calc(0.02679 * 100vw + 9.42857px);
+  }
+}
+
+@media (max-width: 767.98px) and (min-width: 768px) {
+  .person__name {
+    font-size: 30px;
   }
 }
 

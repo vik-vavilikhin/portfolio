@@ -9,19 +9,19 @@ mixin s-team()
       +e.slider-team.team-slider
         +e.row.row-team
           +e.column.column
-            +e.photo.ibg: img(src='http://fakeimg.pl/320x460?text=Photo')
-          +e.column.column
-            +e.person.person__
-              +e.info
-                +e.H3.name mark waugh
-                +e.P.desc Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore Ui / Ux , print template.
-                +e.contacts.contacts-person__
-                  +e.link(href='#') Facebook
-                  +e.link(href='#') Dribble
-                  +e.link(href='#') Behance
-                  +e.link(href='#') Twiter
-              +e.works.works-person__
-                +e.A.item.ibg(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
-                +e.A.item.ibg(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
-                +e.A.item.ibg(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
-                +e.A.item.ibg(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
+            +e.photo(data-move='person, 0, 767'): img(src='http://fakeimg.pl/320x460?text=Photo')
+          +e.column.column.person__
+            //- +e.person
+            +e.info
+              +e.H3.name mark waugh
+              +e.P.desc Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed dooing eiusmod tempor incididut labore Ui / Ux , print template.
+              +e.contacts.contacts-person__
+                +e.link.icon-facebook-squared(href='#'): span Facebook
+                +e.link.icon-dribbble(href='#'): span Dribbble
+                +e.link.icon-behance-squared(href='#'): span Behance
+                +e.link.icon-twitter-squared(href='#'): span Twiter
+            +e.works.works-person__(data-move='row-team, 2, 767')
+              +e.A.item(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
+              +e.A.item(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
+              +e.A.item(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")
+              +e.A.item(href="#"): img(src="http://fakeimg.pl/200x200?text=200x200")

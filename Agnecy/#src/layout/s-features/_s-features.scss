@@ -62,11 +62,20 @@
   // .gallery-features__item
   &__item {
     margin: 10px 0;
-    flex: 0 1 24%;
-    height: 290px;
+    width: 24%;
+    flex: 0 1 auto;
+    height: auto;
+
+    picture,
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
 
     @media (max-width:$md3+px) {
-      flex: 0 1 48%;
+      display: inline-flex;
+      // flex: 0 0 auto;
+      width: 48%;
     }
 
     @media (max-width:$md4+px) {

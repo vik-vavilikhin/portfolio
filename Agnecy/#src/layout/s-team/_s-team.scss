@@ -1,26 +1,43 @@
 .team {
   padding: 0px 0px 110px 0px;
 
+  @media (max-width:$md4+px) {
+    padding: 0px 0px 55px 0px;
+  }
+
   // .team__container
   &__container {}
 
   // .team__header
   &__header {
-    text-align-last: left;
-    width: 40%;
+    text-align: left;
+    max-width: 500px;
     margin: 0px 0px 70px 0px;
 
+    @media (max-width:$md3+px) {
+      text-align: center;
+      margin: 0 auto 70px;
+    }
+
+    @media (max-width:$md4+px) {
+      text-align: center;
+      margin: 0 auto 30px;
+    }
+
     &:after {
-      content: '';
-      width: 132px;
-      display: block;
       margin: initial;
-      height: 3px;
-      background-color: $main-color;
+
+      @media (max-width:$md3+px) {
+        margin: 0 auto;
+      }
     }
 
     .section-header__text {
       text-align: initial;
+
+      @media (max-width:$md3+px) {
+        text-align: center;
+      }
     }
   }
 
@@ -30,14 +47,29 @@
   // .team__row
   &__row {
     display: flex;
-    flex-wrap: wrap;
+
+    @media (max-width:$md3+px) {
+      flex-direction: column;
+    }
   }
 
   // .team__column
   &__column {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width:$md3+px) {
+      flex-direction: row;
+      margin: 0px 0px 25px 0px;
+    }
+
     &:first-child {
-      flex: 1 1 25%;
-      margin: 0px 75px 0px 0px;
+      // flex: 1 1 25%;
+      margin: 0px 6% 0px 0px;
+
+      @media (max-width:$md3+px) {
+        display: none;
+      }
     }
   }
 
@@ -45,6 +77,22 @@
   &__photo {
     width: 100%;
     height: 100%;
+
+    @media (max-width:$md3+px) {
+      max-width: 25%;
+      min-width: 130px;
+      margin: 0px 35px 0px 0px;
+    }
+
+    @media (max-width: 400px) {
+      margin: 0px 15px 0px 0px;
+    }
+
+    picture,
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   // .team__person
@@ -60,24 +108,54 @@
 
   // .person__info
   &__info {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 70%;
     margin: 0px 0px 65px 0px;
+
+    @media (max-width: 1040px) {
+      margin: 0px 0px 35px 0px;
+    }
+
+    @media (max-width: 880px) {
+      width: 100%;
+    }
+
+    @media (max-width:$md3+px) {
+      margin: 0;
+    }
+
+    @media (max-width: 370px) {
+      line-height: .7;
+      font-size: 13px;
+    }
   }
 
   // .person__name
   &__name {
-    font-size: 30px;
+    @include fluidFontSize(24px, 30px, 640px, $maxW, 24px);
     font-weight: 600;
     text-transform: uppercase;
-    margin: 0px 0px 35px 0px;
+    margin: 0px 0px 6% 0px;
+
+    @media (max-width: 880px) {
+      margin: 0px 0px 3% 0px;
+    }
+
+    @media (max-width:$md3+px) {
+      margin: 0px 0px 6% 0px;
+      @include fluidFontSize(18px, 30px, 320px, 768px, 18px);
+      // font-size: 30px;
+    }
   }
 
   // .person__desc
   &__desc {
-    // font-size: 16px;
     font-weight: 400;
     line-height: calc(28 / 16);
-    margin: 0px 0px 45px 0px;
+    flex: 1 1 auto;
+
   }
 
   // .person__contacts
@@ -88,6 +166,16 @@
 }
 
 .contacts-person {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width:$md3+px) {
+    margin: 0px 0px 35px 0px;
+  }
+
+  @media (max-width: 580px) {
+    margin: 0;
+  }
 
   // .contacts-person__link
   &__link {
@@ -96,6 +184,40 @@
     font-style: italic;
     color: #000000;
     margin: 0px 30px 0px 0px;
+
+    &:before {
+      display: none;
+    }
+
+    @media (max-width:$md3+px) {
+      // font-size: 14px;
+      margin: 0px 20px 0px 0px;
+    }
+
+    @media (max-width: 540px) {
+      font-size: 14px;
+    }
+
+    @media (max-width:$md4+px) {
+      font-size: 25px;
+
+      &:before {
+        display: block;
+      }
+
+      span {
+        display: none;
+      }
+    }
+
+    @media (max-width: 390px) {
+      margin: 0px 5px 0px 0px;
+      font-size: 20px;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
 
     &:hover {
       text-decoration: underline;
@@ -110,9 +232,27 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width:$md3+px) {
+    flex: 1 1 auto;
+  }
+
+  @media (max-width:$md4+px) {
+    // justify-content: space-around;
+  }
+
   // .works-person__item
   &__item {
-    flex: 0 1 24%;
-    height: 200px;
+    width: 24%;
+
+    @media (max-width:$md4+px) {
+      // width: 40%;
+      // margin: 0px 0px 20px 0px;
+    }
+
+    picture,
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
