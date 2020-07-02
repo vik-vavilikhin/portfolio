@@ -3,16 +3,24 @@
   background-color: $bg-color;
   text-align: center;
 
+  @media (max-width:$md4+px) {
+    padding: 60px 0px 70px 0px;
+
+  }
+
   // .offers__container
   &__container {}
 
   // .offers__title
   &__title {
     font-size: 42px;
-    letter-spacing: 0.03em;
-    line-height: calc(24 / 42);
+    line-height: calc(60 / 42);
     color: #fff;
     margin: 0px 0px 25px 0px;
+
+    @media (max-width:$md4+px) {
+      font-size: 28px;
+    }
   }
 
   // .offers__text
@@ -21,13 +29,16 @@
     line-height: calc(28 / 16);
     color: #fff;
     margin: 0px 0px 60px 0px;
+
+    @media (max-width:$md4+px) {
+      margin: 0px 0px 30px 0px;
+      font-size: 14px;
+    }
   }
 
   // .offers__form
   &__form {}
 }
-
-.container {}
 
 .form-offers {
   width: 60%;
@@ -35,6 +46,22 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
+
+  @media (max-width:$md3+px) {
+    width: 80%;
+  }
+
+  @media (max-width: 640px) {
+    width: 90%;
+  }
+
+  @media (max-width: 540px) {
+    width: 100%;
+  }
+
+  @media (max-width:$md4+px) {
+    flex-wrap: wrap;
+  }
 
   // .form-offers__input
   &__input {
@@ -47,6 +74,26 @@
     border-radius: 5px;
     color: #000;
 
+    @media (max-width:$md3+px) {
+      padding: 20px 30px;
+
+    }
+
+    @media (max-width: 640px) {
+      padding: 15px 25px;
+
+    }
+
+    @media (max-width: 540px) {
+      padding: 10px 20px;
+
+    }
+
+    @media (max-width:$md4+px) {
+      margin: 0px 0px 20px 0px;
+      flex: 1 1 100%;
+    }
+
     &[placeholder] {
       letter-spacing: 0.03em;
       color: #2c2c2c;
@@ -56,9 +103,17 @@
 
   // .form-offers__btn
   &__btn {
+    padding: 0px 5px/60px*100%;
     display: inline-flex;
     align-items: center;
+
+    @media (max-width:$md2+px) {
+      @include fluidFontSize(14px, 18px, $md4*1px, $md2*1px, 14px);
+      // width: 80%;
+    }
+
+    @media (max-width:$md4+px) {
+      padding: 20px 65px;
+    }
   }
 }
-
-.btn {}

@@ -62,17 +62,18 @@ const sliderInit = () => {
     Параметры для слайдера: https://swiperjs.com/
   */
   const mainSlider = new Swiper('.team-slider', {
-    /*
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    */
+
+    // effect: 'fade',
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+
     observer: true,
     observerParents: true,
-    slidesPerView: 1,
-    spaceBetween: 0,
+    slidesPerView: 'auto',
+    loopedSlides: 2,
+    spaceBetween: 20,
     // autoHeight: true,
     speed: 800,
 

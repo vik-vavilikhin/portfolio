@@ -925,14 +925,15 @@ h6 {
 }
 
 .btn {
-  display: inline-block;
-  padding: 0px 0px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   border-radius: 5px;
   background-color: #FF2D2D;
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
-  padding: 20px 63px;
+  padding: 20px 65px;
   position: relative;
   overflow: hidden;
 }
@@ -2278,8 +2279,7 @@ body.ie .ibg img {
 
 .offers__title {
   font-size: 42px;
-  letter-spacing: 0.03em;
-  line-height: calc(24 / 42);
+  line-height: calc(60 / 42);
   color: #fff;
   margin: 0px 0px 25px 0px;
 }
@@ -2324,6 +2324,7 @@ body.ie .ibg img {
 }
 
 .form-offers__btn {
+  padding: 0px 8.33333%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2469,6 +2470,12 @@ body.ie .ibg img {
 
   .services__item {
     width: 48%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .form-offers__btn {
+    font-size: 14px;
   }
 }
 
@@ -2841,6 +2848,14 @@ body.ie .ibg img {
   .works-person__item {
     height: 25vw;
   }
+
+  .form-offers {
+    width: 80%;
+  }
+
+  .form-offers__input {
+    padding: 20px 30px;
+  }
 }
 
 @media (max-width: 767.98px) and (max-width: 640px) {
@@ -2863,9 +2878,27 @@ body.ie .ibg img {
   }
 }
 
+@media (max-width: 640px) {
+  .form-offers {
+    width: 90%;
+  }
+
+  .form-offers__input {
+    padding: 15px 25px;
+  }
+}
+
 @media (max-width: 540px) {
   .contacts-person__link {
     font-size: 14px;
+  }
+
+  .form-offers {
+    width: 100%;
+  }
+
+  .form-offers__input {
+    padding: 10px 20px;
   }
 }
 
@@ -2936,6 +2969,35 @@ body.ie .ibg img {
   .contacts-person__link span {
     display: none;
   }
+
+  .offers {
+    padding: 60px 0px 70px 0px;
+  }
+
+  .offers__title {
+    font-size: 28px;
+  }
+
+  .offers__text {
+    margin: 0px 0px 30px 0px;
+    font-size: 14px;
+  }
+
+  .form-offers {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .form-offers__input {
+    margin: 0px 0px 20px 0px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+
+  .form-offers__btn {
+    padding: 20px 65px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -2962,6 +3024,19 @@ body.ie .ibg img {
 @media (max-width: 767.98px) and (min-width: 768px) {
   .person__name {
     font-size: 30px;
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 479.98px) {
+  .form-offers__btn {
+    font-size: 14px;
+    font-size: calc(0.00781 * 100vw + 10.25016px);
+  }
+}
+
+@media (max-width: 991.98px) and (min-width: 991.98px) {
+  .form-offers__btn {
+    font-size: 18px;
   }
 }
 
