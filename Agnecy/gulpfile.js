@@ -57,7 +57,6 @@ const ttf2woff2 = require('gulp-ttf2woff2');
 const svgSprite = require('gulp-svg-sprite');
 const fonter = require('gulp-fonter');
 const pug = require('gulp-pug');
-const prettyHtml = require('gulp-pretty-html');
 
 let isDev = true; //
 let isProd = !isDev;
@@ -93,10 +92,8 @@ function html() {
       pretty: true
     }))
     .pipe(webpHTML())
-    .pipe(prettyHtml({
-      'indent_size': 2,
-      'extra_liners': ['header', 'section', 'footer'],
-    }))
+    .pipe(dest(sourceFolder))
+    // .pipe(src(sourceFolder))
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }
