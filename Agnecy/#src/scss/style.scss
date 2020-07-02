@@ -24,6 +24,7 @@ $maxW: $mw * 1px;
 
 $main-color: #FF2D2D;
 $bg-menu: #313030;
+$bg-color:#F5F0DD;
 
 
 .fluid-font-size {
@@ -97,6 +98,7 @@ body {
 @import "../layout/s-services/s-services";
 @import "../layout/s-features/s-features";
 @import "../layout/s-team/s-team";
+@import "../layout/s-offers/s-offers";
 
 // @import "../layout/footer/footer";
 // @import "../layout/popup/popup";

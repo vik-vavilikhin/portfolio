@@ -2270,6 +2270,68 @@ body.ie .ibg img {
   bottom: 0;
 }
 
+.offers {
+  padding: 130px 0px 140px 0px;
+  background-color: #F5F0DD;
+  text-align: center;
+}
+
+.offers__title {
+  font-size: 42px;
+  letter-spacing: 0.03em;
+  line-height: calc(24 / 42);
+  color: #fff;
+  margin: 0px 0px 25px 0px;
+}
+
+.offers__text {
+  font-size: 16px;
+  line-height: calc(28 / 16);
+  color: #fff;
+  margin: 0px 0px 60px 0px;
+}
+
+.form-offers {
+  width: 60%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.form-offers__input {
+  padding: 29px 35px;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 0px 22px 0px 0px;
+  border-radius: 5px;
+  color: #000;
+}
+
+.form-offers__input[placeholder] {
+  letter-spacing: 0.03em;
+  color: #2c2c2c;
+}
+
+.form-offers__btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .hidden {
   display: none;
 }
@@ -2675,6 +2737,7 @@ body.ie .ibg img {
   }
 
   .menu-features__list {
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2696,6 +2759,9 @@ body.ie .ibg img {
   }
 
   .menu-features__list_active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     height: auto;
     opacity: 1;
   }

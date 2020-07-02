@@ -77,6 +77,7 @@
     flex: 1 1 auto;
 
     @media (max-width:$md3+px) {
+      display: none;
       flex-direction: column;
       background-color: rgba($bg-menu, .9);
 
@@ -99,6 +100,7 @@
       }
 
       &_active {
+        display: flex;
         height: auto;
         opacity: 1;
       }
