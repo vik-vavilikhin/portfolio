@@ -63,8 +63,9 @@
   &__item {
     margin: 10px 0;
     width: 24%;
+
     flex: 0 1 auto;
-    height: auto;
+    height: 24vw;
 
     picture,
     img {
@@ -74,11 +75,13 @@
 
     @media (max-width:$md3+px) {
       display: inline-flex;
+      height: 47vw;
       // flex: 0 0 auto;
       width: 48%;
     }
 
     @media (max-width:$md4+px) {
+      height: 95vw;
       flex: 0 1 100%;
     }
   }
