@@ -16,14 +16,14 @@ const path = {
     fonts: `${projectFolder}/fonts/`,
   },
   src: {
-    html: [`${sourceFolder}/*.pug`, `!${sourceFolder}/_*.pug`],
+    html: [`${sourceFolder}/*.html`, `!${sourceFolder}/_*.html`],
     css: `${sourceFolder}/scss/style.scss`,
     js: `${sourceFolder}/js/script.js`,
     img: `${sourceFolder}/img/**/*.+(png|jpg|gif|ico|svg|webp)`,
     fonts: `${sourceFolder}/fonts/*.ttf`,
   },
   watch: {
-    html: `${sourceFolder}/**/*.pug`,
+    html: `${sourceFolder}/**/*.html`,
     css: `${sourceFolder}/**/*.scss`,
     js: `${sourceFolder}/**/*.js`,
     img: `${sourceFolder}/img/**/*.+(png|jpg|gif|ico|svg|webp)`,
@@ -41,6 +41,7 @@ const {
 } = require('gulp');
 const gulp = require('gulp');
 const browsersync = require('browser-sync').create();
+const fileinclude = require('gulp-file-include');
 const del = require('del');
 const scss = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -51,12 +52,12 @@ const webpack = require('webpack-stream');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const webpHTML = require('gulp-webp-html');
-const webpcss = require("gulp-webpcss");
+const webpcss = require('gulp-webpcss');
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const svgSprite = require('gulp-svg-sprite');
 const fonter = require('gulp-fonter');
-const pug = require('gulp-pug');
+// const pug = require('gulp-pug');
 
 let isDev = true; //
 let isProd = !isDev;
@@ -88,12 +89,8 @@ function browserSync() {
 
 function html() {
   return src(path.src.html)
-    .pipe(pug({
-      pretty: true
-    }))
+    .pipe(fileinclude())
     .pipe(webpHTML())
-    .pipe(dest(sourceFolder))
-    // .pipe(src(sourceFolder))
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }
@@ -218,8 +215,8 @@ function cb() {}
 
 function watchFiles() {
   watch([path.watch.html], html);
-  watch([path.watch.css], css)
-    .on('change', browsersync.reload);
+  // watch([path.watch.css], css).on('change', browsersync.reload);
+  watch([path.watch.css], css);
   watch([path.watch.js], js);
   watch([path.watch.img], images);
 }
