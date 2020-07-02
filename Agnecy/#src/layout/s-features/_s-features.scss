@@ -66,6 +66,7 @@
 
     flex: 0 1 auto;
     height: 24vw;
+    max-height: 300px;
 
     picture,
     img {
@@ -82,6 +83,7 @@
 
     @media (max-width:$md4+px) {
       height: 95vw;
+      max-height: none;
       flex: 0 1 100%;
     }
   }

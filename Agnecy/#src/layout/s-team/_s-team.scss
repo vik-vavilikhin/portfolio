@@ -42,7 +42,9 @@
   }
 
   // .team__slider-team
-  &__slider-team {}
+  &__slider-team {
+    overflow: hidden;
+  }
 
   // .team__row
   &__row {

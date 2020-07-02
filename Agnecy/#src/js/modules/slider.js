@@ -1,4 +1,5 @@
-import '../../vendor/swiper/js/swiper';
+// import '../../vendor/swiper/js/swiper';
+
 
 // ====== SLIDER SETTINGS ==================
 /*
@@ -9,7 +10,7 @@ import '../../vendor/swiper/js/swiper';
  */
 const sliderBuildCallback = () => {};
 
-const sliderSettings = () => {
+const sliderInit = () => {
   // Получить все элементы обертки с классом '._swiper'
   // ...если на странице несколько сладеров
   const sliders = document.querySelectorAll('._swiper');
@@ -60,46 +61,48 @@ const sliderSettings = () => {
   /*
     Параметры для слайдера: https://swiperjs.com/
   */
-  const mainSlider = new Swiper('.main-slider__body', {
-    /*
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    */
-    observer: true,
-    observerParents: true,
-    slidesPerView: 1,
-    spaceBetween: 0,
-    // autoHeight: true,
-    speed: 800,
+  // const mainSlider = new Swiper('.team-slider', {
+  //   /*
+  //     effect: 'fade',
+  //     autoplay: {
+  //       delay: 3000,
+  //       disableOnInteraction: false,
+  //     },
+  //   */
+  //   observer: true,
+  //   observerParents: true,
+  //   slidesPerView: 1,
+  //   spaceBetween: 0,
+  //   // autoHeight: true,
+  //   speed: 800,
 
-    // touchRatio: 0,
-    // simulateTouch: false,
-    loop: true,
-    // preloadImages: false,
-    // lazy: true,
-    // Dotts
-    pagination: {
-      el: '',
-      clickable: true,
-    },
-    // Arrows
-    navigation: {
-      nextEl: '.control-main-slider__arrow_next',
-      prevEl: '.control-main-slider__arrow_prev',
-    },
+  //   // touchRatio: 0,
+  //   // simulateTouch: false,
+  //   loop: true,
+  //   // preloadImages: false,
+  //   // lazy: true,
+  //   // Dotts
+  //   pagination: {
+  //     el: '',
+  //     clickable: true,
+  //   },
+  //   // Arrows
+  //   // navigation: {
+  //   //   nextEl: '.control-main-slider__arrow_next',
+  //   //   prevEl: '.control-main-slider__arrow_prev',
+  //   // },
 
-    // Responsive breakpoints
-    breakpoints: {
-      320: {
-        autoHeight: true,
-      },
-      768: {
-        autoHeight: true,
-      },
-    }
-  });
+  //   // Responsive breakpoints
+  //   // breakpoints: {
+  //   //   320: {
+  //   //     autoHeight: true,
+  //   //   },
+  //   //   768: {
+  //   //     autoHeight: true,
+  //   //   },
+  //   // }
+  // });
 };
-export default sliderSettings;
+export {
+  sliderInit
+};
