@@ -1,3 +1,5 @@
+@import './../b-section-header/b-section-header';
+
 .features {
   padding: 105px 0px 140px 0px;
   position: relative;
@@ -19,7 +21,6 @@
 
   // .features__header
   &__header {
-    max-width: 500px;
     margin: 0px auto 90px;
 
     @media (max-width:$md3+px) {
@@ -89,6 +90,4 @@
   }
 }
 
-
-@import './../b-section-header/b-section-header';
 @import 'b-menu-features/b-menu-features';

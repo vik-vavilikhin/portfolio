@@ -1,0 +1,35 @@
+<section class="contact">
+  <div class="contact__container container">
+    @@include('./../b-section-header/_b-section-header.html',{
+    'section': 'contact',
+    'center': '',
+    'title': 'GET IN TOUCH',
+    'text': 'Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.'
+    })
+
+    <div class="contact__row row-contact">
+      <div class="contact__column column-contact column-contact_form">
+        <form action="#" class="contact__form form-contact">
+          <input type="text" id="form-contact__name" class="form-contact__name" placeholder="Name">
+          <input type="text" id="form-contact__mail" class="form-contact__mail" placeholder="Your Mail">
+          <textarea id="form-contact__texteria" class="form-contact__texteria" placeholder="Type your message" rows="11"
+            cols="45" name="text"></textarea>
+          <a href="#" class="contact__btn btn">send message</a>
+        </form>
+      </div>
+
+      <div class="contact__column column-contact column-contact_info">
+        <h4 class="contact__title">contact info</h4>
+
+        <div class="contact__address">
+          Jalalabad 24 / A, Ambaarkhana, Sylhet,
+          Bangladesh
+        </div>
+
+        <a href="mailto: redwan@deviserweb.com" class="contact__mail">redwan@deviserweb.com</a>
+
+        <a href="tel: +8801761746373" class="contact__phone">(+88) 017 617 46373</a>
+      </div>
+    </div>
+  </div>
+</section>

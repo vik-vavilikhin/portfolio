@@ -936,6 +936,7 @@ h6 {
   padding: 20px 65px;
   position: relative;
   overflow: hidden;
+  text-transform: uppercase;
 }
 
 .btn:before {
@@ -1963,6 +1964,41 @@ body.ie .ibg img {
   line-height: calc(28 / 16);
 }
 
+.section-header {
+  max-width: 500px;
+}
+
+.section-header:after {
+  content: '';
+  width: 132px;
+  display: block;
+  height: 3px;
+  background-color: #FF2D2D;
+}
+
+.section-header_center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section-header_center:after {
+  margin: 0 auto;
+}
+
+.section-header__title {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0px 0px 40px 0px;
+}
+
+.section-header__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: calc(24 / 16);
+  margin: 0px 0px 30px 0px;
+}
+
 .features {
   padding: 105px 0px 140px 0px;
   position: relative;
@@ -1980,7 +2016,6 @@ body.ie .ibg img {
 }
 
 .features__header {
-  max-width: 500px;
   margin: 0px auto 90px;
 }
 
@@ -2030,33 +2065,6 @@ body.ie .ibg img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.section-header {
-  text-align: center;
-}
-
-.section-header:after {
-  content: '';
-  width: 132px;
-  display: block;
-  margin: 0 auto;
-  height: 3px;
-  background-color: #FF2D2D;
-}
-
-.section-header__title {
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0px 0px 40px 0px;
-}
-
-.section-header__text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: calc(24 / 16);
-  margin: 0px 0px 30px 0px;
 }
 
 .menu-features {
@@ -2331,6 +2339,130 @@ body.ie .ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contact {
+  padding: 90px 0px 110px 0px;
+  position: relative;
+}
+
+.contact__header {
+  margin: 0px 0px 75px 0px;
+}
+
+.contact__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact__form {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+}
+
+.contact__btn {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact__title {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 25;
+  margin: 0px 0px 35px 0px;
+}
+
+.contact__address,
+.contact__mail,
+.contact__phone {
+  display: block;
+  line-height: calc(28 / 16);
+  margin: 0px 0px 25px 0px;
+  color: #ffffff;
+}
+
+.column-contact_form {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+  margin: 0px 110px 0px 0px;
+}
+
+.column-contact_info {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 0px 0px 6%;
+}
+
+.column-contact_info::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 61.4%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  width: 41.8%;
+  height: 54%;
+  background-color: #2D2D2D;
+  z-index: -1;
+}
+
+.form-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-contact__name,
+.form-contact__mail,
+.form-contact__texteria {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 25px 50px;
+  margin: 0px 0px 45px 0px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.form-contact__name {
+  margin-right: 55px;
+}
+
+.form-contact__texteria {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
 }
 
 .hidden {
