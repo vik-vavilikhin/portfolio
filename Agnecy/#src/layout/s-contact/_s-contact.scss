@@ -71,7 +71,7 @@
     color: #ffffff;
 
     @media (max-width:$md3+px) {
-      // color: #000000;
+      color: #000000;
       margin: 0px 0px 15px 0px;
     }
   }
@@ -109,12 +109,12 @@
     padding: 0px 0px 0px 6vw;
 
     @media (max-width:$md3+px) {
-      // text-align: center;
-      // color: #000000;
-      // padding: 0 30px;
-      margin: 0 -10px;
-      background-color: #2D2D2D;
-      padding: 30px;
+      text-align: center;
+      color: #000000;
+      padding: 0 30px;
+      // margin: 0 -10px;
+      // background-color: #2D2D2D;
+      // padding: 30px;
     }
 
     &::after {
